@@ -17,7 +17,7 @@ const UserList = () => {
         {userInfo.map(({id, username, age, country}) => (
 
         <h2>
-            <ul key={Math.rando m()}>
+            <ul key={Math.random()}>
             
                 <li>{id} {username} </li>
                 <li> {age} </li>
