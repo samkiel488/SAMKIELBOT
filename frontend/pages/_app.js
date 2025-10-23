@@ -1,7 +1,11 @@
 import '../styles/globals.css';
 import { Toaster } from 'react-hot-toast';
-import { AuthProvider } from '../lib/auth';
+import dynamic from 'next/dynamic';
 import Layout from '../components/Layout';
+
+const AuthProvider = dynamic(() => import('../lib/auth').then(mod => mod.AuthProvider), {
+  ssr: false,
+});
 
 export default function App({ Component, pageProps }) {
   return (
