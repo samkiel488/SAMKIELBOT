@@ -15,6 +15,24 @@ const mod = await __turbopack_context__.y("react-hot-toast");
 __turbopack_context__.n(mod);
 __turbopack_async_result__();
 } catch(e) { __turbopack_async_result__(e); } }, true);}),
+"[externals]/react/jsx-runtime [external] (react/jsx-runtime, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("react/jsx-runtime", () => require("react/jsx-runtime"));
+
+module.exports = mod;
+}),
+"[externals]/react [external] (react, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("react", () => require("react"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/compiled/next-server/pages-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/pages-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/compiled/next-server/pages-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/pages-turbo.runtime.dev.js"));
+
+module.exports = mod;
+}),
 "[externals]/fs [external] (fs, cjs)", ((__turbopack_context__, module, exports) => {
 
 const mod = __turbopack_context__.x("fs", () => require("fs"));
@@ -464,4 +482,4 @@ __turbopack_async_result__();
 } catch(e) { __turbopack_async_result__(e); } }, false);}),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__81be57bd._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__71f72cc2._.js.map

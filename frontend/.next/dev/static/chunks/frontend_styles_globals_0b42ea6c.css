@@ -330,16 +330,16 @@ img, video {
   right: .75rem;
 }
 
+.top-0 {
+  top: 0;
+}
+
 .top-10 {
   top: 2.5rem;
 }
 
 .top-20 {
   top: 5rem;
-}
-
-.top-0 {
-  top: 0;
 }
 
 .z-10 {
