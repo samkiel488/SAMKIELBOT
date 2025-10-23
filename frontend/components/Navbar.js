@@ -7,12 +7,12 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-900 p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-white text-xl font-bold">
+        <Link href={user ? "/dashboard" : "/"} className="text-white text-xl font-bold">
           𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋
         </Link>
 
         <div className="space-x-4">
-          <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+          <Link href={user ? "/dashboard" : "/"} className="text-gray-300 hover:text-white transition-colors">
             Home
           </Link>
           {user ? (

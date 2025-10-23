@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BotCard from '../components/BotCard';
 import DeployModal from '../components/DeployModal';
@@ -64,7 +63,7 @@ export default function Dashboard() {
         <title>Dashboard - 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋</title>
       </Head>
 
-      <Navbar />
+
 
       <main className="container mx-auto px-4 py-16">
         <div className="flex justify-between items-center mb-8">
