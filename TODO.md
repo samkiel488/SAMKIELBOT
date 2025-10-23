@@ -1,0 +1,22 @@
+# TODO for Building 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 Full-Stack App
+
+- [ ] Create root package.json with scripts
+- [ ] Create .env file
+- [ ] Create README.md
+- [ ] Create backend/ directory structure
+  - [ ] server.js
+  - [ ] routes/auth.js, deploy.js, update.js
+  - [ ] models/User.js, Deployment.js
+  - [ ] controllers/authController.js, deployController.js, updateController.js
+  - [ ] config/db.js
+  - [ ] utils/errorHandler.js, response.js, logger.js
+  - [ ] backend/package.json
+- [ ] Create frontend/ directory structure
+  - [ ] pages/index.js, dashboard.js, login.js, register.js
+  - [ ] components/Navbar.js, Footer.js, BotCard.js, DeployModal.js
+  - [ ] lib/api.js
+  - [ ] styles/globals.css
+  - [ ] next.config.js, tailwind.config.js, postcss.config.js
+  - [ ] frontend/package.json
+- [ ] Install dependencies in root, backend, frontend
+- [ ] Test running the app with npm run dev
