@@ -78,6 +78,12 @@ export default function Login() {
               Sign in to 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋
             </h2>
             <p className="text-gray-400">Enter your credentials to access your account</p>
+            {/* Mobile welcome message */}
+            <div className="lg:hidden mt-4">
+              <h3 className="text-xl font-semibold text-white transition-opacity duration-500">
+                Welcome back, {username || 'friend'}!
+              </h3>
+            </div>
           </div>
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
