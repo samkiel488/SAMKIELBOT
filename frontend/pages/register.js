@@ -50,7 +50,7 @@ export default function Register() {
     try {
       await register(formData);
     } catch (error) {
-      // Error is handled in auth context
+      toast.error(error.response?.data?.message || 'Registration failed');
     }
   };
 

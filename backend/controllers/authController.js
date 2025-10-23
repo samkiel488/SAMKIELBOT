@@ -16,10 +16,9 @@ const register = async (req, res) => {
   try {
     const { fullName, username, email, whatsappNumber, password } = req.body;
 
-    // Check if user exists
-    const userExists = await User.findOne({ $or: [{ email }, { username }] });
-    if (userExists) {
-      return errorResponse(res, 'User already exists', 400);
+    // Validation for required fields
+    if (!fullName || !username || !email || !whatsappNumber || !password) {
+      return errorResponse(res, 'All fields are required', 400);
     }
 
     // Create user
@@ -44,6 +43,16 @@ const register = async (req, res) => {
       errorResponse(res, 'Invalid user data', 400);
     }
   } catch (error) {
+    // Handle duplicate key errors
+    if (error.code === 11000) {
+      const field = Object.keys(error.keyValue)[0];
+      return errorResponse(res, `${field.charAt(0).toUpperCase() + field.slice(1)} already exists`, 400);
+    }
+    // Handle validation errors
+    if (error.name === 'ValidationError') {
+      const messages = Object.values(error.errors).map(err => err.message);
+      return errorResponse(res, messages.join(', '), 400);
+    }
     errorResponse(res, error.message, 500);
   }
 };
