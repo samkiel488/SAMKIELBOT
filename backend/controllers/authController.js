@@ -14,26 +14,30 @@ const generateToken = (id) => {
 // @access  Public
 const register = async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { fullName, username, email, whatsappNumber, password } = req.body;
 
     // Check if user exists
-    const userExists = await User.findOne({ email });
+    const userExists = await User.findOne({ $or: [{ email }, { username }] });
     if (userExists) {
       return errorResponse(res, 'User already exists', 400);
     }
 
     // Create user
     const user = await User.create({
+      fullName,
       username,
       email,
+      whatsappNumber,
       password,
     });
 
     if (user) {
       successResponse(res, {
         _id: user._id,
+        fullName: user.fullName,
         username: user.username,
         email: user.email,
+        whatsappNumber: user.whatsappNumber,
         token: generateToken(user._id),
       });
     } else {
