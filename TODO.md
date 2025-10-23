@@ -1,13 +1,11 @@
-# TODO: Prepare SAMKIEL BOT for Production Deployment on Render
+# TODO: Fix Render Deployment Build Error for TailwindCSS
 
 ## Tasks
-- [x] Create .env.example at root with environment variables
-- [x] Update root package.json: scripts and add concurrently ^9.0.0
-- [x] Update backend/server.js to serve frontend in production
-- [x] Update frontend/next.config.js with production settings
-
-## Followup Steps
-- [x] Run npm install at root to update dependencies
-- [x] Verify build process: npm run build
-- [x] Test production start: npm run start
-- [ ] Ensure environment variables are set in Render dashboard
+- [x] Move `tailwindcss`, `autoprefixer`, and `postcss` from devDependencies to dependencies in `frontend/package.json`
+- [x] Update root `package.json` build script to install frontend dependencies first
+- [ ] Ensure `.gitignore` does not exclude `frontend/node_modules`
+- [ ] Verify `tailwind.config.js` and `postcss.config.js` are properly configured
+- [ ] Confirm `@tailwind` imports in `frontend/styles/globals.css`
+- [x] Log TailwindCSS version (3.4.18)
+- [ ] Test build locally if possible
+- [ ] Push changes to GitHub for Render rebuild
