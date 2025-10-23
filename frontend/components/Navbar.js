@@ -1,45 +1,38 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useAuth } from '../lib/auth';
 
 export default function Navbar() {
-  const router = useRouter();
-
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    router.push('/');
-  };
-
-  const isLoggedIn = typeof window !== 'undefined' && localStorage.getItem('token');
+  const { user, logout } = useAuth();
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-gray-900 p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
+        <Link href="/" className="text-white text-xl font-bold">
           𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋
         </Link>
 
         <div className="space-x-4">
-          <Link href="/" className="hover:text-blue-400">
+          <Link href="/" className="text-gray-300 hover:text-white transition-colors">
             Home
           </Link>
-          {isLoggedIn ? (
+          {user ? (
             <>
-              <Link href="/dashboard" className="hover:text-blue-400">
+              <Link href="/dashboard" className="text-gray-300 hover:text-white transition-colors">
                 Dashboard
               </Link>
               <button
-                onClick={handleLogout}
-                className="hover:text-blue-400"
+                onClick={logout}
+                className="text-gray-300 hover:text-white transition-colors"
               >
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link href="/login" className="hover:text-blue-400">
+              <Link href="/login" className="text-gray-300 hover:text-white transition-colors">
                 Login
               </Link>
-              <Link href="/register" className="hover:text-blue-400">
+              <Link href="/register" className="text-gray-300 hover:text-white transition-colors">
                 Register
               </Link>
             </>
