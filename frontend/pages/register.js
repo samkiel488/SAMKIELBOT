@@ -1,21 +1,21 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { HiEye, HiEyeOff } from 'react-icons/hi';
-import toast from 'react-hot-toast';
-import { useAuth } from '../lib/auth';
+import { useState, useEffect } from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { HiEye, HiEyeOff } from "react-icons/hi";
+import toast from "react-hot-toast";
+import { useAuth } from "../lib/auth";
 
 export default function Register() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    username: '',
-    email: '',
-    whatsappNumber: '',
-    password: '',
-    confirmPassword: '',
+    fullName: "",
+    username: "",
+    email: "",
+    whatsappNumber: "",
+    password: "",
+    confirmPassword: "",
   });
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ export default function Register() {
 
   useEffect(() => {
     if (user) {
-      router.push('/dashboard');
+      router.push("/dashboard");
     }
   }, [user, router]);
 
@@ -36,7 +36,7 @@ export default function Register() {
     });
 
     // Update username for welcome message
-    if (name === 'username') {
+    if (name === "username") {
       setUsername(value);
     }
   };
@@ -46,13 +46,15 @@ export default function Register() {
 
     // Validate WhatsApp number format
     const phoneRegex = /^\+?[1-9]\d{1,14}$/;
-    if (!phoneRegex.test(formData.whatsappNumber.replace(/\s+/g, ''))) {
-      toast.error('Please enter a valid WhatsApp phone number (e.g., +1234567890)');
+    if (!phoneRegex.test(formData.whatsappNumber.replace(/\s+/g, ""))) {
+      toast.error(
+        "Please enter a valid WhatsApp phone number (e.g., +2348087357158)"
+      );
       return;
     }
 
     if (formData.password !== formData.confirmPassword) {
-      toast.error('Passwords do not match');
+      toast.error("Passwords do not match");
       return;
     }
 
@@ -60,11 +62,13 @@ export default function Register() {
     try {
       const result = await register(formData);
       if (result) {
-        toast.success('🎉 Registration successful! Redirecting to dashboard...');
+        toast.success(
+          "🎉 Registration successful! Redirecting to dashboard..."
+        );
       }
     } catch (error) {
       // Error is already handled in the register function
-      console.error('Registration failed:', error);
+      console.error("Registration failed:", error);
     } finally {
       setLoading(false);
     }
@@ -81,10 +85,13 @@ export default function Register() {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10">
           <h1 className="text-4xl font-bold text-white mb-6 transition-opacity duration-500">
-            {username ? `${username}, we're glad to have you here!` : 'Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!'}
+            {username
+              ? `${username}, we're glad to have you here!`
+              : "Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!"}
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Create your account and start deploying bots with ease. Join thousands of developers already using our platform.
+            Create your account and start deploying bots with ease. Join
+            thousands of developers already using our platform.
           </p>
           <div className="space-y-4">
             <div className="w-16 h-16 bg-white/10 rounded-full animate-pulse"></div>
@@ -108,7 +115,9 @@ export default function Register() {
             {/* Mobile welcome message */}
             <div className="lg:hidden mt-4">
               <h3 className="text-xl font-semibold text-white transition-opacity duration-500">
-                {username ? `${username}, we're glad to have you here!` : 'Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!'}
+                {username
+                  ? `${username}, we're glad to have you here!`
+                  : "Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!"}
               </h3>
             </div>
           </div>
@@ -116,7 +125,10 @@ export default function Register() {
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
-                <label htmlFor="fullName" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="fullName"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Full Name
                 </label>
                 <input
@@ -132,7 +144,10 @@ export default function Register() {
               </div>
 
               <div>
-                <label htmlFor="username" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="username"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Username
                 </label>
                 <input
@@ -148,7 +163,10 @@ export default function Register() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -164,7 +182,10 @@ export default function Register() {
               </div>
 
               <div>
-                <label htmlFor="whatsappNumber" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="whatsappNumber"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   WhatsApp Phone Number
                 </label>
                 <input
@@ -180,13 +201,16 @@ export default function Register() {
               </div>
 
               <div className="relative">
-                <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Password
                 </label>
                 <input
                   id="password"
                   name="password"
-                  type={showPassword ? 'text' : 'password'}
+                  type={showPassword ? "text" : "password"}
                   required
                   className="w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   placeholder="Create a password"
@@ -197,20 +221,23 @@ export default function Register() {
                   type="button"
                   className="absolute right-3 top-10 text-gray-400 hover:text-gray-300 focus:outline-none focus:text-gray-300"
                   onClick={() => setShowPassword(!showPassword)}
-                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  aria-label={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
                 </button>
               </div>
 
               <div className="relative">
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="confirmPassword"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Confirm Password
                 </label>
                 <input
                   id="confirmPassword"
                   name="confirmPassword"
-                  type={showConfirmPassword ? 'text' : 'password'}
+                  type={showConfirmPassword ? "text" : "password"}
                   required
                   className="w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   placeholder="Confirm your password"
@@ -221,9 +248,17 @@ export default function Register() {
                   type="button"
                   className="absolute right-3 top-10 text-gray-400 hover:text-gray-300 focus:outline-none focus:text-gray-300"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}
+                  aria-label={
+                    showConfirmPassword
+                      ? "Hide confirm password"
+                      : "Show confirm password"
+                  }
                 >
-                  {showConfirmPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
+                  {showConfirmPassword ? (
+                    <HiEyeOff size={20} />
+                  ) : (
+                    <HiEye size={20} />
+                  )}
                 </button>
               </div>
             </div>
@@ -231,13 +266,18 @@ export default function Register() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
+                loading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             >
               {loading ? "Creating Account..." : "Create Account"}
             </button>
 
             <div className="text-center">
-              <Link href="/login" className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+              <Link
+                href="/login"
+                className="text-purple-400 hover:text-purple-300 transition-colors duration-200"
+              >
                 Already have an account? Sign in here
               </Link>
             </div>
