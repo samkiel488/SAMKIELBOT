@@ -1,5 +1,4 @@
 const express = require("express");
-const next = require("next");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
@@ -10,10 +9,6 @@ const updateRoutes = require("./routes/update");
 const { errorHandler } = require("./utils/errorHandler");
 
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
-
-const dev = process.env.NODE_ENV !== "production";
-const nextApp = next({ dev, dir: path.join(__dirname, "../frontend") });
-const handle = nextApp.getRequestHandler();
 
 const app = express();
 
@@ -34,31 +29,19 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-nextApp
-  .prepare()
-  .then(() => {
-    console.log("Next.js app prepared successfully");
+// Run backend API only (for both dev and production in this setup)
+const server = app.listen(PORT, () => {
+  console.log(`Backend API server running on port ${PORT}`);
+});
 
-    // Handle all other routes with Next.js
-    app.all("*", (req, res) => handle(req, res));
-
-    const server = app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
-
-    // Handle EADDRINUSE error
-    server.on("error", (err) => {
-      if (err.code === "EADDRINUSE") {
-        console.error(
-          `Port ${PORT} is already in use. Please try a different port or free up the port.`
-        );
-        process.exit(1);
-      } else {
-        console.error("Server error:", err);
-      }
-    });
-  })
-  .catch((err) => {
-    console.error("Error preparing Next.js app:", err);
+// Handle EADDRINUSE error
+server.on("error", (err) => {
+  if (err.code === "EADDRINUSE") {
+    console.error(
+      `Port ${PORT} is already in use. Please try a different port or free up the port.`
+    );
     process.exit(1);
-  });
+  } else {
+    console.error("Server error:", err);
+  }
+});

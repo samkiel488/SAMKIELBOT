@@ -1,7 +1,7 @@
-# TODO: Fix Render Deployment ENOENT Error
+# TODO: Fix Render Backend Deployment Issues
 
-- [x] Remove static file serving code from backend/server.js that serves from "../frontend/out".
-- [x] Integrate Next.js server into Express to handle frontend requests dynamically.
-- [x] Ensure API routes under /api prefix still work.
-- [x] Add logging for successful startup of both Express and Next.js.
-- [x] Update production start script if needed.
+## Steps to Complete
+- [x] Edit backend/server.js: Conditionally prepare Next.js only in development mode, run backend API only in production, enhance console logs for server start and mode.
+- [x] Edit backend/config/db.js: Enhance MongoDB connection log with host details.
+- [x] Test the backend in production mode locally.
+- [ ] Deploy to Render and verify no errors.

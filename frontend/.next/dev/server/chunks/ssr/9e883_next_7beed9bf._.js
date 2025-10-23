@@ -5765,7 +5765,7 @@ const routeModule = new __TURBOPACK__imported__module__$5b$project$5d2f$frontend
         filename: ''
     },
     distDir: ("TURBOPACK compile-time value", ".next\\dev") || '',
-    relativeProjectDir: ("TURBOPACK compile-time value", "") || '',
+    relativeProjectDir: ("TURBOPACK compile-time value", "..\\frontend") || '',
     components: {
         // default export might not exist when optimized for data only
         App: __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$pages$2f$_app$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"],
