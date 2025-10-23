@@ -5,7 +5,7 @@ export default function Navbar() {
   const { user, logout } = useAuth();
 
   return (
-    <nav className="bg-gray-900 p-4 shadow-lg">
+    <nav className="bg-gray-900 p-4 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href={user ? "/dashboard" : "/"} className="text-white text-xl font-bold">
           𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋
