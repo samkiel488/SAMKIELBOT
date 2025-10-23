@@ -4,18 +4,14 @@
   "description": "𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 Full-Stack Application",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:server": "cd backend && npm run dev",
-    "dev:client": "cd frontend && npm run dev",
-    "build": "cd frontend && npm run build && cd ../backend && npm run build",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
-    "start:server": "cd backend && npm start",
-    "start:client": "cd frontend && npm start"
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "start": "concurrently \"npm run start --prefix backend\" \"npm run start --prefix frontend\""
   },
   "keywords": ["bot", "deployment", "nextjs", "nodejs"],
   "author": "SAMKIEL",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {
+    "concurrently": "^9.0.0"
   }
 }

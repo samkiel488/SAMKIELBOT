@@ -1,6 +1,13 @@
-# TODO: Add Navbar to Login and Register Screens
+# TODO: Prepare SAMKIEL BOT for Production Deployment on Render
 
-## Steps to Complete:
-- [ ] Modify frontend/components/Layout.js to include the Navbar on all pages, including login and register.
-- [ ] Update frontend/components/Navbar.js to add sticky positioning (sticky top-0 z-50).
-- [ ] Test the changes by running the app and verifying the navbar appears on login and register pages with sticky behavior.
+## Tasks
+- [x] Create .env.example at root with environment variables
+- [x] Update root package.json: scripts and add concurrently ^9.0.0
+- [x] Update backend/server.js to serve frontend in production
+- [x] Update frontend/next.config.js with production settings
+
+## Followup Steps
+- [x] Run npm install at root to update dependencies
+- [ ] Verify build process: npm run build
+- [ ] Test production start: npm run start
+- [ ] Ensure environment variables are set in Render dashboard
