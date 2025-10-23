@@ -41,7 +41,6 @@ export default function Login() {
     setLoading(true);
     try {
       await login(formData.identifier, formData.password);
-      toast.success('Login successful! Redirecting to dashboard...');
     } catch (error) {
       const err = JSON.parse(error.message);
       toast.error(err.message || 'Login failed');
