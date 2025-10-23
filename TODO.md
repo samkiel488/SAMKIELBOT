@@ -1,11 +1,7 @@
-# TODO: Fix Render Deployment Build Error for TailwindCSS
+# TODO: Fix Render Backend Deployment Issues
 
-## Tasks
-- [x] Move `tailwindcss`, `autoprefixer`, and `postcss` from devDependencies to dependencies in `frontend/package.json`
-- [x] Update root `package.json` build script to install frontend dependencies first
-- [x] Ensure `.gitignore` does not exclude `frontend/node_modules` (not excluded)
-- [x] Verify `tailwind.config.js` and `postcss.config.js` are properly configured (both exist and configured for Next.js)
-- [x] Confirm `@tailwind` imports in `frontend/styles/globals.css` (present)
-- [x] Log TailwindCSS version (3.4.18)
-- [x] Test build locally if possible (build started successfully)
-- [x] Push changes to GitHub for Render rebuild (build completed successfully locally)
+- [x] Remove duplicate `userSchema.index()` calls in `backend/models/User.js` to eliminate index warnings, keeping only `unique: true` in schema.
+- [x] Add try-catch around `app.listen()` in `backend/server.js` to handle EADDRINUSE errors gracefully.
+- [x] Update root `package.json` "start" script to run only backend: `"start": "npm run start --prefix backend"`.
+- [x] Fix MongoDB connection log in `backend/config/db.js` to "MongoDB Connected".
+- [x] Ensure clear console logs for server start and MongoDB connection in `backend/server.js` and `backend/config/db.js`.

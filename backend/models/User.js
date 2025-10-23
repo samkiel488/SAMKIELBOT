@@ -29,11 +29,6 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// ✅ Ensure unique indexes are built
-userSchema.index({ email: 1 }, { unique: true });
-userSchema.index({ username: 1 }, { unique: true });
-userSchema.index({ whatsappNumber: 1 }, { unique: true });
-
 // Password encryption
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
