@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { HiEye, HiEyeOff } from 'react-icons/hi';
+import toast from 'react-hot-toast';
 import { useAuth } from '../lib/auth';
 
 export default function Login() {
@@ -12,6 +13,7 @@ export default function Login() {
   });
   const [username, setUsername] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
   const { login, user } = useAuth();
   const router = useRouter();
 
@@ -36,12 +38,15 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       await login(formData.identifier, formData.password);
       toast.success('Login successful! Redirecting to dashboard...');
     } catch (error) {
       const err = JSON.parse(error.message);
       toast.error(err.message || 'Login failed');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -133,9 +138,10 @@ export default function Login() {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              disabled={loading}
+              className={`w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
-              Sign In
+              {loading ? "Signing In..." : "Sign In"}
             </button>
 
             <div className="text-center">

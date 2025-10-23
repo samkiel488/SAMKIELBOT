@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { HiEye, HiEyeOff } from 'react-icons/hi';
+import toast from 'react-hot-toast';
 import { useAuth } from '../lib/auth';
 
 export default function Register() {
@@ -17,6 +18,7 @@ export default function Register() {
   const [username, setUsername] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
   const { register, user } = useAuth();
   const router = useRouter();
 
@@ -47,6 +49,7 @@ export default function Register() {
       return;
     }
 
+    setLoading(true);
     try {
       await register(formData);
       toast.success('🎉 Registration successful! Redirecting to dashboard...');
@@ -70,6 +73,8 @@ export default function Register() {
           toast.error(err?.message || 'Something went wrong. Please try again.');
           break;
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -233,9 +238,10 @@ export default function Register() {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              disabled={loading}
+              className={`w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
-              Create Account
+              {loading ? "Creating Account..." : "Create Account"}
             </button>
 
             <div className="text-center">

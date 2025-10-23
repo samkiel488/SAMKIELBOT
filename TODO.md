@@ -1,28 +1,24 @@
-# TODO for Building 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 Full-Stack App
+# TODO: Fix and Enhance SAMKIEL BOT Authentication System
 
-- [x] Create root package.json with scripts
-- [x] Create .env file
-- [x] Create README.md
-- [x] Create backend/ directory structure
-  - [x] server.js
-  - [x] routes/auth.js, deploy.js, update.js
-  - [x] models/User.js, Deployment.js
-  - [x] controllers/authController.js, deployController.js, updateController.js
-  - [x] config/db.js
-  - [x] utils/errorHandler.js, response.js, logger.js
-  - [x] backend/package.json
-- [x] Create frontend/ directory structure
-  - [x] pages/index.js, dashboard.js, login.js, register.js
-  - [x] components/Navbar.js, Footer.js, BotCard.js, DeployModal.js
-  - [x] lib/api.js
-  - [x] styles/globals.css
-  - [x] next.config.js, tailwind.config.js, postcss.config.js
-  - [x] frontend/package.json
-- [x] Install dependencies in root, backend, frontend
-- [x] Fix backend registration error handling
-- [x] Fix frontend registration error display
-- [x] Add global navbar to _app.js
-- [x] Improve auth context with better error handling and logging
-- [x] Fix API interceptor to not logout on login/register 401
-- [x] Remove duplicate navbar from index.js
-- [x] Test running the app with npm run dev
+## 1. Fix React Hot Toast Reference Error
+- [x] Import `toast` from "react-hot-toast" in `frontend/pages/register.js`
+- [x] Import `toast` from "react-hot-toast" in `frontend/pages/login.js`
+- [x] Verify `react-hot-toast` is installed (already in package.json)
+- [x] Ensure `<Toaster />` is in `frontend/pages/_app.js` (already present)
+
+## 2. Fix Auto-Logout After Login
+- [x] Install `jwt-decode` package in frontend
+- [x] Update `frontend/lib/auth.js` useEffect to use `jwt-decode` for client-side token validation
+- [x] Ensure token is saved before any validation or redirect in login/register functions (already done)
+- [x] Verify backend returns JWT with `exp` claim (confirmed in authController.js)
+
+## 3. Add Loading States for Auth Actions
+- [x] Add loading state in `frontend/pages/register.js` for form submission
+- [x] Add loading state in `frontend/pages/login.js` for form submission
+- [x] Update button text and disable during loading
+- [x] Add visual feedback (dim button, cursor-not-allowed)
+
+## 4. Final Testing Checklist
+- [ ] Test registration: No toast error, success/error toasts, loading state
+- [ ] Test login: Loading state, stays logged in after redirect, no immediate logout
+- [ ] Test token persistence across refresh
