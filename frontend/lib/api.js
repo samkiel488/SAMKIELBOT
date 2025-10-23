@@ -7,20 +7,36 @@ const api = axios.create({
 });
 
 // Add token to requests
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+      console.log("🟢 Attached token to request:", config.url);
+    } else {
+      console.warn("⚠️ No token found for request:", config.url);
+    }
+    return config;
+  },
+  (error) => {
+    console.error("❌ Request error:", error);
+    return Promise.reject(error);
   }
-  return config;
-});
+);
 
 // Handle response errors
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    // Only logout on 401 if it's not a login/register request
-    if (error.response?.status === 401 && !error.config.url.includes('/auth/login') && !error.config.url.includes('/auth/register')) {
+    console.error("🚨 Response error:", error.response?.status, error.response?.data);
+    // Only logout on 401 if it's not a login/register request and not the verify endpoint
+    if (
+      error.response?.status === 401 &&
+      !error.config.url.includes('/auth/login') &&
+      !error.config.url.includes('/auth/register') &&
+      !error.config.url.includes('/auth/verify')
+    ) {
+      console.warn("🔴 Unauthorized (401). Clearing session...");
       localStorage.removeItem('token');
       localStorage.removeItem('user');
       window.location.href = '/login';
