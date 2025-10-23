@@ -24,6 +24,13 @@ api.interceptors.response.use(
       localStorage.removeItem('user');
       window.location.href = '/login';
     }
+    // Show toast for network errors
+    if (!error.response) {
+      // Network error - show toast
+      if (typeof window !== 'undefined' && window.toast) {
+        window.toast.error('Could not connect to the server. Please check your connection.');
+      }
+    }
     return Promise.reject(error);
   }
 );
