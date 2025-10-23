@@ -1,13 +1,14 @@
 import '../styles/globals.css';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from '../lib/auth';
-import Navbar from '../components/Navbar';
+import Layout from '../components/Layout';
 
 export default function App({ Component, pageProps }) {
   return (
     <AuthProvider>
-      <Navbar />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
       <Toaster
         position="top-right"
         toastOptions={{
