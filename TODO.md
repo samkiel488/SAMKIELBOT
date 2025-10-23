@@ -8,6 +8,6 @@
 
 ## Followup Steps
 - [x] Run npm install at root to update dependencies
-- [ ] Verify build process: npm run build
-- [ ] Test production start: npm run start
+- [x] Verify build process: npm run build
+- [x] Test production start: npm run start
 - [ ] Ensure environment variables are set in Render dashboard
