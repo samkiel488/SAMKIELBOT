@@ -49,8 +49,27 @@ export default function Register() {
 
     try {
       await register(formData);
+      toast.success('🎉 Registration successful! Redirecting to dashboard...');
     } catch (error) {
-      toast.error(error.response?.data?.message || 'Registration failed');
+      const err = error.response?.data;
+
+      switch (err?.code) {
+        case 'username_exists':
+          toast.error('This username is already taken. Try another one.');
+          break;
+        case 'email_exists':
+          toast.error('An account with this email already exists.');
+          break;
+        case 'whatsappNumber_exists':
+          toast.error('This WhatsApp number is already linked to another account.');
+          break;
+        case 'validation_error':
+          toast.error(`Validation error: ${err.message}`);
+          break;
+        default:
+          toast.error(err?.message || 'Something went wrong. Please try again.');
+          break;
+      }
     }
   };
 
