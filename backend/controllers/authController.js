@@ -21,6 +21,27 @@ const register = async (req, res) => {
       return errorResponse(res, 'All fields are required', 400);
     }
 
+    // Additional backend validation for uniqueness (pre-check before MongoDB)
+    const existingUser = await User.findOne({
+      $or: [
+        { email: email.toLowerCase().trim() },
+        { username: username.toLowerCase().trim() },
+        { whatsappNumber: whatsappNumber.trim() }
+      ]
+    });
+
+    if (existingUser) {
+      if (existingUser.email === email.toLowerCase().trim()) {
+        return errorResponse(res, 'Email already exists.', 400, 'email_exists');
+      }
+      if (existingUser.username === username.toLowerCase().trim()) {
+        return errorResponse(res, 'Username already exists.', 400, 'username_exists');
+      }
+      if (existingUser.whatsappNumber === whatsappNumber.trim()) {
+        return errorResponse(res, 'WhatsApp number already exists.', 400, 'whatsappNumber_exists');
+      }
+    }
+
     // Create user
     const user = await User.create({
       fullName,
@@ -43,7 +64,7 @@ const register = async (req, res) => {
       errorResponse(res, 'Invalid user data', 400);
     }
   } catch (error) {
-    // Handle duplicate key errors
+    // Handle duplicate key errors (fallback)
     if (error.code === 11000) {
       const field = Object.keys(error.keyValue)[0];
       return errorResponse(res, `${field.charAt(0).toUpperCase() + field.slice(1)} already exists.`, 400, `${field}_exists`);
