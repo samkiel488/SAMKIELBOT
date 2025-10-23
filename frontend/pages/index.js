@@ -20,15 +20,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Navbar */}
-      <header className="flex justify-between items-center px-6 py-4 border-b border-gray-700">
-        <h1 className="text-2xl font-bold tracking-wide">𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋</h1>
-        <nav className="space-x-6 text-gray-300">
-          <Link href="/" className="hover:text-white transition">Home</Link>
-          <Link href="/login" className="hover:text-white transition">Login</Link>
-          <Link href="/register" className="hover:text-white transition">Register</Link>
-        </nav>
-      </header>
 
       {/* Hero Section */}
       <main className="flex flex-1 flex-col justify-center items-center text-center px-6 py-12">
@@ -50,14 +41,14 @@ export default function Home() {
       <footer className="border-t border-gray-700 py-6 text-center text-gray-400 text-sm">
         <p>© {new Date().getFullYear()} 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋. All rights reserved.</p>
         <p className="mt-2">
-          Made with <span className="text-red-500">❤</span> by{" "}
+          Made with  ❤ by{" "}
           <a
             href="https://samkiel.dev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400 hover:underline"
-          >
-            Samkiel
+          >SAMKIEL
+            
           </a>
         </p>
       </footer>
