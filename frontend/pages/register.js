@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { HiEye, HiEyeOff } from 'react-icons/hi';
 import { useAuth } from '../lib/auth';
 
 export default function Register() {
@@ -14,6 +15,8 @@ export default function Register() {
     confirmPassword: '',
   });
   const [username, setUsername] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const { register, user } = useAuth();
   const router = useRouter();
 
@@ -61,7 +64,7 @@ export default function Register() {
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 p-12 flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10">
-          <h1 className="text-4xl font-bold text-white mb-6 animate-fade-in">
+          <h1 className="text-4xl font-bold text-white mb-6 transition-opacity duration-500">
             {username ? `${username}, we're glad to have you here!` : 'Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!'}
           </h1>
           <p className="text-xl text-gray-300 mb-8">
@@ -86,6 +89,12 @@ export default function Register() {
               Create your account
             </h2>
             <p className="text-gray-400">Fill in your details to get started</p>
+            {/* Mobile welcome message */}
+            <div className="lg:hidden mt-4">
+              <h3 className="text-xl font-semibold text-white transition-opacity duration-500">
+                {username ? `${username}, we're glad to have you here!` : 'Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!'}
+              </h3>
+            </div>
           </div>
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -154,36 +163,52 @@ export default function Register() {
                 />
               </div>
 
-              <div>
+              <div className="relative">
                 <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
                   Password
                 </label>
                 <input
                   id="password"
                   name="password"
-                  type="password"
+                  type={showPassword ? 'text' : 'password'}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   placeholder="Create a password"
                   value={formData.password}
                   onChange={handleChange}
                 />
+                <button
+                  type="button"
+                  className="absolute right-3 top-10 text-gray-400 hover:text-gray-300 focus:outline-none focus:text-gray-300"
+                  onClick={() => setShowPassword(!showPassword)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                >
+                  {showPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
+                </button>
               </div>
 
-              <div>
+              <div className="relative">
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-300 mb-2">
                   Confirm Password
                 </label>
                 <input
                   id="confirmPassword"
                   name="confirmPassword"
-                  type="password"
+                  type={showConfirmPassword ? 'text' : 'password'}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   placeholder="Confirm your password"
                   value={formData.confirmPassword}
                   onChange={handleChange}
                 />
+                <button
+                  type="button"
+                  className="absolute right-3 top-10 text-gray-400 hover:text-gray-300 focus:outline-none focus:text-gray-300"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}
+                >
+                  {showConfirmPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
+                </button>
               </div>
             </div>
 
