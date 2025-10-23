@@ -1,19 +1,30 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BotCard from '../components/BotCard';
 import DeployModal from '../components/DeployModal';
 import { getDeployments } from '../lib/api';
+import { useAuth } from '../lib/auth';
 
 export default function Dashboard() {
   const [deployments, setDeployments] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(true);
+  const { user, loading: authLoading } = useAuth();
+  const router = useRouter();
 
   useEffect(() => {
-    fetchDeployments();
-  }, []);
+    if (!authLoading && !user) {
+      router.push('/login');
+      return;
+    }
+
+    if (user) {
+      fetchDeployments();
+    }
+  }, [user, authLoading, router]);
 
   const fetchDeployments = async () => {
     try {
@@ -35,6 +46,18 @@ export default function Dashboard() {
     fetchDeployments(); // Refresh deployments after deploy
   };
 
+  if (authLoading) {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Head>
@@ -43,24 +66,49 @@ export default function Dashboard() {
 
       <Navbar />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-16">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Dashboard</h1>
+          <div>
+            <h1 className="text-4xl font-bold mb-2">Welcome back, {user.fullName}!</h1>
+            <p className="text-gray-400">Manage your bot deployments and monitor their performance.</p>
+          </div>
           <button
             onClick={handleDeploy}
-            className="bg-green-600 hover:bg-green-700 px-6 py-2 rounded-lg font-semibold"
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
           >
             Deploy New Bot
           </button>
         </div>
 
         {loading ? (
-          <div className="text-center">Loading...</div>
+          <div className="text-center py-16">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto"></div>
+            <p className="mt-4 text-gray-400">Loading deployments...</p>
+          </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {deployments.map((deployment) => (
               <BotCard key={deployment._id} deployment={deployment} />
             ))}
+            {deployments.length === 0 && (
+              <div className="col-span-full text-center py-16">
+                <div className="bg-gray-800 rounded-lg p-8 max-w-md mx-auto">
+                  <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">No deployments yet</h3>
+                  <p className="text-gray-400 mb-4">Create your first bot deployment to get started!</p>
+                  <button
+                    onClick={handleDeploy}
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-2 rounded-lg font-semibold transition-all duration-200"
+                  >
+                    Deploy Your First Bot
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </main>
