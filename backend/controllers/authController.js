@@ -53,15 +53,19 @@ const register = async (req, res) => {
 // @access  Public
 const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { identifier, password } = req.body; // identifier can be email or username
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({
+      $or: [{ email: identifier }, { username: identifier }]
+    });
 
     if (user && (await user.matchPassword(password))) {
       successResponse(res, {
         _id: user._id,
+        fullName: user.fullName,
         username: user.username,
         email: user.email,
+        whatsappNumber: user.whatsappNumber,
         token: generateToken(user._id),
       });
     } else {
