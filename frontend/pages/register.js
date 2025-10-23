@@ -44,12 +44,10 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate WhatsApp number format
-    const phoneRegex = /^\+?[1-9]\d{1,14}$/;
-    if (!phoneRegex.test(formData.whatsappNumber.replace(/\s+/g, ""))) {
-      toast.error(
-        "Please enter a valid WhatsApp phone number (e.g., +2348087357158)"
-      );
+    // ✅ WhatsApp number validation
+    const phoneRegex = /^\+?\d{8,15}$/;
+    if (!phoneRegex.test(formData.whatsappNumber)) {
+      toast.error("Please enter a valid WhatsApp number (digits only, 8–15 characters).");
       return;
     }
 
@@ -63,7 +61,7 @@ export default function Register() {
       const result = await register(formData);
       if (result) {
         toast.success(
-          "🎉 Registration successful! Redirecting to dashboard..."
+          `🎉 Registration successful! Welcome ${result.username}`
         );
       }
     } catch (error) {
@@ -196,7 +194,14 @@ export default function Register() {
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   placeholder="+2348087357158"
                   value={formData.whatsappNumber}
-                  onChange={handleChange}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (!/^[\d+]*$/.test(value)) {
+                      toast.error("Only numbers and '+' are allowed in WhatsApp number.");
+                      return;
+                    }
+                    handleChange(e);
+                  }}
                 />
               </div>
 
