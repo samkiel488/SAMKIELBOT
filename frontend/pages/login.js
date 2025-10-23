@@ -38,8 +38,10 @@ export default function Login() {
     e.preventDefault();
     try {
       await login(formData.identifier, formData.password);
+      toast.success('Login successful! Redirecting to dashboard...');
     } catch (error) {
-      // Error is handled in auth context
+      const err = JSON.parse(error.message);
+      toast.error(err.message || 'Login failed');
     }
   };
 
