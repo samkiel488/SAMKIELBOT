@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -10,8 +9,6 @@ export default function Home() {
         <meta name="description" content="Deploy and manage your bots" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Navbar />
 
       <main className="container mx-auto px-4 py-16">
         <div className="text-center">

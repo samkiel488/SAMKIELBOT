@@ -5,10 +5,11 @@ const successResponse = (res, data, statusCode = 200) => {
   });
 };
 
-const errorResponse = (res, message, statusCode = 500) => {
+const errorResponse = (res, message, statusCode = 500, code = 'general_error') => {
   res.status(statusCode).json({
     success: false,
-    error: message,
+    code,
+    message,
   });
 };
 

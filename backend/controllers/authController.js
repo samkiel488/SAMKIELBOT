@@ -46,14 +46,14 @@ const register = async (req, res) => {
     // Handle duplicate key errors
     if (error.code === 11000) {
       const field = Object.keys(error.keyValue)[0];
-      return errorResponse(res, `${field.charAt(0).toUpperCase() + field.slice(1)} already exists`, 400);
+      return errorResponse(res, `${field.charAt(0).toUpperCase() + field.slice(1)} already exists.`, 400, `${field}_exists`);
     }
     // Handle validation errors
     if (error.name === 'ValidationError') {
       const messages = Object.values(error.errors).map(err => err.message);
-      return errorResponse(res, messages.join(', '), 400);
+      return errorResponse(res, messages.join(', '), 400, 'validation_error');
     }
-    errorResponse(res, error.message, 500);
+    errorResponse(res, 'Registration failed. Please try again.', 500, 'general_error');
   }
 };
 

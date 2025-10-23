@@ -19,4 +19,10 @@
   - [x] next.config.js, tailwind.config.js, postcss.config.js
   - [x] frontend/package.json
 - [x] Install dependencies in root, backend, frontend
+- [x] Fix backend registration error handling
+- [x] Fix frontend registration error display
+- [x] Add global navbar to _app.js
+- [x] Improve auth context with better error handling and logging
+- [x] Fix API interceptor to not logout on login/register 401
+- [x] Remove duplicate navbar from index.js
 - [x] Test running the app with npm run dev
