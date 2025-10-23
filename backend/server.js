@@ -1,4 +1,5 @@
 const express = require("express");
+const next = require("next");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
@@ -9,6 +10,10 @@ const updateRoutes = require("./routes/update");
 const { errorHandler } = require("./utils/errorHandler");
 
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
+
+const dev = process.env.NODE_ENV !== "production";
+const nextApp = next({ dev, dir: path.join(__dirname, "../frontend") });
+const handle = nextApp.getRequestHandler();
 
 const app = express();
 
@@ -24,32 +29,36 @@ app.use("/api/auth", authRoutes);
 app.use("/api/deploy", deployRoutes);
 app.use("/api/update", updateRoutes);
 
-/* // Serve frontend build in production
-if (process.env.NODE_ENV === "production") {
-  const frontendPath = path.join(__dirname, "../frontend/out");
-  app.use(express.static(frontendPath));
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(frontendPath, "index.html"))
-  );
-} */
-
 // Error handling middleware
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-const server = app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+nextApp
+  .prepare()
+  .then(() => {
+    console.log("Next.js app prepared successfully");
 
-// Handle EADDRINUSE error
-server.on("error", (err) => {
-  if (err.code === "EADDRINUSE") {
-    console.error(
-      `Port ${PORT} is already in use. Please try a different port or free up the port.`
-    );
+    // Handle all other routes with Next.js
+    app.all("*", (req, res) => handle(req, res));
+
+    const server = app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+
+    // Handle EADDRINUSE error
+    server.on("error", (err) => {
+      if (err.code === "EADDRINUSE") {
+        console.error(
+          `Port ${PORT} is already in use. Please try a different port or free up the port.`
+        );
+        process.exit(1);
+      } else {
+        console.error("Server error:", err);
+      }
+    });
+  })
+  .catch((err) => {
+    console.error("Error preparing Next.js app:", err);
     process.exit(1);
-  } else {
-    console.error("Server error:", err);
-  }
-});
+  });
