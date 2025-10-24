@@ -7,7 +7,7 @@ SAMKIEL BOT is a full-stack web application designed for deploying and managing 
 - User authentication (registration and login) with JWT tokens
 - Bot deployment via API with status tracking (pending, running, stopped, failed)
 - Bot version updates from GitHub (simulated)
-- Dashboard for viewing and managing deployed bots
+- Dashboard for viewing and managing deployed bots 
 - Dark theme UI built with Tailwind CSS
 - Responsive design for various screen sizes
 
