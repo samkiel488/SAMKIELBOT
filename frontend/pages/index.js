@@ -172,7 +172,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div {...slideIn} className="text-center">
               <Image
-                src="/bot-menu-preview.jpg"
+                src="/bot-menu-preview2.jpg"
                 alt="Bot Command Menu"
                 width={500}
                 height={300}

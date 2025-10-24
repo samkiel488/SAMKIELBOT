@@ -288,3 +288,19 @@ Debug info:
 [00:25:51.850] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [00:25:53.434] Browser WARN    Image with src "/bot-menu-preview.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [00:25:53.434] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:26:34.135] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/bot-menu-preview2.jpg" "received" null
+[00:26:34.145] Server  LOG      ✓ Compiled in 206ms
+[00:26:46.553] Browser LOG     ⚙️ AuthProvider initialized...
+[00:26:46.553] Browser LOG     ℹ️ No token found in storage.
+[00:26:46.553] Browser LOG     ⚙️ AuthProvider initialized...
+[00:26:46.553] Browser LOG     ℹ️ No token found in storage.
+[00:26:46.678] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:26:46.679] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/bot-menu-preview2.jpg" "received" null
+[00:26:47.195] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:27:12.938] Browser LOG     ⚙️ AuthProvider initialized...
+[00:27:12.938] Browser LOG     ℹ️ No token found in storage.
+[00:27:12.938] Browser LOG     ⚙️ AuthProvider initialized...
+[00:27:12.938] Browser LOG     ℹ️ No token found in storage.
+[00:27:12.938] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:27:15.774] Browser WARN    Image with src "/bot-menu-preview2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:27:15.774] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
