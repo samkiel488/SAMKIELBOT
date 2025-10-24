@@ -11,7 +11,7 @@ const { errorHandler } = require("./utils/errorHandler");
 
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
-const dev = process.env.NODE_ENV !== "development";
+const dev = process.env.NODE_ENV !== "production";
 const nextApp = next({ dev, dir: path.join(__dirname, "../frontend") });
 const handle = nextApp.getRequestHandler();
 
