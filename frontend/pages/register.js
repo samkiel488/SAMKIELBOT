@@ -47,7 +47,9 @@ export default function Register() {
     // ✅ WhatsApp number validation
     const phoneRegex = /^\+?\d{8,15}$/;
     if (!phoneRegex.test(formData.whatsappNumber)) {
-      toast.error("Please enter a valid WhatsApp number (digits only, 8–15 characters).");
+      toast.error(
+        "Please enter a valid WhatsApp number (digits only, 8–15 characters)."
+      );
       return;
     }
 
@@ -60,9 +62,7 @@ export default function Register() {
     try {
       const result = await register(formData);
       if (result) {
-        toast.success(
-          `🎉 Registration successful! Welcome ${result.username}`
-        );
+        toast.success(`🎉 Registration successful! Welcome ${result.username}`);
       }
     } catch (error) {
       // Error is already handled in the register function
@@ -73,13 +73,10 @@ export default function Register() {
   };
 
   return (
-
-    
     <div className="min-h-screen flex">
       <Head>
         <title>Register - 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋</title>
       </Head>
-      
 
       {/* Left side - Welcome section */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 p-12 flex-col justify-center relative overflow-hidden">
@@ -200,7 +197,9 @@ export default function Register() {
                   onChange={(e) => {
                     const value = e.target.value;
                     if (!/^[\d+]*$/.test(value)) {
-                      toast.error("Only numbers and '+' are allowed in WhatsApp number.");
+                      toast.error(
+                        "Na Only valid WhatsApp numbers dey allowed."
+                      );
                       return;
                     }
                     handleChange(e);
