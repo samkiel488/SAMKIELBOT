@@ -26,7 +26,7 @@ app.use("/api/update", updateRoutes);
 
 // Serve frontend build in production
 if (process.env.NODE_ENV === "production") {
-  const frontendPath = path.join(__dirname, "../frontend/out");
+  const frontendPath = path.join(__dirname, "../frontend/.next");
   app.use(express.static(frontendPath));
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(frontendPath, "index.html"))
