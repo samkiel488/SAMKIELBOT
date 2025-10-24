@@ -14,3 +14,277 @@
 [00:04:30.003] Browser LOG     ⚙️ AuthProvider initialized...
 [00:04:30.003] Browser LOG     ℹ️ No token found in storage.
 [00:04:30.003] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:12:40.258] Server  LOG      ✓ Compiled in 457ms
+[00:12:41.578] Browser LOG     Refreshing page data due to server-side change
+[00:16:31.389] Server  LOG      ✓ Compiled in 155ms
+[00:16:31.917] Browser LOG     Refreshing page data due to server-side change
+[00:16:31.917] Browser ERROR   ./pages/index.js:275:1
+Parsing ecmascript source code failed
+  273 |     </div>
+  274 |   );
+> 275 | }
+      | ^
+  276 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:16:31.918] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:16:49.347] Browser ERROR   ./pages/index.js:274:1
+Parsing ecmascript source code failed
+  272 |     </div>
+  273 |   );
+> 274 | }
+      | ^
+  275 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:16:49.347] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:16:51.925] Browser ERROR   ./pages/index.js:274:1
+Parsing ecmascript source code failed
+  272 |     </div>
+  273 |   );
+> 274 | }
+      | ^
+  275 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:16:51.925] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:16:53.365] Browser ERROR   uncaughtError: Error: ./pages/index.js:274:1
+Parsing ecmascript source code failed
+  272 |     </div>
+  273 |   );
+> 274 | }
+      | ^
+  275 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+[00:16:53.575] Browser ERROR   ./pages/index.js:274:1
+Parsing ecmascript source code failed
+  272 |     </div>
+  273 |   );
+> 274 | }
+      | ^
+  275 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:16:53.575] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:16:53.673] Browser ERROR   ./pages/index.js:274:1
+Parsing ecmascript source code failed
+  272 |     </div>
+  273 |   );
+> 274 | }
+      | ^
+  275 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:16:53.673] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:17:01.918] Browser ERROR   ./pages/index.js:274:1
+Parsing ecmascript source code failed
+  272 |     </div>
+  273 |   );
+> 274 | }
+      | ^
+  275 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:17:01.918] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:17:15.818] Browser ERROR   ./pages/index.js:274:1
+Parsing ecmascript source code failed
+  272 |     </div>
+  273 |   );
+> 274 | }
+      | ^
+  275 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:17:15.818] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:18:20.920] Browser ERROR   ./pages/index.js:274:1
+Parsing ecmascript source code failed
+  272 |     </div>
+  273 |   );
+> 274 | }
+      | ^
+  275 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:18:20.920] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:18:24.340] Browser ERROR   uncaughtError: Error: ./pages/index.js:273:1
+Parsing ecmascript source code failed
+  271 |     </div>
+  272 |   );
+> 273 | }
+      | ^
+  274 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+[00:18:24.576] Browser ERROR   ./pages/index.js:273:1
+Parsing ecmascript source code failed
+  271 |     </div>
+  272 |   );
+> 273 | }
+      | ^
+  274 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:18:24.576] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:18:24.576] Browser ERROR   ./pages/index.js:273:1
+Parsing ecmascript source code failed
+  271 |     </div>
+  272 |   );
+> 273 | }
+      | ^
+  274 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:18:24.576] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:18:31.318] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:31.391] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:31.555] Server  LOG      ✓ Compiled in 406ms
+[00:18:33.055] Browser LOG     ⚙️ AuthProvider initialized...
+[00:18:33.055] Browser LOG     ℹ️ No token found in storage.
+[00:18:33.055] Browser LOG     ⚙️ AuthProvider initialized...
+[00:18:33.055] Browser LOG     ℹ️ No token found in storage.
+[00:18:33.268] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:18:34.547] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/bot-menu-preview.jpg" "received" null
+[00:18:34.601] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/viewonce-demo.jpg" "received" null
+[00:20:00.665] Browser LOG     ⚙️ AuthProvider initialized...
+[00:20:00.665] Browser LOG     ℹ️ No token found in storage.
+[00:20:00.665] Browser LOG     ⚙️ AuthProvider initialized...
+[00:20:00.665] Browser LOG     ℹ️ No token found in storage.
+[00:20:00.665] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:20:01.690] Browser WARN    Image with src "/bot-menu-preview.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:20:01.789] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/viewonce-demo.jpg" "received" null
+[00:24:31.417] Browser LOG     ⚙️ AuthProvider initialized...
+[00:24:31.417] Browser LOG     ℹ️ No token found in storage.
+[00:24:31.417] Browser LOG     ⚙️ AuthProvider initialized...
+[00:24:31.417] Browser LOG     ℹ️ No token found in storage.
+[00:24:31.417] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:24:32.231] Browser WARN    Image with src "/bot-menu-preview.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:24:32.296] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/viewonce-demo.jpg" "received" null
+[00:24:40.591] Browser LOG     ⚙️ AuthProvider initialized...
+[00:24:40.591] Browser LOG     ℹ️ No token found in storage.
+[00:24:40.591] Browser LOG     ⚙️ AuthProvider initialized...
+[00:24:40.591] Browser LOG     ℹ️ No token found in storage.
+[00:24:40.591] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:24:59.329] Browser WARN    Image with src "/bot-menu-preview.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:24:59.636] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:25:51.850] Browser LOG     ⚙️ AuthProvider initialized...
+[00:25:51.850] Browser LOG     ℹ️ No token found in storage.
+[00:25:51.850] Browser LOG     ⚙️ AuthProvider initialized...
+[00:25:51.850] Browser LOG     ℹ️ No token found in storage.
+[00:25:51.850] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:25:53.434] Browser WARN    Image with src "/bot-menu-preview.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:25:53.434] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

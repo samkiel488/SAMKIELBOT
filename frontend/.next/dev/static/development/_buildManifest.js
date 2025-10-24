@@ -5,6 +5,9 @@ self.__BUILD_MANIFEST = {
   "/_error": [
     "static/chunks/pages/_error.js"
   ],
+  "/login": [
+    "static/chunks/pages/login.js"
+  ],
   "/register": [
     "static/chunks/pages/register.js"
   ],
