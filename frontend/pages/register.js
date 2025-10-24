@@ -48,7 +48,7 @@ export default function Register() {
     const phoneRegex = /^\+?\d{8,15}$/;
     if (!phoneRegex.test(formData.whatsappNumber)) {
       toast.error(
-        "Please enter a valid WhatsApp number (digits only, 8–15 characters)."
+        "Abeg enter valid WhatsApp number (only digits, 8–15 characters)."
       );
       return;
     }

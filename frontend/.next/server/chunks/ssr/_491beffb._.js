@@ -41,7 +41,7 @@ module.exports = [
             w = async (b) => {
               if ((b.preventDefault(), !/^\+?\d{8,15}$/.test(a.whatsappNumber)))
                 return void j.default.error(
-                  "Please enter a valid WhatsApp number (digits only, 8–15 characters)."
+                  "Abeg enter valid WhatsApp number (only digits, 8–15 characters)."
                 );
               if (a.password !== a.confirmPassword)
                 return void j.default.error("Passwords do not match");

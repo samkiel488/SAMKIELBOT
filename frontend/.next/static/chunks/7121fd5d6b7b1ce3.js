@@ -36,7 +36,7 @@
         j = async (a) => {
           if ((a.preventDefault(), !/^\+?\d{8,15}$/.test(e.whatsappNumber)))
             return void n.default.error(
-              "Please enter a valid WhatsApp number (digits only, 8–15 characters)."
+              "Abeg enter valid WhatsApp number (only digits, 8–15 characters)."
             );
           if (e.password !== e.confirmPassword)
             return void n.default.error("Passwords do not match");
