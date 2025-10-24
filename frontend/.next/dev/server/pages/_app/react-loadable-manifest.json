@@ -1,9 +1,9 @@
 {
-  "[project]/frontend/lib/auth.js [client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/frontend/lib/auth.js [client] (ecmascript, next/dynamic entry)",
+  "[project]/lib/auth.js [client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/lib/auth.js [client] (ecmascript, next/dynamic entry)",
     "files": [
-      "static/chunks/frontend_lib_auth_2caec73d.js",
-      "static/chunks/frontend_lib_auth_6a4dbfa2.js"
+      "static/chunks/lib_auth_f0730842.js",
+      "static/chunks/lib_auth_9e7b1b65.js"
     ]
   }
 }
