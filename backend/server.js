@@ -24,22 +24,14 @@ app.use("/api/auth", authRoutes);
 app.use("/api/deploy", deployRoutes);
 app.use("/api/update", updateRoutes);
 
-/* // Serve frontend build in production
-if (process.env.NODE_ENV === "production") {
-  const frontendPath = path.join(__dirname, "../frontend/out");
-  app.use(express.static(frontendPath));
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(frontendPath, "index.html"))
-  );
-} */
-
 // Error handling middleware
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
+// Run backend API only (for both dev and production in this setup)
 const server = app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Backend API server running on port ${PORT}`);
 });
 
 // Handle EADDRINUSE error
