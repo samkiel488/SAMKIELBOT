@@ -1,4 +1,9 @@
 {
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
   "pages": {
     "/_app": [
       "static/chunks/lib_auth_60524763.js",
@@ -17,11 +22,5 @@
       "static/chunks/turbopack-pages__app_440cd825._.js"
     ]
   },
-  "devFiles": [],
-  "polyfillFiles": [],
-  "lowPriorityFiles": [
-    "static/development/_ssgManifest.js",
-    "static/development/_buildManifest.js"
-  ],
-  "rootMainFiles": []
+  "ampFirstPages": []
 }

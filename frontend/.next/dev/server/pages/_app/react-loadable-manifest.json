@@ -1,0 +1,9 @@
+{
+  "[project]/lib/auth.js [client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/lib/auth.js [client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/lib_auth_f0730842.js",
+      "static/chunks/lib_auth_9e7b1b65.js"
+    ]
+  }
+}
