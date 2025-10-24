@@ -13,17 +13,23 @@ SAMKIEL BOT is a full-stack web application designed for deploying and managing 
 
 ## Tech Stack
 ### Frontend
-- Next.js 16 (React framework)
-- Tailwind CSS (styling)
-- Axios (HTTP client for API calls)
+- Next.js 16.0.0 (React framework)
+- React 18.2.0
+- Tailwind CSS 3.3.6 (styling)
+- Axios 1.6.2 (HTTP client for API calls)
+- jwt-decode 4.0.0 (JWT decoding)
+- react-hot-toast 2.6.0 (toast notifications)
+- react-icons 5.5.0 (icons)
 - Next.js built-in routing
 
 ### Backend
 - Node.js with Express.js
-- MongoDB with Mongoose ODM
-- JWT (JSON Web Tokens) for authentication
-- bcryptjs for password hashing
-- CORS for cross-origin requests
+- MongoDB with Mongoose 8.0.3 ODM
+- JWT 9.0.2 (JSON Web Tokens) for authentication
+- bcryptjs 2.4.3 for password hashing
+- CORS 2.8.5 for cross-origin requests
+- dotenv 16.3.1 for environment variables
+- Next.js 16.0.0 (for serving the frontend in full-stack setup)
 
 ### Database
 - MongoDB (NoSQL database)
@@ -85,6 +91,7 @@ samkiel-bot-deployment/
 - Runs on port 5000 (configurable via PORT env var)
 - Uses Express.js with middleware for CORS, JSON parsing
 - Connects to MongoDB using Mongoose
+- Integrates Next.js to serve the frontend in a full-stack setup, handling all non-API routes with Next.js
 - Global error handling middleware
 - Routes organized by feature (auth, deploy, update)
 
@@ -140,6 +147,7 @@ samkiel-bot-deployment/
 - Functions for all backend endpoints
 - Error handling for API calls
 - Token storage in localStorage
+- AuthProvider context for managing authentication state, including custom logout reasons and unique error messages (e.g., Pidgin English for user-friendly errors like "Person don fes u use that Username!")
 
 ### Styling
 - Tailwind CSS for utility-first styling
