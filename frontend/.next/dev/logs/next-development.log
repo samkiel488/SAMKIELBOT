@@ -8,3 +8,9 @@
 [00:01:18.492] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/bot-menu-preview.jpg" "received" null
 [00:01:27.218] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/bot-menu-preview.jpg" "received" null
 [00:01:31.672] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/bot-menu-preview.jpg" "received" null
+[00:02:38.759] Server  LOG      ✓ Compiled in 617ms
+[00:04:30.003] Browser LOG     ⚙️ AuthProvider initialized...
+[00:04:30.003] Browser LOG     ℹ️ No token found in storage.
+[00:04:30.003] Browser LOG     ⚙️ AuthProvider initialized...
+[00:04:30.003] Browser LOG     ℹ️ No token found in storage.
+[00:04:30.003] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

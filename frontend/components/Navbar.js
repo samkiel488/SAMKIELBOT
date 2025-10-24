@@ -17,6 +17,7 @@ export default function Navbar() {
             alt="SAMKIEL BOT Logo"
             width={40}
             height={40}
+            className="-mt-1"
           />
           <span className="text-white text-xl font-bold">𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋</span>
         </Link>
