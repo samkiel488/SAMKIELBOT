@@ -1,50 +1,119 @@
 import Link from "next/link";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 p-6 mt-16">
+    <footer className="bg-gray-900 dark:bg-gray-900 px-6 py-10 mt-16">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <p className="text-gray-400 text-sm">
-              © 2025 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋. All rights reserved.
-            </p>
-            <p className="text-gray-400 text-sm mt-2">
-              Made with ❤️ by SAMKIEL
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Column 1: Quick Links */}
+          <div className="text-center md:text-left">
+            <h3 className="text-white dark:text-white font-semibold mb-4">
+              Quick Links
+            </h3>
+            <div className="flex flex-col space-y-2">
+              <Link
+                href="/"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm"
+              >
+                Home
+              </Link>
+              <Link
+                href="/login"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm"
+              >
+                Login
+              </Link>
+              <Link
+                href="/register"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm"
+              >
+                Register
+              </Link>
+              <Link
+                href="/dashboard"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm"
+              >
+                Dashboard
+              </Link>
+            </div>
           </div>
-          <div className="flex space-x-6">
-            <Link
-              href="/"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Home
-            </Link>
-            <Link
-              href="/login"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Login
-            </Link>
-            <Link
-              href="/register"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Register
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Terms
-            </Link>
-            <Link
-              href="/privacy"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Privacy Policy
-            </Link>
+
+          {/* Column 2: Legal */}
+          <div className="text-center">
+            <h3 className="text-white dark:text-white font-semibold mb-4">
+              Legal
+            </h3>
+            <div className="flex flex-col space-y-2">
+              <Link
+                href="/terms"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm"
+              >
+                Terms & Conditions
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm"
+              >
+                Privacy Policy
+              </Link>
+            </div>
           </div>
+
+          {/* Column 3: Connect With Us */}
+          <div className="text-center md:text-right">
+            <h3 className="text-white dark:text-white font-semibold mb-4">
+              Connect With Us
+            </h3>
+            <div className="flex justify-center md:justify-end space-x-4">
+              <a
+                href="https://github.com/samkiel488"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110"
+              >
+                <FaGithub size={24} />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110"
+              >
+                <FaLinkedin size={24} />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110"
+              >
+                <FaTwitter size={24} />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110"
+              >
+                <FaInstagram size={24} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="text-center text-sm text-gray-400 dark:text-gray-400 mt-8">
+          © 2025 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋. All rights reserved. <br />
+          Made with ❤️ by{" "}
+          <a
+            href="https://www.samkiel.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 transition-colors"
+          >
+            SAMKIEL
+          </a>
         </div>
       </div>
     </footer>

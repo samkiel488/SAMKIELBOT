@@ -7,9 +7,11 @@ __turbopack_load_page_chunks__("/dashboard", [
   "static/chunks/node_modules_react_e3593a73._.js",
   "static/chunks/node_modules_react-dom_cjs_react-dom_development_2b5e0eb3.js",
   "static/chunks/node_modules_react-dom_8a8085df._.js",
+  "static/chunks/node_modules_react-icons_fa_index_mjs_c19690bf._.js",
+  "static/chunks/node_modules_react-icons_lib_7cd2a28b._.js",
   "static/chunks/node_modules_axios_lib_2c8bf6cb._.js",
   "static/chunks/node_modules_5b63d273._.js",
   "static/chunks/[root-of-the-server]__d709e37a._.js",
   "static/chunks/pages_dashboard_2da965e7._.js",
-  "static/chunks/turbopack-pages_dashboard_52c67af3._.js"
+  "static/chunks/turbopack-pages_dashboard_c9232930._.js"
 ])

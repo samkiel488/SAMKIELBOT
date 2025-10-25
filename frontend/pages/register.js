@@ -19,6 +19,7 @@ export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
   const { register, user } = useAuth();
   const router = useRouter();
 
@@ -43,6 +44,13 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!agreeToTerms) {
+      toast.error(
+        "Please agree to the Terms & Conditions and Privacy Policy to continue."
+      );
+      return;
+    }
 
     // ✅ WhatsApp number validation
     const phoneRegex = /^\+?\d{8,15}$/;
@@ -270,11 +278,39 @@ export default function Register() {
               </div>
             </div>
 
+            {/* Terms and Privacy Checkbox */}
+            <div className="flex items-start space-x-3">
+              <input
+                id="agreeToTerms"
+                name="agreeToTerms"
+                type="checkbox"
+                checked={agreeToTerms}
+                onChange={(e) => setAgreeToTerms(e.target.checked)}
+                className="mt-1 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+              />
+              <label htmlFor="agreeToTerms" className="text-sm text-gray-300">
+                I agree to the{" "}
+                <Link
+                  href="/terms"
+                  className="text-blue-400 hover:text-blue-300 underline"
+                >
+                  Terms & Conditions
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/privacy"
+                  className="text-blue-400 hover:text-blue-300 underline"
+                >
+                  Privacy Policy
+                </Link>
+              </label>
+            </div>
+
             <button
               type="submit"
-              disabled={loading}
+              disabled={loading || !agreeToTerms}
               className={`w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
-                loading ? "opacity-50 cursor-not-allowed" : ""
+                loading || !agreeToTerms ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
               {loading ? "Creating Account..." : "Create Account"}
