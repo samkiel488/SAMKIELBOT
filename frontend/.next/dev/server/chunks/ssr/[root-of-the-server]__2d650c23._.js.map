@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/SAMKIEL/CODEX/Practise/React%20Projects/samkiel-bot-deployment/frontend/pages/index.js"],"sourcesContent":["import { useEffect } from 'react';\r\n"],"names":[],"mappings":";AAAA","debugId":null}}]
-}
