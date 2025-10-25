@@ -93,26 +93,70 @@ export default function Navbar() {
                   : "light";
               toggleTheme(next);
             }}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all hover:scale-110"
             aria-label="Toggle theme"
           >
             {theme === "light" ? (
-              <Sun size={20} className="text-yellow-500" />
+              <Sun
+                size={20}
+                className="text-yellow-500 transition-colors duration-300"
+              />
             ) : theme === "dark" ? (
-              <Moon size={20} className="text-blue-400" />
+              <Moon
+                size={20}
+                className="text-blue-400 transition-colors duration-300"
+              />
             ) : (
-              <Monitor size={20} className="text-gray-500" />
+              <Monitor
+                size={20}
+                className="text-gray-500 transition-colors duration-300"
+              />
             )}
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-800 dark:text-gray-100"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile Header: Theme Toggle + Menu Button */}
+        <div className="md:hidden flex items-center gap-2">
+          {/* Mobile Theme Toggle Button */}
+          <button
+            onClick={() => {
+              const next =
+                theme === "light"
+                  ? "dark"
+                  : theme === "dark"
+                  ? "system"
+                  : "light";
+              toggleTheme(next);
+            }}
+            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all hover:scale-110"
+            aria-label="Toggle theme"
+          >
+            {theme === "light" ? (
+              <Sun
+                size={20}
+                className="text-yellow-500 transition-colors duration-300"
+              />
+            ) : theme === "dark" ? (
+              <Moon
+                size={20}
+                className="text-blue-400 transition-colors duration-300"
+              />
+            ) : (
+              <Monitor
+                size={20}
+                className="text-gray-500 transition-colors duration-300"
+              />
+            )}
+          </button>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="text-gray-800 dark:text-gray-100"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Dropdown */}
@@ -164,20 +208,38 @@ export default function Navbar() {
           )}
 
           {/* Theme Toggle inside dropdown */}
-          <button
-            onClick={() => {
-              const next =
-                theme === "light"
-                  ? "dark"
-                  : theme === "dark"
-                  ? "system"
-                  : "light";
-              toggleTheme(next);
-            }}
-            className="mt-2 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md transition-colors"
-          >
-            Switch Theme ({theme})
-          </button>
+          <div className="flex justify-center mt-2">
+            <button
+              onClick={() => {
+                const next =
+                  theme === "light"
+                    ? "dark"
+                    : theme === "dark"
+                    ? "system"
+                    : "light";
+                toggleTheme(next);
+              }}
+              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all hover:scale-110"
+              aria-label="Toggle theme"
+            >
+              {theme === "light" ? (
+                <Sun
+                  size={20}
+                  className="text-yellow-500 transition-colors duration-300"
+                />
+              ) : theme === "dark" ? (
+                <Moon
+                  size={20}
+                  className="text-blue-400 transition-colors duration-300"
+                />
+              ) : (
+                <Monitor
+                  size={20}
+                  className="text-gray-500 transition-colors duration-300"
+                />
+              )}
+            </button>
+          </div>
         </div>
       )}
     </nav>
