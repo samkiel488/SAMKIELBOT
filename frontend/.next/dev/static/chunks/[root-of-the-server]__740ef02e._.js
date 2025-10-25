@@ -685,7 +685,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$ico
 ;
 function Footer() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-        className: "bg-gray-900 dark:bg-gray-900 px-6 py-10 mt-16",
+        className: "bg-gray-100 dark:bg-gray-800 px-6 py-10 mt-16 border-t border-gray-200 dark:border-gray-700",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "container mx-auto",
             children: [
@@ -696,7 +696,7 @@ function Footer() {
                             className: "text-center md:text-left",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Quick Links"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -708,7 +708,7 @@ function Footer() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Home"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -717,7 +717,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/login",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Login"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -726,7 +726,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/register",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Register"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -735,7 +735,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/dashboard",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Dashboard"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -758,7 +758,7 @@ function Footer() {
                             className: "text-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Legal"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -770,7 +770,7 @@ function Footer() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/terms",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Terms & Conditions"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -779,7 +779,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/privacy",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Privacy Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -802,7 +802,7 @@ function Footer() {
                             className: "text-center md:text-right",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Connect With Us"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -816,7 +816,7 @@ function Footer() {
                                             href: "https://github.com/samkiel488",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaGithub"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -833,7 +833,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaLinkedin"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -850,7 +850,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaTwitter"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -867,7 +867,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaInstagram"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -899,7 +899,7 @@ function Footer() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-center text-sm text-gray-400 dark:text-gray-400 mt-8",
+                    className: "text-center text-sm text-gray-600 dark:text-gray-400 mt-8",
                     children: [
                         "© 2025 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋. All rights reserved. ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -913,7 +913,7 @@ function Footer() {
                             href: "https://www.samkiel.dev/",
                             target: "_blank",
                             rel: "noopener noreferrer",
-                            className: "text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 transition-colors",
+                            className: "text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors",
                             children: "SAMKIEL"
                         }, void 0, false, {
                             fileName: "[project]/components/Footer.js",
@@ -1154,7 +1154,7 @@ function Register() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900 overflow-y-auto",
+                className: "w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-50 dark:bg-gray-900 overflow-y-auto",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-md w-full space-y-8",
                     children: [
@@ -1162,7 +1162,7 @@ function Register() {
                             className: "text-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-3xl font-bold text-white mb-2",
+                                    className: "text-3xl font-bold text-gray-800 dark:text-white mb-2",
                                     children: "Create your account"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
@@ -1170,7 +1170,7 @@ function Register() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-gray-400",
+                                    className: "text-gray-600 dark:text-gray-400",
                                     children: "Fill in your details to get started"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
@@ -1180,16 +1180,16 @@ function Register() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "lg:hidden mt-4",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-white transition-opacity duration-500",
+                                        className: "text-xl font-semibold text-gray-800 dark:text-white transition-opacity duration-500",
                                         children: username ? `${username}, we're glad to have you here!` : "Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/register.js",
-                                        lineNumber: 136,
+                                        lineNumber: 138,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 135,
+                                    lineNumber: 137,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -1209,11 +1209,11 @@ function Register() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "fullName",
-                                                    className: "block text-sm font-medium text-gray-300 mb-2",
+                                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
                                                     children: "Full Name"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 147,
+                                                    lineNumber: 149,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1221,30 +1221,30 @@ function Register() {
                                                     name: "fullName",
                                                     type: "text",
                                                     required: true,
-                                                    className: "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
+                                                    className: "w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
                                                     placeholder: "Enter your full name",
                                                     value: formData.fullName,
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 153,
+                                                    lineNumber: 155,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 146,
+                                            lineNumber: 148,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "username",
-                                                    className: "block text-sm font-medium text-gray-300 mb-2",
+                                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
                                                     children: "Username"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 166,
+                                                    lineNumber: 168,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1252,30 +1252,30 @@ function Register() {
                                                     name: "username",
                                                     type: "text",
                                                     required: true,
-                                                    className: "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
+                                                    className: "w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
                                                     placeholder: "Choose a username",
                                                     value: formData.username,
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 172,
+                                                    lineNumber: 174,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 165,
+                                            lineNumber: 167,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "email",
-                                                    className: "block text-sm font-medium text-gray-300 mb-2",
+                                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
                                                     children: "Email"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 185,
+                                                    lineNumber: 187,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1283,30 +1283,30 @@ function Register() {
                                                     name: "email",
                                                     type: "email",
                                                     required: true,
-                                                    className: "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
+                                                    className: "w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
                                                     placeholder: "Enter your email",
                                                     value: formData.email,
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 191,
+                                                    lineNumber: 193,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 184,
+                                            lineNumber: 186,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "whatsappNumber",
-                                                    className: "block text-sm font-medium text-gray-300 mb-2",
+                                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
                                                     children: "WhatsApp Phone Number"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 204,
+                                                    lineNumber: 206,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1314,7 +1314,7 @@ function Register() {
                                                     name: "whatsappNumber",
                                                     type: "tel",
                                                     required: true,
-                                                    className: "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
+                                                    className: "w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
                                                     placeholder: "+2348087357158",
                                                     value: formData.whatsappNumber,
                                                     onChange: (e)=>{
@@ -1327,13 +1327,13 @@ function Register() {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 210,
+                                                    lineNumber: 212,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 203,
+                                            lineNumber: 205,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1341,11 +1341,11 @@ function Register() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "password",
-                                                    className: "block text-sm font-medium text-gray-300 mb-2",
+                                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 232,
+                                                    lineNumber: 234,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1353,42 +1353,42 @@ function Register() {
                                                     name: "password",
                                                     type: showPassword ? "text" : "password",
                                                     required: true,
-                                                    className: "w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
+                                                    className: "w-full px-4 py-3 pr-12 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
                                                     placeholder: "Create a password",
                                                     value: formData.password,
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 238,
+                                                    lineNumber: 240,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                     type: "button",
-                                                    className: "absolute right-3 top-10 text-gray-400 hover:text-gray-300 focus:outline-none focus:text-gray-300",
+                                                    className: "absolute right-3 top-10 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:text-gray-600 dark:focus:text-gray-300",
                                                     onClick: ()=>setShowPassword(!showPassword),
                                                     "aria-label": showPassword ? "Hide password" : "Show password",
                                                     children: showPassword ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["HiEyeOff"], {
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/register.js",
-                                                        lineNumber: 254,
+                                                        lineNumber: 256,
                                                         columnNumber: 35
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["HiEye"], {
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/register.js",
-                                                        lineNumber: 254,
+                                                        lineNumber: 256,
                                                         columnNumber: 60
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 248,
+                                                    lineNumber: 250,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 231,
+                                            lineNumber: 233,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1396,11 +1396,11 @@ function Register() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "confirmPassword",
-                                                    className: "block text-sm font-medium text-gray-300 mb-2",
+                                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
                                                     children: "Confirm Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 259,
+                                                    lineNumber: 261,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1408,48 +1408,48 @@ function Register() {
                                                     name: "confirmPassword",
                                                     type: showConfirmPassword ? "text" : "password",
                                                     required: true,
-                                                    className: "w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
+                                                    className: "w-full px-4 py-3 pr-12 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
                                                     placeholder: "Confirm your password",
                                                     value: formData.confirmPassword,
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 265,
+                                                    lineNumber: 267,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                     type: "button",
-                                                    className: "absolute right-3 top-10 text-gray-400 hover:text-gray-300 focus:outline-none focus:text-gray-300",
+                                                    className: "absolute right-3 top-10 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:text-gray-600 dark:focus:text-gray-300",
                                                     onClick: ()=>setShowConfirmPassword(!showConfirmPassword),
                                                     "aria-label": showConfirmPassword ? "Hide confirm password" : "Show confirm password",
                                                     children: showConfirmPassword ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["HiEyeOff"], {
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/register.js",
-                                                        lineNumber: 286,
+                                                        lineNumber: 288,
                                                         columnNumber: 21
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["HiEye"], {
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/register.js",
-                                                        lineNumber: 288,
+                                                        lineNumber: 290,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 275,
+                                                    lineNumber: 277,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 258,
+                                            lineNumber: 260,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 145,
+                                    lineNumber: 147,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1472,12 +1472,12 @@ function Register() {
                                             className: "mt-1 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 296,
+                                            lineNumber: 298,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                             htmlFor: "agreeToTerms",
-                                            className: "text-sm text-gray-300",
+                                            className: "text-sm text-gray-700 dark:text-gray-300",
                                             children: [
                                                 "I agree to the",
                                                 " ",
@@ -1489,11 +1489,11 @@ function Register() {
                                                         localStorage.setItem("samkiel_clicked_terms", "true");
                                                     // let the normal link proceed (no preventDefault)
                                                     },
-                                                    className: "text-blue-400 hover:text-blue-300 underline",
+                                                    className: "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline",
                                                     children: "Terms & Conditions"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 314,
+                                                    lineNumber: 319,
                                                     columnNumber: 17
                                                 }, this),
                                                 " ",
@@ -1507,23 +1507,23 @@ function Register() {
                                                         localStorage.setItem("samkiel_clicked_terms", "true");
                                                     // let the normal link proceed (no preventDefault)
                                                     },
-                                                    className: "text-blue-400 hover:text-blue-300 underline",
+                                                    className: "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline",
                                                     children: "Privacy Policy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 327,
+                                                    lineNumber: 332,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 312,
+                                            lineNumber: 314,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 295,
+                                    lineNumber: 297,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1533,29 +1533,29 @@ function Register() {
                                     children: loading ? "Creating Account..." : "Create Account"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 342,
+                                    lineNumber: 347,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "text-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/login",
-                                        className: "text-purple-400 hover:text-purple-300 transition-colors duration-200",
+                                        className: "text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors duration-200",
                                         children: "Already have an account? Sign in here"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/register.js",
-                                        lineNumber: 353,
+                                        lineNumber: 358,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 352,
+                                    lineNumber: 357,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/pages/register.js",
-                            lineNumber: 144,
+                            lineNumber: 146,
                             columnNumber: 11
                         }, this)
                     ]

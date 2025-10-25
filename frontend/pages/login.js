@@ -51,7 +51,7 @@ export default function Login() {
 
     if (!read) {
       toast.error(
-        "Abeg go read the Terms & Conditions and Privacy Policy first."
+        "Abeg go read the evTerms & Conditions and Privacy Policy first."
       );
       return;
     }
@@ -101,18 +101,18 @@ export default function Login() {
       </div>
 
       {/* Right side - Login form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-2">
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
               Sign in to 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋
             </h2>
-            <p className="text-gray-400">
+            <p className="text-gray-600 dark:text-gray-400">
               Enter your credentials to access your account
             </p>
             {/* Mobile welcome message */}
             <div className="lg:hidden mt-4">
-              <h3 className="text-xl font-semibold text-white transition-opacity duration-500">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white transition-opacity duration-500">
                 Welcome back, {username || "friend"}!
               </h3>
             </div>
@@ -123,7 +123,7 @@ export default function Login() {
               <div>
                 <label
                   htmlFor="identifier"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Email or Username
                 </label>
@@ -132,7 +132,7 @@ export default function Login() {
                   name="identifier"
                   type="text"
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   placeholder="Enter your email or username"
                   value={formData.identifier}
                   onChange={handleChange}
@@ -142,7 +142,7 @@ export default function Login() {
               <div className="relative">
                 <label
                   htmlFor="password"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Password
                 </label>
@@ -151,14 +151,14 @@ export default function Login() {
                   name="password"
                   type={showPassword ? "text" : "password"}
                   required
-                  className="w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 pr-12 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                   placeholder="Enter your password"
                   value={formData.password}
                   onChange={handleChange}
                 />
                 <button
                   type="button"
-                  className="absolute right-3 top-10 text-gray-400 hover:text-gray-300 focus:outline-none focus:text-gray-300"
+                  className="absolute right-3 top-10 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:text-gray-600 dark:focus:text-gray-300"
                   onClick={() => setShowPassword(!showPassword)}
                   aria-label={showPassword ? "Hide password" : "Show password"}
                 >
@@ -185,7 +185,10 @@ export default function Login() {
                 }}
                 className="mt-1 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
               />
-              <label htmlFor="agreeToTerms" className="text-sm text-gray-300">
+              <label
+                htmlFor="agreeToTerms"
+                className="text-sm text-gray-700 dark:text-gray-300"
+              >
                 I agree to the{" "}
                 <a
                   href="/terms"
@@ -195,7 +198,7 @@ export default function Login() {
                     localStorage.setItem("samkiel_clicked_terms", "true");
                     // let the normal link proceed (no preventDefault)
                   }}
-                  className="text-blue-400 hover:text-blue-300 underline"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline"
                 >
                   Terms & Conditions
                 </a>{" "}
@@ -208,7 +211,7 @@ export default function Login() {
                     localStorage.setItem("samkiel_clicked_terms", "true");
                     // let the normal link proceed (no preventDefault)
                   }}
-                  className="text-blue-400 hover:text-blue-300 underline"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline"
                 >
                   Privacy Policy
                 </Link>
@@ -228,7 +231,7 @@ export default function Login() {
             <div className="text-center">
               <Link
                 href="/register"
-                className="text-purple-400 hover:text-purple-300 transition-colors duration-200"
+                className="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors duration-200"
               >
                 Don't have an account? Sign up here
               </Link>

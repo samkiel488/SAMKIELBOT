@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useAuth } from "../lib/auth";
 import { useTheme } from "../context/ThemeContext";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon, Monitor } from "lucide-react";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -81,6 +81,29 @@ export default function Navbar() {
               </Link>
             </>
           )}
+
+          {/* Theme Toggle Button */}
+          <button
+            onClick={() => {
+              const next =
+                theme === "light"
+                  ? "dark"
+                  : theme === "dark"
+                  ? "system"
+                  : "light";
+              toggleTheme(next);
+            }}
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === "light" ? (
+              <Sun size={20} className="text-yellow-500" />
+            ) : theme === "dark" ? (
+              <Moon size={20} className="text-blue-400" />
+            ) : (
+              <Monitor size={20} className="text-gray-500" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Menu Button */}

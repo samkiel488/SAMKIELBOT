@@ -14,7 +14,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$ico
 ;
 function Footer() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("footer", {
-        className: "bg-gray-900 dark:bg-gray-900 px-6 py-10 mt-16",
+        className: "bg-gray-100 dark:bg-gray-800 px-6 py-10 mt-16 border-t border-gray-200 dark:border-gray-700",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
             className: "container mx-auto",
             children: [
@@ -25,7 +25,7 @@ function Footer() {
                             className: "text-center md:text-left",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Quick Links"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -37,7 +37,7 @@ function Footer() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Home"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -46,7 +46,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/login",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Login"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -55,7 +55,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/register",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Register"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -64,7 +64,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/dashboard",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Dashboard"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -87,7 +87,7 @@ function Footer() {
                             className: "text-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Legal"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -99,7 +99,7 @@ function Footer() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/terms",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Terms & Conditions"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -108,7 +108,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/privacy",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Privacy Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -131,7 +131,7 @@ function Footer() {
                             className: "text-center md:text-right",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Connect With Us"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -145,7 +145,7 @@ function Footer() {
                                             href: "https://github.com/samkiel488",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaGithub"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -162,7 +162,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaLinkedin"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -179,7 +179,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaTwitter"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -196,7 +196,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaInstagram"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -228,7 +228,7 @@ function Footer() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "text-center text-sm text-gray-400 dark:text-gray-400 mt-8",
+                    className: "text-center text-sm text-gray-600 dark:text-gray-400 mt-8",
                     children: [
                         "© 2025 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋. All rights reserved. ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -242,7 +242,7 @@ function Footer() {
                             href: "https://www.samkiel.dev/",
                             target: "_blank",
                             rel: "noopener noreferrer",
-                            className: "text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 transition-colors",
+                            className: "text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors",
                             children: "SAMKIEL"
                         }, void 0, false, {
                             fileName: "[project]/components/Footer.js",
@@ -340,7 +340,7 @@ function Login() {
         e.preventDefault();
         const read = localStorage.getItem("samkiel_read_terms") === "true"; // user actually visited terms
         if (!read) {
-            __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].error("Abeg go read the Terms & Conditions and Privacy Policy first.");
+            __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].error("Abeg go read the evTerms & Conditions and Privacy Policy first.");
             return;
         }
         setLoading(true);
@@ -464,7 +464,7 @@ function Login() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900",
+                className: "w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-50 dark:bg-gray-900",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                     className: "max-w-md w-full space-y-8",
                     children: [
@@ -472,7 +472,7 @@ function Login() {
                             className: "text-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                                    className: "text-3xl font-bold text-white mb-2",
+                                    className: "text-3xl font-bold text-gray-800 dark:text-white mb-2",
                                     children: "Sign in to 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/login.js",
@@ -480,7 +480,7 @@ function Login() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                    className: "text-gray-400",
+                                    className: "text-gray-600 dark:text-gray-400",
                                     children: "Enter your credentials to access your account"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/login.js",
@@ -490,7 +490,7 @@ function Login() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                     className: "lg:hidden mt-4",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-white transition-opacity duration-500",
+                                        className: "text-xl font-semibold text-gray-800 dark:text-white transition-opacity duration-500",
                                         children: [
                                             "Welcome back, ",
                                             username || "friend",
@@ -523,7 +523,7 @@ function Login() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
                                                     htmlFor: "identifier",
-                                                    className: "block text-sm font-medium text-gray-300 mb-2",
+                                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
                                                     children: "Email or Username"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/login.js",
@@ -535,7 +535,7 @@ function Login() {
                                                     name: "identifier",
                                                     type: "text",
                                                     required: true,
-                                                    className: "w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
+                                                    className: "w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
                                                     placeholder: "Enter your email or username",
                                                     value: formData.identifier,
                                                     onChange: handleChange
@@ -555,7 +555,7 @@ function Login() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
                                                     htmlFor: "password",
-                                                    className: "block text-sm font-medium text-gray-300 mb-2",
+                                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/login.js",
@@ -567,7 +567,7 @@ function Login() {
                                                     name: "password",
                                                     type: showPassword ? "text" : "password",
                                                     required: true,
-                                                    className: "w-full px-4 py-3 pr-12 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
+                                                    className: "w-full px-4 py-3 pr-12 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200",
                                                     placeholder: "Enter your password",
                                                     value: formData.password,
                                                     onChange: handleChange
@@ -578,7 +578,7 @@ function Login() {
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                                     type: "button",
-                                                    className: "absolute right-3 top-10 text-gray-400 hover:text-gray-300 focus:outline-none focus:text-gray-300",
+                                                    className: "absolute right-3 top-10 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:text-gray-600 dark:focus:text-gray-300",
                                                     onClick: ()=>setShowPassword(!showPassword),
                                                     "aria-label": showPassword ? "Hide password" : "Show password",
                                                     children: showPassword ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["HiEyeOff"], {
@@ -636,7 +636,7 @@ function Login() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
                                             htmlFor: "agreeToTerms",
-                                            className: "text-sm text-gray-300",
+                                            className: "text-sm text-gray-700 dark:text-gray-300",
                                             children: [
                                                 "I agree to the",
                                                 " ",
@@ -648,11 +648,11 @@ function Login() {
                                                         localStorage.setItem("samkiel_clicked_terms", "true");
                                                     // let the normal link proceed (no preventDefault)
                                                     },
-                                                    className: "text-blue-400 hover:text-blue-300 underline",
+                                                    className: "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline",
                                                     children: "Terms & Conditions"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/login.js",
-                                                    lineNumber: 190,
+                                                    lineNumber: 193,
                                                     columnNumber: 17
                                                 }, this),
                                                 " ",
@@ -666,11 +666,11 @@ function Login() {
                                                         localStorage.setItem("samkiel_clicked_terms", "true");
                                                     // let the normal link proceed (no preventDefault)
                                                     },
-                                                    className: "text-blue-400 hover:text-blue-300 underline",
+                                                    className: "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline",
                                                     children: "Privacy Policy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/login.js",
-                                                    lineNumber: 203,
+                                                    lineNumber: 206,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
@@ -692,23 +692,23 @@ function Login() {
                                     children: loading ? "Signing In..." : "Sign In"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/login.js",
-                                    lineNumber: 218,
+                                    lineNumber: 221,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                     className: "text-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/register",
-                                        className: "text-purple-400 hover:text-purple-300 transition-colors duration-200",
+                                        className: "text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors duration-200",
                                         children: "Don't have an account? Sign up here"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/login.js",
-                                        lineNumber: 229,
+                                        lineNumber: 232,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/pages/login.js",
-                                    lineNumber: 228,
+                                    lineNumber: 231,
                                     columnNumber: 13
                                 }, this)
                             ]

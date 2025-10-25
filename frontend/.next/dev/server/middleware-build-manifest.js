@@ -19,7 +19,7 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/turbopack-pages_index_0a05c8d0._.js"
     ],
     "/_app": [
-      "static/chunks/lib_auth_41deb300.js",
+      "static/chunks/lib_auth_d7e42360.js",
       "static/chunks/node_modules_next_dist_compiled_cd3fa330._.js",
       "static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js",
       "static/chunks/node_modules_next_dist_client_9b1b49db._.js",
@@ -28,26 +28,11 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/node_modules_react_e3593a73._.js",
       "static/chunks/node_modules_react-dom_cjs_react-dom_development_2b5e0eb3.js",
       "static/chunks/node_modules_react-dom_8a8085df._.js",
-      "static/chunks/node_modules_e0fcdb2c._.js",
+      "static/chunks/node_modules_e111d624._.js",
       "static/chunks/[root-of-the-server]__1826d1c4._.js",
       "static/chunks/styles_globals_dc36e6c9.css",
       "static/chunks/pages__app_2da965e7._.js",
-      "static/chunks/turbopack-pages__app_4cfa05c4._.js"
-    ],
-    "/_error": [
-      "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_cf5b50a6._.js",
-      "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
-      "static/chunks/node_modules_next_dist_19fd0646._.js",
-      "static/chunks/node_modules_next_error_1cfbb379.js",
-      "static/chunks/[next]_entry_page-loader_ts_43b523b5._.js",
-      "static/chunks/node_modules_react_b4bd21af._.js",
-      "static/chunks/node_modules_react-dom_cjs_react-dom_development_2b5e0eb3.js",
-      "static/chunks/node_modules_react-dom_8a8085df._.js",
-      "static/chunks/node_modules_416396d1._.js",
-      "static/chunks/[root-of-the-server]__092393de._.js",
-      "static/chunks/pages__error_2da965e7._.js",
-      "static/chunks/turbopack-pages__error_a5919942._.js"
+      "static/chunks/turbopack-pages__app_29a9333b._.js"
     ],
     "/dashboard": [
       "static/chunks/node_modules_next_dist_compiled_44618872._.js",
@@ -82,20 +67,6 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/[root-of-the-server]__1d67a8ab._.js",
       "static/chunks/pages_login_2da965e7._.js",
       "static/chunks/turbopack-pages_login_15b3c6b6._.js"
-    ],
-    "/privacy": [
-      "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_2202bc1a._.js",
-      "static/chunks/node_modules_next_dist_client_3ede7da4._.js",
-      "static/chunks/node_modules_next_dist_6024eba3._.js",
-      "static/chunks/node_modules_next_1e915a6b._.js",
-      "static/chunks/node_modules_react_e3593a73._.js",
-      "static/chunks/node_modules_react-dom_cjs_react-dom_development_2b5e0eb3.js",
-      "static/chunks/node_modules_react-dom_8a8085df._.js",
-      "static/chunks/node_modules_416396d1._.js",
-      "static/chunks/[root-of-the-server]__acd4c9f2._.js",
-      "static/chunks/pages_privacy_2da965e7._.js",
-      "static/chunks/turbopack-pages_privacy_4c0ad9a0._.js"
     ],
     "/register": [
       "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
