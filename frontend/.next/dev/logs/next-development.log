@@ -108,3 +108,298 @@ Expression expected
 [05:10:42.790] Browser LOG     ℹ️ No token found in storage.
 [05:10:42.790] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [05:10:57.321] Server  LOG      ✓ Compiled in 1871ms
+[05:12:24.143] Server  LOG      ✓ Compiled in 476ms
+[05:12:38.244] Server  LOG      ✓ Compiled in 566ms
+[05:12:41.705] Browser LOG     ⚙️ AuthProvider initialized...
+[05:12:41.705] Browser LOG     ℹ️ No token found in storage.
+[05:12:41.705] Browser LOG     ⚙️ AuthProvider initialized...
+[05:12:41.705] Browser LOG     ℹ️ No token found in storage.
+[05:12:41.820] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:12:50.156] Server  LOG      ✓ Compiled in 310ms
+[05:13:04.354] Server  LOG      ✓ Compiled in 497ms
+[05:13:17.205] Browser LOG     ⚙️ AuthProvider initialized...
+[05:13:17.205] Browser LOG     ℹ️ No token found in storage.
+[05:13:17.205] Browser LOG     ⚙️ AuthProvider initialized...
+[05:13:17.205] Browser LOG     ℹ️ No token found in storage.
+[05:13:17.326] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:13:20.601] Browser LOG     🟢 Logging in...
+[05:13:21.276] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzQ4NiwiZXhwIjoxNzYzOTc1NDg2fQ.UTTnxqc_t913M5bRGm99knHdqI2gLFOdWX38nEasFOA
+[05:13:21.276] Browser LOG     ✅ User successfully logged in: guy
+[05:13:21.467] Browser LOG     🟢 Attached token to request: /deploy
+[05:13:21.467] Browser LOG     🟢 Attached token to request: /deploy
+[05:13:28.822] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:13:52.468] Browser ERROR   uncaughtError: ReferenceError: checkboxDisabled is not defined
+[05:13:52.468] Browser ERROR   uncaughtError: ReferenceError: checkboxDisabled is not defined
+[05:13:52.468] Browser ERROR   The above error occurred in the <Login> component:
+
+    at Login (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__1d67a8ab._.js?id=%255Bproject%255D%252Fpages%252Flogin.js+%255Bclient%255D+%2528ecmascript%2529:29:176)
+    at Layout (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js?ts=1761383479762:1105:19)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js?ts=1761383479762:496:25)
+    at LoadableComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js?ts=1761383479762:5489:9)
+    at ThemeProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js?ts=1761383479762:688:26)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js?ts=1761383479762:1161:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js?ts=1761383479762:5040:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js?ts=1761383479762:1129:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js?ts=1761383479762:1906:34)
+    at Container (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761383479762:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761383479762:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761383479762:3348:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:13:52.855] Server  LOG      ✓ Compiled in 772ms
+[05:14:10.249] Browser LOG     ⚙️ AuthProvider initialized...
+[05:14:10.249] Browser LOG     ℹ️ No token found in storage.
+[05:14:10.249] Browser LOG     ⚙️ AuthProvider initialized...
+[05:14:10.249] Browser LOG     ℹ️ No token found in storage.
+[05:14:10.355] Server  LOG      ✓ Compiled in 350ms
+[05:14:17.284] Browser LOG     🟢 Logging in...
+[05:14:17.609] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzU0MywiZXhwIjoxNzYzOTc1NTQzfQ.Oi7FupOTh8ZS-YAEcfaGkMBxGJELdClcgUqYQsz6zv0
+[05:14:17.609] Browser LOG     ✅ User successfully logged in: guy
+[05:14:17.609] Browser LOG     🟢 Attached token to request: /deploy
+[05:14:17.609] Browser LOG     🟢 Attached token to request: /deploy
+[05:14:20.868] Browser LOG     🟢 Attached token to request: /deploy
+[05:14:20.868] Browser LOG     🟢 Attached token to request: /deploy
+[05:14:23.470] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:14:28.364] Server  LOG      ✓ Compiled in 561ms
+[05:14:38.780] Server  LOG      ✓ Compiled in 152ms
+[05:14:47.932] Server  LOG      ✓ Compiled in 186ms
+[05:14:54.037] Server  LOG      ✓ Compiled in 531ms
+[05:14:55.412] Browser ERROR   ./pages/login.js:195:23
+Parsing ecmascript source code failed
+  193 |                   onClick={(e) => {
+  194 |                     // record intent and route, then navigate
+> 195 |                  f    sessionStorage.setItem("return_route", "login");
+      |                       ^^^^^^^^^^^^^^
+  196 |                     localStorage.setItem("samkiel_clicked_terms", "true");
+  197 |                     // let the normal link proceed (no preventDefault)
+  198 |                   }}
+
+Expected '</', got 'sessionStorage'
+[05:14:55.412] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:14:55.413] Browser LOG     Refreshing page data due to server-side change
+[05:14:55.413] Browser ERROR   ./pages/login.js:195:23
+Parsing ecmascript source code failed
+  193 |                   onClick={(e) => {
+  194 |                     // record intent and route, then navigate
+> 195 |                  f    sessionStorage.setItem("return_route", "login");
+      |                       ^^^^^^^^^^^^^^
+  196 |                     localStorage.setItem("samkiel_clicked_terms", "true");
+  197 |                     // let the normal link proceed (no preventDefault)
+  198 |                   }}
+
+Expected '</', got 'sessionStorage'
+[05:14:55.413] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:14:55.422] Browser ERROR   ./pages/login.js:195:23
+Parsing ecmascript source code failed
+  193 |                   onClick={(e) => {
+  194 |                     // record intent and route, then navigate
+> 195 |                  f    sessionStorage.setItem("return_route", "login");
+      |                       ^^^^^^^^^^^^^^
+  196 |                     localStorage.setItem("samkiel_clicked_terms", "true");
+  197 |                     // let the normal link proceed (no preventDefault)
+  198 |                   }}
+
+Expected '</', got 'sessionStorage'
+[05:14:55.422] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:14:55.423] Browser ERROR   ./pages/login.js:195:23
+Parsing ecmascript source code failed
+  193 |                   onClick={(e) => {
+  194 |                     // record intent and route, then navigate
+> 195 |                  f    sessionStorage.setItem("return_route", "login");
+      |                       ^^^^^^^^^^^^^^
+  196 |                     localStorage.setItem("samkiel_clicked_terms", "true");
+  197 |                     // let the normal link proceed (no preventDefault)
+  198 |                   }}
+
+Expected '</', got 'sessionStorage'
+[05:14:55.423] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:14:56.665] Server  LOG      ✓ Compiled in 329ms
+[05:14:57.367] Browser ERROR   ./pages/login.js:195:23
+Parsing ecmascript source code failed
+  193 |                   onClick={(e) => {
+  194 |                     // record intent and route, then navigate
+> 195 |                  f    sessionStorage.setItem("return_route", "login");
+      |                       ^^^^^^^^^^^^^^
+  196 |                     localStorage.setItem("samkiel_clicked_terms", "true");
+  197 |                     // let the normal link proceed (no preventDefault)
+  198 |                   }}
+
+Expected '</', got 'sessionStorage'
+[05:14:57.367] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:14:57.367] Browser ERROR   ./pages/login.js:195:23
+Parsing ecmascript source code failed
+  193 |                   onClick={(e) => {
+  194 |                     // record intent and route, then navigate
+> 195 |                  f    sessionStorage.setItem("return_route", "login");
+      |                       ^^^^^^^^^^^^^^
+  196 |                     localStorage.setItem("samkiel_clicked_terms", "true");
+  197 |                     // let the normal link proceed (no preventDefault)
+  198 |                   }}
+
+Expected '</', got 'sessionStorage'
+[05:14:57.367] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:14:57.372] Browser ERROR   ./pages/login.js:195:23
+Parsing ecmascript source code failed
+  193 |                   onClick={(e) => {
+  194 |                     // record intent and route, then navigate
+> 195 |                  f    sessionStorage.setItem("return_route", "login");
+      |                       ^^^^^^^^^^^^^^
+  196 |                     localStorage.setItem("samkiel_clicked_terms", "true");
+  197 |                     // let the normal link proceed (no preventDefault)
+  198 |                   }}
+
+Expected '</', got 'sessionStorage'
+[05:14:57.372] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:14:57.373] Browser ERROR   ./pages/login.js:195:23
+Parsing ecmascript source code failed
+  193 |                   onClick={(e) => {
+  194 |                     // record intent and route, then navigate
+> 195 |                  f    sessionStorage.setItem("return_route", "login");
+      |                       ^^^^^^^^^^^^^^
+  196 |                     localStorage.setItem("samkiel_clicked_terms", "true");
+  197 |                     // let the normal link proceed (no preventDefault)
+  198 |                   }}
+
+Expected '</', got 'sessionStorage'
+[05:14:57.373] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:15:18.815] Browser LOG     Refreshing page data due to server-side change
+[05:15:18.917] Server  LOG      ✓ Compiled in 354ms
+[05:15:52.817] Browser LOG     🟢 Logging in...
+[05:15:53.243] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzYzOCwiZXhwIjoxNzYzOTc1NjM4fQ.z7l7QaVeEcFFTtjCXnfWd57ZvarGKhhkte6iOJYIGDQ
+[05:15:53.243] Browser LOG     ✅ User successfully logged in: guy
+[05:15:53.243] Browser LOG     🟢 Attached token to request: /deploy
+[05:15:53.244] Browser LOG     🟢 Attached token to request: /deploy
+[05:15:59.220] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:16:04.864] Browser LOG     ⚙️ AuthProvider initialized...
+[05:16:04.864] Browser LOG     ℹ️ No token found in storage.
+[05:16:04.864] Browser LOG     ⚙️ AuthProvider initialized...
+[05:16:04.864] Browser LOG     ℹ️ No token found in storage.
+[05:16:05.045] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:16:19.604] Server  LOG      ✓ Compiled in 614ms
+[05:16:33.396] Server  LOG      ✓ Compiled in 340ms
+[05:16:49.526] Browser LOG     🟢 Logging in...
+[05:16:50.032] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzY5NSwiZXhwIjoxNzYzOTc1Njk1fQ.VoIWoSW1Q58ALLN0ge2RVdYfnShLUFZ6EsK1WFamozk
+[05:16:50.032] Browser LOG     ✅ User successfully logged in: guy
+[05:16:50.227] Browser LOG     🟢 Attached token to request: /deploy
+[05:16:50.227] Browser LOG     🟢 Attached token to request: /deploy
+[05:16:58.201] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:17:05.974] Browser LOG     ⚙️ AuthProvider initialized...
+[05:17:05.974] Browser LOG     ℹ️ No token found in storage.
+[05:17:05.974] Browser LOG     ⚙️ AuthProvider initialized...
+[05:17:05.974] Browser LOG     ℹ️ No token found in storage.
+[05:17:05.974] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:17:08.659] Browser LOG     🟢 Logging in...
+[05:17:09.071] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzcxNCwiZXhwIjoxNzYzOTc1NzE0fQ.GUixWIgeCRdYPo6XEBN8DzYeF7xdaRAVLn4E2HefYZg
+[05:17:09.071] Browser LOG     ✅ User successfully logged in: guy
+[05:17:09.220] Browser LOG     🟢 Attached token to request: /deploy
+[05:17:09.220] Browser LOG     🟢 Attached token to request: /deploy
+[05:17:40.874] Server  LOG      ✓ Compiled in 290ms
+[05:19:52.035] Server  LOG      ✓ Compiled in 201ms
+[05:19:55.561] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:20:05.998] Browser LOG     🟢 Logging in...
+[05:20:06.368] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4Mzg5MiwiZXhwIjoxNzYzOTc1ODkyfQ.wO5sFZvIfdAx5577Ik1JxlEeeB9ql_NQU0yOwrFOwIU
+[05:20:06.368] Browser LOG     ✅ User successfully logged in: guy
+[05:20:06.368] Browser LOG     🟢 Attached token to request: /deploy
+[05:20:06.368] Browser LOG     🟢 Attached token to request: /deploy
+[05:20:23.261] Browser LOG     ⚙️ AuthProvider initialized...
+[05:20:23.262] Browser LOG     ℹ️ No token found in storage.
+[05:20:23.262] Browser LOG     ⚙️ AuthProvider initialized...
+[05:20:23.262] Browser LOG     ℹ️ No token found in storage.
+[05:20:23.371] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:20:26.083] Browser WARN    Image with src "/bot-menu-preview2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:20:26.083] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:21:15.321] Browser LOG     ⚙️ AuthProvider initialized...
+[05:21:15.321] Browser LOG     ℹ️ No token found in storage.
+[05:21:15.321] Browser LOG     ⚙️ AuthProvider initialized...
+[05:21:15.321] Browser LOG     ℹ️ No token found in storage.
+[05:21:15.321] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:21:15.321] Browser WARN    Image with src "/bot-menu-preview2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:21:15.321] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

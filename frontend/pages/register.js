@@ -23,7 +23,7 @@ export default function Register() {
   const [agreeToTerms, setAgreeToTerms] = useState(false);
 
   useEffect(() => {
-    // Restore either explicit agreement OR that user actually read the terms
+    // Restore agreement state if user has agreed or read terms
     const agreed = localStorage.getItem("samkiel_agreed") === "true";
     const read = localStorage.getItem("samkiel_read_terms") === "true";
     if (agreed || read) setAgreeToTerms(true);
@@ -54,11 +54,10 @@ export default function Register() {
     e.preventDefault();
 
     const read = localStorage.getItem("samkiel_read_terms") === "true"; // user actually visited terms
-    const agreed = localStorage.getItem("samkiel_agreed") === "true";
 
-    if (!agreed && !read) {
+    if (!read) {
       toast.error(
-        "Please agree to the Terms & Privacy Policy or read them first."
+        "Abeg read the Terms & Conditions and Privacy Policy first."
       );
       return;
     }
