@@ -47,8 +47,8 @@ export default function Dashboard() {
 
   if (authLoading) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500"></div>
       </div>
     );
   }
@@ -69,7 +69,7 @@ export default function Dashboard() {
             <h1 className="text-4xl font-bold mb-2">
               Welcome back, {user.fullName}!
             </h1>
-            <p className="text-gray-400">
+            <p className="text-gray-600 dark:text-gray-400">
               Manage your bot deployments and monitor their performance.
             </p>
           </div>
@@ -84,7 +84,9 @@ export default function Dashboard() {
         {loading ? (
           <div className="text-center py-16">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto"></div>
-            <p className="mt-4 text-gray-400">Loading deployments...</p>
+            <p className="mt-4 text-gray-600 dark:text-gray-400">
+              Loading deployments...
+            </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -93,7 +95,7 @@ export default function Dashboard() {
             ))}
             {deployments.length === 0 && (
               <div className="col-span-full text-center py-16">
-                <div className="bg-gray-800 rounded-lg p-8 max-w-md mx-auto">
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-700/40 p-8 max-w-md mx-auto">
                   <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg
                       className="w-8 h-8 text-purple-400"
@@ -109,10 +111,10 @@ export default function Dashboard() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
                     No deployments yet
                   </h3>
-                  <p className="text-gray-400 mb-4">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
                     Create your first bot deployment to get started!
                   </p>
                   <button

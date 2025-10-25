@@ -69,3 +69,48 @@
 [00:35:35.754] Browser LOG     ✅ Token still valid, restoring session...
 [00:35:35.754] Browser LOG     🟢 Attached token to request: /deploy
 [00:35:35.754] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:40:42.284] Browser LOG     🟢 Attached token to request: /deploy
+[00:40:47.109] Browser WARN    🔴 Logging out triggered: Manual logout
+[00:40:58.763] Browser LOG     ⚙️ AuthProvider initialized...
+[00:40:58.763] Browser LOG     ℹ️ No token found in storage.
+[00:40:58.763] Browser LOG     ⚙️ AuthProvider initialized...
+[00:40:58.763] Browser LOG     ℹ️ No token found in storage.
+[00:40:58.763] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:43:33.432] Server  LOG      ✓ Compiled in 1454ms
+[00:43:51.458] Browser LOG     🟢 Logging in...
+[00:43:52.244] Browser LOG     ✅ Token received:
+[00:43:52.244] Browser LOG     ✅ User successfully logged in: guy
+[00:43:52.692] Browser LOG     🟢 Attached token to request: /deploy
+[00:43:52.692] Browser LOG     🟢 Attached token to request: /deploy
+[00:44:22.950] Server  LOG      ✓ Compiled in 1036ms
+[00:44:40.088] Browser LOG     🟢 Attached token to request: /deploy
+[00:44:40.422] Server  LOG      ✓ Compiled in 1074ms
+[00:44:57.580] Browser LOG     🟢 Attached token to request: /deploy
+[00:44:58.923] Server  LOG      ✓ Compiled in 2.1s
+[00:45:18.747] Browser LOG     🟢 Attached token to request: /deploy
+[00:45:19.065] Server  LOG      ✓ Compiled in 622ms
+[00:45:31.548] Browser LOG     🟢 Attached token to request: /deploy
+[00:45:32.128] Server  LOG      ✓ Compiled in 952ms
+[00:45:46.933] Browser LOG     🟢 Attached token to request: /deploy
+[00:45:47.206] Server  LOG      ✓ Compiled in 491ms
+[00:46:04.362] Browser LOG     ⚙️ AuthProvider initialized...
+[00:46:04.363] Browser LOG     📦 Saved token detected: {"exp":1763984730,"iat":1761392730,"id":"68fa3c466414c64795ef7ee7"}
+[00:46:04.363] Browser LOG     📆 Expiration: "2025-11-24T11:45:30.000Z"
+[00:46:04.363] Browser LOG     ✅ Token still valid, restoring session...
+[00:46:04.363] Browser LOG     ⚙️ AuthProvider initialized...
+[00:46:04.363] Browser LOG     📦 Saved token detected: {"exp":1763984730,"iat":1761392730,"id":"68fa3c466414c64795ef7ee7"}
+[00:46:04.363] Browser LOG     📆 Expiration: "2025-11-24T11:45:30.000Z"
+[00:46:04.363] Browser LOG     ✅ Token still valid, restoring session...
+[00:46:04.363] Browser LOG     🟢 Attached token to request: /deploy
+[00:46:04.363] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:46:11.427] Browser LOG     ⚙️ AuthProvider initialized...
+[00:46:11.427] Browser LOG     📦 Saved token detected: {"exp":1763984730,"iat":1761392730,"id":"68fa3c466414c64795ef7ee7"}
+[00:46:11.427] Browser LOG     📆 Expiration: "2025-11-24T11:45:30.000Z"
+[00:46:11.427] Browser LOG     ✅ Token still valid, restoring session...
+[00:46:11.427] Browser LOG     ⚙️ AuthProvider initialized...
+[00:46:11.427] Browser LOG     📦 Saved token detected: {"exp":1763984730,"iat":1761392730,"id":"68fa3c466414c64795ef7ee7"}
+[00:46:11.427] Browser LOG     📆 Expiration: "2025-11-24T11:45:30.000Z"
+[00:46:11.427] Browser LOG     ✅ Token still valid, restoring session...
+[00:46:11.427] Browser LOG     🟢 Attached token to request: /deploy
+[00:46:11.427] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:46:14.842] Server  LOG      ✓ Compiled in 1489ms

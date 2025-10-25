@@ -280,26 +280,26 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$run
 function BotCard({ deployment }) {
     const getStatusColor = (status)=>{
         switch(status){
-            case 'running':
-                return 'bg-green-600';
-            case 'stopped':
-                return 'bg-red-600';
-            case 'pending':
-                return 'bg-yellow-600';
-            case 'failed':
-                return 'bg-red-600';
+            case "running":
+                return "bg-green-600";
+            case "stopped":
+                return "bg-red-600";
+            case "pending":
+                return "bg-yellow-600";
+            case "failed":
+                return "bg-red-600";
             default:
-                return 'bg-gray-600';
+                return "bg-gray-600";
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-        className: "bg-gray-800 p-6 rounded-lg",
+        className: "bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md dark:shadow-gray-700/40 hover:shadow-lg transition-shadow duration-300",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "flex justify-between items-start mb-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                        className: "text-xl font-semibold",
+                        className: "text-xl font-semibold text-gray-800 dark:text-gray-100",
                         children: deployment.botName
                     }, void 0, false, {
                         fileName: "[project]/components/BotCard.js",
@@ -307,11 +307,11 @@ function BotCard({ deployment }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                        className: `px-2 py-1 rounded text-sm ${getStatusColor(deployment.status)}`,
+                        className: `px-2 py-1 rounded text-sm text-white ${getStatusColor(deployment.status)}`,
                         children: deployment.status
                     }, void 0, false, {
                         fileName: "[project]/components/BotCard.js",
-                        lineNumber: 21,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, this)
                 ]
@@ -321,50 +321,50 @@ function BotCard({ deployment }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                className: "text-gray-400 mb-2",
+                className: "text-gray-600 dark:text-gray-400 mb-2",
                 children: [
                     "Version: ",
                     deployment.version
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/BotCard.js",
-                lineNumber: 30,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                className: "text-gray-400 mb-4",
+                className: "text-gray-600 dark:text-gray-400 mb-4",
                 children: [
                     "Deployed: ",
                     new Date(deployment.deployedAt).toLocaleDateString()
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/BotCard.js",
-                lineNumber: 31,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "flex space-x-2",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                        className: "bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-sm",
+                        className: "bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200",
                         children: "Update"
                     }, void 0, false, {
                         fileName: "[project]/components/BotCard.js",
-                        lineNumber: 36,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                        className: "bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-sm",
+                        className: "bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200",
                         children: "Stop"
                     }, void 0, false, {
                         fileName: "[project]/components/BotCard.js",
-                        lineNumber: 39,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/BotCard.js",
-                lineNumber: 35,
+                lineNumber: 39,
                 columnNumber: 7
             }, this)
         ]
@@ -505,11 +505,11 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 function DeployModal({ onClose }) {
     const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])({
-        botName: '',
-        version: '1.0.0'
+        botName: "",
+        version: "1.0.0"
     });
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
-    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])('');
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])("");
     const handleChange = (e)=>{
         setFormData({
             ...formData,
@@ -519,12 +519,12 @@ function DeployModal({ onClose }) {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setLoading(true);
-        setError('');
+        setError("");
         try {
             await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["deployBot"])(formData);
             onClose();
         } catch (error) {
-            setError(error.response?.data?.error || 'Deployment failed');
+            setError(error.response?.data?.error || "Deployment failed");
         } finally{
             setLoading(false);
         }
@@ -532,10 +532,10 @@ function DeployModal({ onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-            className: "bg-gray-800 p-8 rounded-lg w-full max-w-md",
+            className: "bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-md",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                    className: "text-2xl font-bold mb-6",
+                    className: "text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100",
                     children: "Deploy New Bot"
                 }, void 0, false, {
                     fileName: "[project]/components/DeployModal.js",
@@ -543,11 +543,11 @@ function DeployModal({ onClose }) {
                     columnNumber: 9
                 }, this),
                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "bg-red-600 text-white p-3 rounded mb-4",
+                    className: "bg-red-600 text-white p-3 rounded-lg mb-4",
                     children: error
                 }, void 0, false, {
                     fileName: "[project]/components/DeployModal.js",
-                    lineNumber: 40,
+                    lineNumber: 42,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("form", {
@@ -557,11 +557,11 @@ function DeployModal({ onClose }) {
                             className: "mb-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
-                                    className: "block text-sm font-medium mb-2",
+                                    className: "block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300",
                                     children: "Bot Name"
                                 }, void 0, false, {
                                     fileName: "[project]/components/DeployModal.js",
-                                    lineNumber: 47,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -569,28 +569,28 @@ function DeployModal({ onClose }) {
                                     name: "botName",
                                     value: formData.botName,
                                     onChange: handleChange,
-                                    className: "w-full px-3 py-2 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500",
+                                    className: "w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200",
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/DeployModal.js",
-                                    lineNumber: 48,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/DeployModal.js",
-                            lineNumber: 46,
+                            lineNumber: 48,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                             className: "mb-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
-                                    className: "block text-sm font-medium mb-2",
+                                    className: "block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300",
                                     children: "Version"
                                 }, void 0, false, {
                                     fileName: "[project]/components/DeployModal.js",
-                                    lineNumber: 59,
+                                    lineNumber: 63,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -598,17 +598,17 @@ function DeployModal({ onClose }) {
                                     name: "version",
                                     value: formData.version,
                                     onChange: handleChange,
-                                    className: "w-full px-3 py-2 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500",
+                                    className: "w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200",
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/DeployModal.js",
-                                    lineNumber: 60,
+                                    lineNumber: 66,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/DeployModal.js",
-                            lineNumber: 58,
+                            lineNumber: 62,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -617,33 +617,33 @@ function DeployModal({ onClose }) {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                     type: "button",
                                     onClick: onClose,
-                                    className: "flex-1 bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded font-semibold",
+                                    className: "flex-1 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 text-gray-800 dark:text-gray-100 px-4 py-3 rounded-lg font-semibold transition-colors duration-200",
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/components/DeployModal.js",
-                                    lineNumber: 71,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                     type: "submit",
                                     disabled: loading,
-                                    className: "flex-1 bg-green-600 hover:bg-green-700 disabled:opacity-50 px-4 py-2 rounded font-semibold",
-                                    children: loading ? 'Deploying...' : 'Deploy'
+                                    className: "flex-1 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-200",
+                                    children: loading ? "Deploying..." : "Deploy"
                                 }, void 0, false, {
                                     fileName: "[project]/components/DeployModal.js",
-                                    lineNumber: 78,
+                                    lineNumber: 84,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/DeployModal.js",
-                            lineNumber: 70,
+                            lineNumber: 76,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/DeployModal.js",
-                    lineNumber: 45,
+                    lineNumber: 47,
                     columnNumber: 9
                 }, this)
             ]
@@ -731,9 +731,9 @@ function Dashboard() {
     };
     if (authLoading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-            className: "min-h-screen bg-gray-900 flex items-center justify-center",
+            className: "min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"
+                className: "animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500"
             }, void 0, false, {
                 fileName: "[project]/pages/dashboard.js",
                 lineNumber: 51,
@@ -785,7 +785,7 @@ function Dashboard() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-400",
+                                        className: "text-gray-600 dark:text-gray-400",
                                         children: "Manage your bot deployments and monitor their performance."
                                     }, void 0, false, {
                                         fileName: "[project]/pages/dashboard.js",
@@ -824,7 +824,7 @@ function Dashboard() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                className: "mt-4 text-gray-400",
+                                className: "mt-4 text-gray-600 dark:text-gray-400",
                                 children: "Loading deployments..."
                             }, void 0, false, {
                                 fileName: "[project]/pages/dashboard.js",
@@ -843,13 +843,13 @@ function Dashboard() {
                                     deployment: deployment
                                 }, deployment._id, false, {
                                     fileName: "[project]/pages/dashboard.js",
-                                    lineNumber: 92,
+                                    lineNumber: 94,
                                     columnNumber: 15
                                 }, this)),
                             deployments.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                 className: "col-span-full text-center py-16",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "bg-gray-800 rounded-lg p-8 max-w-md mx-auto",
+                                    className: "bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-700/40 p-8 max-w-md mx-auto",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                             className: "w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4",
@@ -865,33 +865,33 @@ function Dashboard() {
                                                     d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/dashboard.js",
-                                                    lineNumber: 104,
+                                                    lineNumber: 106,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/pages/dashboard.js",
-                                                lineNumber: 98,
+                                                lineNumber: 100,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/pages/dashboard.js",
-                                            lineNumber: 97,
+                                            lineNumber: 99,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-semibold mb-2",
+                                            className: "text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100",
                                             children: "No deployments yet"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/dashboard.js",
-                                            lineNumber: 112,
+                                            lineNumber: 114,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-400 mb-4",
+                                            className: "text-gray-600 dark:text-gray-400 mb-4",
                                             children: "Create your first bot deployment to get started!"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/dashboard.js",
-                                            lineNumber: 115,
+                                            lineNumber: 117,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -900,24 +900,24 @@ function Dashboard() {
                                             children: "Deploy Your First Bot"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/dashboard.js",
-                                            lineNumber: 118,
+                                            lineNumber: 120,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/dashboard.js",
-                                    lineNumber: 96,
+                                    lineNumber: 98,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/pages/dashboard.js",
-                                lineNumber: 95,
+                                lineNumber: 97,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/pages/dashboard.js",
-                        lineNumber: 90,
+                        lineNumber: 92,
                         columnNumber: 11
                     }, this)
                 ]
@@ -928,14 +928,14 @@ function Dashboard() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/pages/dashboard.js",
-                lineNumber: 131,
+                lineNumber: 133,
                 columnNumber: 7
             }, this),
             showModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DeployModal$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                 onClose: handleModalClose
             }, void 0, false, {
                 fileName: "[project]/pages/dashboard.js",
-                lineNumber: 133,
+                lineNumber: 135,
                 columnNumber: 21
             }, this)
         ]
