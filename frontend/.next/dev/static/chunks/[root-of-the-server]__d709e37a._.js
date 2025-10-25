@@ -1369,7 +1369,7 @@ function Dashboard() {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Dashboard.useEffect": ()=>{
             if (!authLoading && !user) {
-                router.push('/login');
+                router.push("/login");
                 return;
             }
             if (user) {
@@ -1386,7 +1386,7 @@ function Dashboard() {
             const data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$js__$5b$client$5d$__$28$ecmascript$29$__["getDeployments"])();
             setDeployments(data);
         } catch (error) {
-            console.error('Error fetching deployments:', error);
+            console.error("Error fetching deployments:", error);
         } finally{
             setLoading(false);
         }
@@ -1418,7 +1418,7 @@ function Dashboard() {
         return null;
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen bg-gray-900 text-white",
+        className: "min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("title", {
@@ -1450,7 +1450,7 @@ function Dashboard() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/pages/dashboard.js",
-                                        lineNumber: 71,
+                                        lineNumber: 69,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1464,7 +1464,7 @@ function Dashboard() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/pages/dashboard.js",
-                                lineNumber: 70,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1473,13 +1473,13 @@ function Dashboard() {
                                 children: "Deploy New Bot"
                             }, void 0, false, {
                                 fileName: "[project]/pages/dashboard.js",
-                                lineNumber: 74,
+                                lineNumber: 76,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/pages/dashboard.js",
-                        lineNumber: 69,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this),
                     loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1489,7 +1489,7 @@ function Dashboard() {
                                 className: "animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto"
                             }, void 0, false, {
                                 fileName: "[project]/pages/dashboard.js",
-                                lineNumber: 84,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1497,13 +1497,13 @@ function Dashboard() {
                                 children: "Loading deployments..."
                             }, void 0, false, {
                                 fileName: "[project]/pages/dashboard.js",
-                                lineNumber: 85,
+                                lineNumber: 87,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/pages/dashboard.js",
-                        lineNumber: 83,
+                        lineNumber: 85,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
@@ -1512,7 +1512,7 @@ function Dashboard() {
                                     deployment: deployment
                                 }, deployment._id, false, {
                                     fileName: "[project]/pages/dashboard.js",
-                                    lineNumber: 90,
+                                    lineNumber: 92,
                                     columnNumber: 15
                                 }, this)),
                             deployments.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1534,17 +1534,17 @@ function Dashboard() {
                                                     d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/dashboard.js",
-                                                    lineNumber: 97,
+                                                    lineNumber: 104,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/pages/dashboard.js",
-                                                lineNumber: 96,
+                                                lineNumber: 98,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/pages/dashboard.js",
-                                            lineNumber: 95,
+                                            lineNumber: 97,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1552,7 +1552,7 @@ function Dashboard() {
                                             children: "No deployments yet"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/dashboard.js",
-                                            lineNumber: 100,
+                                            lineNumber: 112,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1560,7 +1560,7 @@ function Dashboard() {
                                             children: "Create your first bot deployment to get started!"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/dashboard.js",
-                                            lineNumber: 101,
+                                            lineNumber: 115,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1569,42 +1569,42 @@ function Dashboard() {
                                             children: "Deploy Your First Bot"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/dashboard.js",
-                                            lineNumber: 102,
+                                            lineNumber: 118,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/dashboard.js",
-                                    lineNumber: 94,
+                                    lineNumber: 96,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/pages/dashboard.js",
-                                lineNumber: 93,
+                                lineNumber: 95,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/pages/dashboard.js",
-                        lineNumber: 88,
+                        lineNumber: 90,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/dashboard.js",
-                lineNumber: 68,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/pages/dashboard.js",
-                lineNumber: 115,
+                lineNumber: 131,
                 columnNumber: 7
             }, this),
             showModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$DeployModal$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                 onClose: handleModalClose
             }, void 0, false, {
                 fileName: "[project]/pages/dashboard.js",
-                lineNumber: 117,
+                lineNumber: 133,
                 columnNumber: 21
             }, this)
         ]

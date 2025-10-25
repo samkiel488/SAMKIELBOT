@@ -56,9 +56,7 @@ export default function Register() {
     const read = localStorage.getItem("samkiel_read_terms") === "true"; // user actually visited terms
 
     if (!read) {
-      toast.error(
-        "Abeg read the Terms & Conditions and Privacy Policy first."
-      );
+      toast.error("Abeg read the Terms & Conditions and Privacy Policy first.");
       return;
     }
 
@@ -126,7 +124,7 @@ export default function Register() {
       </div>
 
       {/* Right side - Register form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-900 overflow-y-auto">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900 overflow-y-auto">
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-2">

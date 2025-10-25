@@ -536,7 +536,7 @@ const AuthProvider = ({ children })=>{
                     __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error("Login failed: no token received from server");
                     return;
                 }
-                console.log("✅ Token received:", token);
+                console.log("✅ Token received:");
                 localStorage.setItem("token", token);
                 localStorage.setItem("user", JSON.stringify(user));
                 setToken(token);
@@ -575,7 +575,7 @@ const AuthProvider = ({ children })=>{
                     __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error("Registration failed: no token received from server");
                     return null;
                 }
-                console.log("✅ Token received:", token);
+                console.log("✅ Token received:");
                 localStorage.setItem("token", token);
                 localStorage.setItem("user", JSON.stringify(user));
                 setToken(token);
@@ -988,7 +988,7 @@ function Register() {
     const [agreeToTerms, setAgreeToTerms] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Register.useEffect": ()=>{
-            // Restore either explicit agreement OR that user actually read the terms
+            // Restore agreement state if user has agreed or read terms
             const agreed = localStorage.getItem("samkiel_agreed") === "true";
             const read = localStorage.getItem("samkiel_read_terms") === "true";
             if (agreed || read) setAgreeToTerms(true);
@@ -1020,9 +1020,8 @@ function Register() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         const read = localStorage.getItem("samkiel_read_terms") === "true"; // user actually visited terms
-        const agreed = localStorage.getItem("samkiel_agreed") === "true";
-        if (!agreed && !read) {
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error("Please agree to the Terms & Privacy Policy or read them first.");
+        if (!read) {
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error("Abeg read the Terms & Conditions and Privacy Policy first.");
             return;
         }
         // ✅ WhatsApp number validation
@@ -1061,12 +1060,12 @@ function Register() {
                     children: "Register - 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋"
                 }, void 0, false, {
                     fileName: "[project]/pages/register.js",
-                    lineNumber: 102,
+                    lineNumber: 99,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/pages/register.js",
-                lineNumber: 101,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1076,7 +1075,7 @@ function Register() {
                         className: "absolute inset-0 bg-black/20"
                     }, void 0, false, {
                         fileName: "[project]/pages/register.js",
-                        lineNumber: 107,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1087,7 +1086,7 @@ function Register() {
                                 children: username ? `${username}, we're glad to have you here!` : "Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!"
                             }, void 0, false, {
                                 fileName: "[project]/pages/register.js",
-                                lineNumber: 109,
+                                lineNumber: 106,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1095,7 +1094,7 @@ function Register() {
                                 children: "Create your account and start deploying bots with ease. Join thousands of developers already using our platform."
                             }, void 0, false, {
                                 fileName: "[project]/pages/register.js",
-                                lineNumber: 114,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1105,57 +1104,57 @@ function Register() {
                                         className: "w-16 h-16 bg-white/10 rounded-full animate-pulse"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/register.js",
-                                        lineNumber: 119,
+                                        lineNumber: 116,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-12 h-12 bg-white/10 rounded-full animate-pulse delay-100"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/register.js",
-                                        lineNumber: 120,
+                                        lineNumber: 117,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-20 h-20 bg-white/10 rounded-full animate-pulse delay-200"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/register.js",
-                                        lineNumber: 121,
+                                        lineNumber: 118,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/pages/register.js",
-                                lineNumber: 118,
+                                lineNumber: 115,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/pages/register.js",
-                        lineNumber: 108,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute top-20 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-bounce"
                     }, void 0, false, {
                         fileName: "[project]/pages/register.js",
-                        lineNumber: 125,
+                        lineNumber: 122,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute bottom-20 left-20 w-24 h-24 bg-blue-500/20 rounded-full blur-xl animate-bounce delay-1000"
                     }, void 0, false, {
                         fileName: "[project]/pages/register.js",
-                        lineNumber: 126,
+                        lineNumber: 123,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/register.js",
-                lineNumber: 106,
+                lineNumber: 103,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-900 overflow-y-auto",
+                className: "w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900 overflow-y-auto",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-md w-full space-y-8",
                     children: [
@@ -1167,7 +1166,7 @@ function Register() {
                                     children: "Create your account"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 133,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1175,7 +1174,7 @@ function Register() {
                                     children: "Fill in your details to get started"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 136,
+                                    lineNumber: 133,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1185,18 +1184,18 @@ function Register() {
                                         children: username ? `${username}, we're glad to have you here!` : "Join the 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 community!"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/register.js",
-                                        lineNumber: 139,
+                                        lineNumber: 136,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 138,
+                                    lineNumber: 135,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/pages/register.js",
-                            lineNumber: 132,
+                            lineNumber: 129,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -1214,7 +1213,7 @@ function Register() {
                                                     children: "Full Name"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 150,
+                                                    lineNumber: 147,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1228,13 +1227,13 @@ function Register() {
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 156,
+                                                    lineNumber: 153,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 149,
+                                            lineNumber: 146,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1245,7 +1244,7 @@ function Register() {
                                                     children: "Username"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 169,
+                                                    lineNumber: 166,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1259,13 +1258,13 @@ function Register() {
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 175,
+                                                    lineNumber: 172,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 168,
+                                            lineNumber: 165,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1276,7 +1275,7 @@ function Register() {
                                                     children: "Email"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 188,
+                                                    lineNumber: 185,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1290,13 +1289,13 @@ function Register() {
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 194,
+                                                    lineNumber: 191,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 187,
+                                            lineNumber: 184,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1307,7 +1306,7 @@ function Register() {
                                                     children: "WhatsApp Phone Number"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 207,
+                                                    lineNumber: 204,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1328,13 +1327,13 @@ function Register() {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 213,
+                                                    lineNumber: 210,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 206,
+                                            lineNumber: 203,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1346,7 +1345,7 @@ function Register() {
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 235,
+                                                    lineNumber: 232,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1360,7 +1359,7 @@ function Register() {
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 241,
+                                                    lineNumber: 238,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1372,24 +1371,24 @@ function Register() {
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/register.js",
-                                                        lineNumber: 257,
+                                                        lineNumber: 254,
                                                         columnNumber: 35
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["HiEye"], {
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/register.js",
-                                                        lineNumber: 257,
+                                                        lineNumber: 254,
                                                         columnNumber: 60
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 251,
+                                                    lineNumber: 248,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 234,
+                                            lineNumber: 231,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1401,7 +1400,7 @@ function Register() {
                                                     children: "Confirm Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 262,
+                                                    lineNumber: 259,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1415,7 +1414,7 @@ function Register() {
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 268,
+                                                    lineNumber: 265,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1427,30 +1426,30 @@ function Register() {
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/register.js",
-                                                        lineNumber: 289,
+                                                        lineNumber: 286,
                                                         columnNumber: 21
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["HiEye"], {
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/register.js",
-                                                        lineNumber: 291,
+                                                        lineNumber: 288,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 278,
+                                                    lineNumber: 275,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 261,
+                                            lineNumber: 258,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 148,
+                                    lineNumber: 145,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1473,7 +1472,7 @@ function Register() {
                                             className: "mt-1 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 299,
+                                            lineNumber: 296,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -1494,7 +1493,7 @@ function Register() {
                                                     children: "Terms & Conditions"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 317,
+                                                    lineNumber: 314,
                                                     columnNumber: 17
                                                 }, this),
                                                 " ",
@@ -1512,19 +1511,19 @@ function Register() {
                                                     children: "Privacy Policy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 330,
+                                                    lineNumber: 327,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/register.js",
-                                            lineNumber: 315,
+                                            lineNumber: 312,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 298,
+                                    lineNumber: 295,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1534,7 +1533,7 @@ function Register() {
                                     children: loading ? "Creating Account..." : "Create Account"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 345,
+                                    lineNumber: 342,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1545,35 +1544,35 @@ function Register() {
                                         children: "Already have an account? Sign in here"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/register.js",
-                                        lineNumber: 356,
+                                        lineNumber: 353,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 355,
+                                    lineNumber: 352,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/pages/register.js",
-                            lineNumber: 147,
+                            lineNumber: 144,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/pages/register.js",
-                    lineNumber: 131,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/pages/register.js",
-                lineNumber: 130,
+                lineNumber: 127,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/pages/register.js",
-        lineNumber: 100,
+        lineNumber: 97,
         columnNumber: 5
     }, this);
 }

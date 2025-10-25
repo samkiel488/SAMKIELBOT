@@ -1140,7 +1140,7 @@ function Login() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-900",
+                className: "w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-md w-full space-y-8",
                     children: [

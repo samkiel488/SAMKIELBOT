@@ -501,3 +501,323 @@ React will try to recreate this component tree from scratch using the error boun
 [05:30:06.367] Browser LOG     ℹ️ No token found in storage.
 [05:30:06.367] Browser LOG     ⚙️ AuthProvider initialized...
 [05:30:06.367] Browser LOG     ℹ️ No token found in storage.
+[05:30:24.354] Browser LOG     ⚙️ AuthProvider initialized...
+[05:30:24.354] Browser LOG     ℹ️ No token found in storage.
+[05:30:24.354] Browser LOG     ⚙️ AuthProvider initialized...
+[05:30:24.354] Browser LOG     ℹ️ No token found in storage.
+[05:30:24.508] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:30:29.607] Browser LOG     🟢 Logging in...
+[05:30:31.489] Browser LOG     ✅ Token received:
+[05:30:31.490] Browser LOG     ✅ User successfully logged in: guy
+[05:30:31.963] Browser LOG     🟢 Attached token to request: /deploy
+[05:30:31.963] Browser LOG     🟢 Attached token to request: /deploy
+[05:30:38.757] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:31:18.107] Browser LOG     ⚙️ AuthProvider initialized...
+[05:31:18.107] Browser LOG     ℹ️ No token found in storage.
+[05:31:18.107] Browser LOG     ⚙️ AuthProvider initialized...
+[05:31:18.107] Browser LOG     ℹ️ No token found in storage.
+[05:31:18.223] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:31:57.216] Browser LOG     Refreshing page data due to server-side change
+[05:31:57.711] Server  LOG      ✓ Compiled in 649ms
+[05:31:58.367] Browser ERROR   ./pages/index.js:299:16
+Parsing ecmascript source code failed
+  297 |       </section>
+  298 |
+> 299 |       <Footer />
+      |                ^
+  300 |     </div>
+  301 |   );
+  302 | }
+
+Expression expected
+[05:31:58.367] Browser ERROR   ./pages/index.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/index.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:08.375] Server  LOG      ✓ Compiled in 634ms
+[05:32:09.941] Browser LOG     Refreshing page data due to server-side change
+[05:32:21.704] Browser LOG     ⚙️ AuthProvider initialized...
+[05:32:21.704] Browser LOG     ℹ️ No token found in storage.
+[05:32:21.704] Browser LOG     ⚙️ AuthProvider initialized...
+[05:32:21.704] Browser LOG     ℹ️ No token found in storage.
+[05:32:22.367] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:32:44.142] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:44.142] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:44.255] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:44.255] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:45.264] Browser LOG     Refreshing page data due to server-side change
+[05:32:47.873] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:47.873] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:47.873] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:47.873] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:48.173] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:48.173] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:48.173] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:48.173] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:48.174] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:48.174] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:48.174] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:48.174] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:49.373] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:49.373] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:49.373] Browser ERROR   ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+[05:32:49.373] Browser ERROR   ./pages/login.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/login.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:32:49.966] Browser ERROR   uncaughtError: Error: ./pages/login.js:238:6
+Parsing ecmascript source code failed
+  236 |         </div>
+  237 |       </div>
+> 238 |     </div>
+      |      ^^^^^
+  239 |   );
+  240 | }
+  241 |
+
+Unterminated regexp literal
+
+
+[05:32:57.547] Browser WARN    Image with src "/bot-menu-preview2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:32:57.547] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:32:59.014] Server  LOG      ✓ Compiled in 450ms
+[05:33:19.826] Server  LOG      ✓ Compiled in 415ms
+[05:33:20.405] Browser ERROR   ./pages/dashboard.js:67:13
+Parsing ecmascript source code failed
+  65 |
+  66 |
+> 67 |       <main className="container mx-auto px-4 py-16">
+     |             ^^^^^^^^^
+  68 |         <div className="flex justify-between items-center mb-8">
+  69 |           <div>
+  70 |             <h1 className="text-4xl font-bold mb-2">Welcome back, {user.fullName}!</h1>
+
+Expected ',', got 'className'
+[05:33:20.405] Browser ERROR   ./pages/dashboard.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/pages/dashboard.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/pages/dashboard.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[05:33:21.292] Server  LOG      ✓ Compiled in 495ms
