@@ -788,10 +788,10 @@ function Dashboard() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
-                                        className: "text-2xl md:text-4xl font-bold mb-2",
+                                        className: "text-xl md:text-3xl font-bold mb-2",
                                         children: [
                                             "Welcome back, ",
-                                            user.fullName,
+                                            user.username,
                                             "!"
                                         ]
                                     }, void 0, true, {
@@ -815,7 +815,7 @@ function Dashboard() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                 onClick: handleDeploy,
-                                className: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105",
+                                className: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-3 py-1.5 md:px-5 md:py-2.5 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105",
                                 children: "Deploy New Bot"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/pages/dashboard.js",
@@ -911,7 +911,7 @@ function Dashboard() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                             onClick: handleDeploy,
-                                            className: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-4 py-2 md:px-6 md:py-2 rounded-lg font-semibold transition-all duration-200",
+                                            className: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-3 py-1.5 md:px-5 md:py-2.5 rounded-lg font-semibold transition-all duration-200",
                                             children: "Deploy Your First Bot"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend/pages/dashboard.js",

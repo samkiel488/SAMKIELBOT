@@ -21,3 +21,30 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 [00:19:19.486] Browser LOG     ✅ Token still valid, restoring session...
 [00:19:19.486] Browser LOG     🟢 Attached token to request: /deploy
 [00:19:19.486] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:19:56.681] Browser LOG     ⚙️ AuthProvider initialized...
+[00:19:56.681] Browser LOG     ℹ️ No token found in storage.
+[00:19:56.681] Browser LOG     ⚙️ AuthProvider initialized...
+[00:19:56.681] Browser LOG     ℹ️ No token found in storage.
+[00:19:56.901] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:20:02.231] Browser LOG     ⚙️ AuthProvider initialized...
+[00:20:02.231] Browser LOG     ℹ️ No token found in storage.
+[00:20:02.231] Browser LOG     ⚙️ AuthProvider initialized...
+[00:20:02.231] Browser LOG     ℹ️ No token found in storage.
+[00:20:02.288] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:20:05.095] Browser LOG     🟢 Logging in...
+[00:20:05.095] Browser ERROR   ❌ Login error: {}
+[00:20:05.095] Browser ERROR   unhandledRejection: SyntaxError: Unexpected token 'F', "Failed to fetch" is not valid JSON
+[00:23:32.536] Server  LOG      ✓ Compiled in 330ms
+[00:23:32.597] Browser LOG     🟢 Attached token to request: /deploy
+[00:23:39.891] Server  LOG      ✓ Compiled in 293ms
+[00:23:40.603] Browser LOG     🟢 Attached token to request: /deploy
+[00:23:47.119] Server  LOG      ✓ Compiled in 272ms
+[00:23:47.605] Browser LOG     🟢 Attached token to request: /deploy
+[00:25:01.023] Browser LOG     🟢 Attached token to request: /deploy
+[00:25:01.100] Server  LOG      ✓ Compiled in 221ms
+[00:25:51.008] Server  LOG      ✓ Compiled in 129ms
+[00:25:51.599] Browser LOG     🟢 Attached token to request: /deploy
+[00:25:53.203] Server  LOG      ✓ Compiled in 109ms
+[00:25:53.599] Browser LOG     🟢 Attached token to request: /deploy
+[00:25:54.773] Browser LOG     🟢 Attached token to request: /deploy
+[00:25:54.851] Server  LOG      ✓ Compiled in 176ms

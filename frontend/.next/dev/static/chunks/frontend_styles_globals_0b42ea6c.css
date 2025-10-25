@@ -960,6 +960,16 @@ img, video {
   padding-bottom: 1rem;
 }
 
+.px-3 {
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.py-1\.5 {
+  padding-top: .375rem;
+  padding-bottom: .375rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1596,6 +1606,16 @@ input, button, textarea {
     padding-bottom: .75rem;
   }
 
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .md\:py-2\.5 {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+  }
+
   .md\:pb-16 {
     padding-bottom: 4rem;
   }
@@ -1631,6 +1651,11 @@ input, button, textarea {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
