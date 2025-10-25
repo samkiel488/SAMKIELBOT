@@ -5,6 +5,7 @@ import Link from "next/link";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 import toast from "react-hot-toast";
 import { useAuth } from "../lib/auth";
+import Footer from "../components/Footer";
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,12 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [agreeToTerms, setAgreeToTerms] = useState(false);
+  const [hasVisitedTerms, setHasVisitedTerms] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("samkiel_agreed");
+    if (saved === "true") setAgreeToTerms(true);
+  }, []);
   const { login, user } = useAuth();
   const router = useRouter();
 
@@ -37,17 +44,27 @@ export default function Login() {
     }
   };
 
+  const handleTermsClick = () => {
+    setHasVisitedTerms(true);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!agreeToTerms) {
+    if (!agreeToTerms || !hasVisitedTerms) {
       toast.error(
-        "Please agree to the Terms & Conditions and Privacy Policy to continue."
+        "Please agree to the Terms & Privacy Policy before continuing.",
+        {
+          duration: 10000,
+        }
       );
+
       return;
     }
     setLoading(true);
     try {
       await login(formData.identifier, formData.password);
+      // Clear agreement after successful login
+      localStorage.removeItem("samkiel_agreed");
     } catch (error) {
       const err = JSON.parse(error.message);
       toast.error(err.message || "Login failed");
@@ -158,17 +175,26 @@ export default function Login() {
                 name="agreeToTerms"
                 type="checkbox"
                 checked={agreeToTerms}
-                onChange={(e) => setAgreeToTerms(e.target.checked)}
+                onChange={(e) => {
+                  const newValue = e.target.checked;
+                  setAgreeToTerms(newValue);
+                  if (newValue) {
+                    localStorage.setItem("samkiel_agreed", "true");
+                  } else {
+                    localStorage.removeItem("samkiel_agreed");
+                  }
+                }}
                 className="mt-1 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
               />
               <label htmlFor="agreeToTerms" className="text-sm text-gray-300">
                 I agree to the{" "}
-                <Link
+                <a
                   href="/terms"
+                  onClick={handleTermsClick}
                   className="text-blue-400 hover:text-blue-300 underline"
                 >
                   Terms & Conditions
-                </Link>{" "}
+                </a>{" "}
                 and{" "}
                 <Link
                   href="/privacy"

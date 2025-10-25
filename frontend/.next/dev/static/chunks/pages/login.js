@@ -7,9 +7,11 @@ __turbopack_load_page_chunks__("/login", [
   "static/chunks/node_modules_react_e3593a73._.js",
   "static/chunks/node_modules_react-dom_cjs_react-dom_development_2b5e0eb3.js",
   "static/chunks/node_modules_react-dom_8a8085df._.js",
-  "static/chunks/node_modules_react-icons_27a67710._.js",
+  "static/chunks/node_modules_react-icons_hi_index_mjs_3b61d17e._.js",
+  "static/chunks/node_modules_react-icons_fa_index_mjs_c19690bf._.js",
+  "static/chunks/node_modules_react-icons_lib_7cd2a28b._.js",
   "static/chunks/node_modules_8c14007f._.js",
-  "static/chunks/[root-of-the-server]__c9558bbc._.js",
+  "static/chunks/[root-of-the-server]__1d67a8ab._.js",
   "static/chunks/pages_login_2da965e7._.js",
-  "static/chunks/turbopack-pages_login_959e4707._.js"
+  "static/chunks/turbopack-pages_login_15b3c6b6._.js"
 ])

@@ -3,6 +3,7 @@ import { Toaster } from "react-hot-toast";
 import dynamic from "next/dynamic";
 import Layout from "../components/Layout";
 import Head from "next/head";
+import { ThemeProvider } from "../context/ThemeProvider";
 
 const AuthProvider = dynamic(
   () => import("../lib/auth").then((mod) => mod.AuthProvider),
@@ -17,21 +18,23 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel="icon" href="/SAMKIELBOT-LOGO.png" />
       </Head>
-      <AuthProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-        <Toaster
-          position="top-right"
-          toastOptions={{
-            duration: 4000,
-            style: {
-              background: "#363636",
-              color: "#fff",
-            },
-          }}
-        />
-      </AuthProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              duration: 4000,
+              style: {
+                background: "#363636",
+                color: "#fff",
+              },
+            }}
+          />
+        </AuthProvider>
+      </ThemeProvider>
     </>
   );
 }

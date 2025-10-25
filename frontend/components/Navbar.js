@@ -1,34 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useAuth } from "../lib/auth";
-import { applyTheme } from "../lib/theme";
-import { HiMenu, HiX, HiSun, HiMoon, HiDesktopComputer } from "react-icons/hi";
+import { ThemeContext } from "../context/ThemeProvider";
+import { HiMenu, HiX } from "react-icons/hi";
+import { Sun, Moon, Monitor } from "lucide-react";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
+  const { theme, setTheme } = useContext(ThemeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("system");
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "system";
-    setTheme(savedTheme);
-    applyTheme(savedTheme);
-
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = () => {
-      if (savedTheme === "system") {
-        applyTheme("system");
-      }
-    };
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
-
-  const handleThemeChange = (newTheme) => {
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    applyTheme(newTheme);
+  const toggleTheme = () => {
+    if (theme === "light") setTheme("dark");
+    else if (theme === "dark") setTheme("system");
+    else setTheme("light");
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -92,82 +78,30 @@ export default function Navbar() {
             </>
           )}
 
-          {/* Theme Toggle Buttons */}
-          <div className="flex space-x-1 ml-4">
-            <button
-              onClick={() => handleThemeChange("light")}
-              className={`p-2 rounded-lg transition-colors ${
-                theme === "light"
-                  ? "bg-blue-500 text-white"
-                  : "text-gray-400 hover:text-white hover:bg-gray-800"
-              }`}
-              aria-label="Light mode"
-            >
-              <HiSun size={20} />
-            </button>
-            <button
-              onClick={() => handleThemeChange("dark")}
-              className={`p-2 rounded-lg transition-colors ${
-                theme === "dark"
-                  ? "bg-blue-500 text-white"
-                  : "text-gray-400 hover:text-white hover:bg-gray-800"
-              }`}
-              aria-label="Dark mode"
-            >
-              <HiMoon size={20} />
-            </button>
-            <button
-              onClick={() => handleThemeChange("system")}
-              className={`p-2 rounded-lg transition-colors ${
-                theme === "system"
-                  ? "bg-blue-500 text-white"
-                  : "text-gray-400 hover:text-white hover:bg-gray-800"
-              }`}
-              aria-label="System mode"
-            >
-              <HiDesktopComputer size={20} />
-            </button>
-          </div>
+          {/* Single Theme Toggle Icon */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors ml-4"
+            aria-label={`Current theme: ${theme}. Click to cycle themes.`}
+          >
+            {theme === "light" && <Sun size={20} />}
+            {theme === "dark" && <Moon size={20} />}
+            {theme === "system" && <Monitor size={20} />}
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-2">
-          {/* Theme Toggle for Mobile */}
-          <div className="flex space-x-1">
-            <button
-              onClick={() => handleThemeChange("light")}
-              className={`p-1 rounded transition-colors ${
-                theme === "light"
-                  ? "bg-blue-500 text-white"
-                  : "text-gray-400 hover:text-white"
-              }`}
-              aria-label="Light mode"
-            >
-              <HiSun size={16} />
-            </button>
-            <button
-              onClick={() => handleThemeChange("dark")}
-              className={`p-1 rounded transition-colors ${
-                theme === "dark"
-                  ? "bg-blue-500 text-white"
-                  : "text-gray-400 hover:text-white"
-              }`}
-              aria-label="Dark mode"
-            >
-              <HiMoon size={16} />
-            </button>
-            <button
-              onClick={() => handleThemeChange("system")}
-              className={`p-1 rounded transition-colors ${
-                theme === "system"
-                  ? "bg-blue-500 text-white"
-                  : "text-gray-400 hover:text-white"
-              }`}
-              aria-label="System mode"
-            >
-              <HiDesktopComputer size={16} />
-            </button>
-          </div>
+          {/* Single Theme Toggle for Mobile */}
+          <button
+            onClick={toggleTheme}
+            className="p-1 rounded text-gray-400 hover:text-white transition-colors"
+            aria-label={`Current theme: ${theme}. Click to cycle themes.`}
+          >
+            {theme === "light" && <Sun size={16} />}
+            {theme === "dark" && <Moon size={16} />}
+            {theme === "system" && <Monitor size={16} />}
+          </button>
 
           <button
             onClick={toggleMenu}
@@ -179,56 +113,73 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Overlay Hamburger Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-800 dark:bg-gray-800 mt-4 rounded-lg p-4">
-          <div className="flex flex-col space-y-4">
-            <Link
-              href={user ? "/dashboard" : "/"}
-              className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            {user ? (
-              <>
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          ></div>
+          {/* Menu */}
+          <div className="fixed top-0 right-0 h-full w-64 bg-gray-800 dark:bg-gray-800 shadow-lg z-50 transform translate-x-0 transition-transform duration-300">
+            <div className="p-4">
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white focus:outline-none mb-4"
+                aria-label="Close menu"
+              >
+                <HiX size={24} />
+              </button>
+              <div className="flex flex-col space-y-4">
                 <Link
-                  href="/dashboard"
+                  href={user ? "/dashboard" : "/"}
                   className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Dashboard
+                  Home
                 </Link>
-                <button
-                  onClick={() => {
-                    logout();
-                    setIsMenuOpen(false);
-                  }}
-                  className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors text-left"
-                >
-                  Logout
-                </button>
-              </>
-            ) : (
-              <>
-                <Link
-                  href="/login"
-                  className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Login
-                </Link>
-                <Link
-                  href="/register"
-                  className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Register
-                </Link>
-              </>
-            )}
+                {user ? (
+                  <>
+                    <Link
+                      href="/dashboard"
+                      className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={() => {
+                        logout();
+                        setIsMenuOpen(false);
+                      }}
+                      className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors text-left"
+                    >
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href="/login"
+                      className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      href="/register"
+                      className="text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Register
+                    </Link>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </nav>
   );

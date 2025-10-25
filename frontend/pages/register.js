@@ -5,6 +5,7 @@ import Link from "next/link";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 import toast from "react-hot-toast";
 import { useAuth } from "../lib/auth";
+import Footer from "../components/Footer";
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,12 @@ export default function Register() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [agreeToTerms, setAgreeToTerms] = useState(false);
+  const [hasVisitedTerms, setHasVisitedTerms] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("samkiel_agreed");
+    if (saved === "true") setAgreeToTerms(true);
+  }, []);
   const { register, user } = useAuth();
   const router = useRouter();
 
@@ -42,12 +49,19 @@ export default function Register() {
     }
   };
 
+  const handleTermsClick = () => {
+    setHasVisitedTerms(true);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!agreeToTerms) {
+    if (!agreeToTerms || !hasVisitedTerms) {
       toast.error(
-        "Please agree to the Terms & Conditions and Privacy Policy to continue."
+        "Please agree to the Terms & Privacy Policy before continuing.",
+        {
+          duration: 10000,
+        }
       );
       return;
     }
@@ -56,7 +70,7 @@ export default function Register() {
     const phoneRegex = /^\+?\d{8,15}$/;
     if (!phoneRegex.test(formData.whatsappNumber)) {
       toast.error(
-        "Abeg enter valid WhatsApp number (only digits, 8–15 characters)."
+        "Please enter a valid WhatsApp number (only digits, 8–15 characters)."
       );
       return;
     }
@@ -71,6 +85,8 @@ export default function Register() {
       const result = await register(formData);
       if (result) {
         toast.success(`🎉 Registration successful! Welcome ${result.username}`);
+        // Clear agreement after successful registration
+        localStorage.removeItem("samkiel_agreed");
       }
     } catch (error) {
       // Error is already handled in the register function
@@ -285,17 +301,27 @@ export default function Register() {
                 name="agreeToTerms"
                 type="checkbox"
                 checked={agreeToTerms}
-                onChange={(e) => setAgreeToTerms(e.target.checked)}
+                onChange={(e) => {
+                  const newValue = e.target.checked;
+                  setAgreeToTerms(newValue);
+                  if (newValue) {
+                    localStorage.setItem("samkiel_agreed", "true");
+                  } else {
+                    localStorage.removeItem("samkiel_agreed");
+                  }
+                }}
                 className="mt-1 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
               />
               <label htmlFor="agreeToTerms" className="text-sm text-gray-300">
                 I agree to the{" "}
-                <Link
+                <a
                   href="/terms"
+                  onClick={handleTermsClick}
+                  target="_blank"
                   className="text-blue-400 hover:text-blue-300 underline"
                 >
                   Terms & Conditions
-                </Link>{" "}
+                </a>{" "}
                 and{" "}
                 <Link
                   href="/privacy"

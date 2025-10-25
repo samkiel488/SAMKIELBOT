@@ -9,3 +9,11 @@ export const applyTheme = (theme) => {
     root.classList.toggle("dark", theme === "dark");
   }
 };
+
+export const cycleTheme = (currentMode) => {
+  const modes = ["light", "dark", "system"];
+  const next = modes[(modes.indexOf(currentMode) + 1) % modes.length];
+  localStorage.setItem("theme", next);
+  applyTheme(next);
+  return next;
+};
