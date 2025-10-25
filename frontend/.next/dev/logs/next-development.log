@@ -821,3 +821,228 @@ Debug info:
 - Execution of EcmascriptChunkItemContent::new failed
 - CJS module can't be async.
 [05:33:21.292] Server  LOG      ✓ Compiled in 495ms
+[06:16:39.675] Browser LOG     ⚙️ AuthProvider initialized...
+[06:16:39.676] Browser LOG     ℹ️ No token found in storage.
+[06:16:39.676] Browser LOG     ⚙️ AuthProvider initialized...
+[06:16:39.676] Browser LOG     ℹ️ No token found in storage.
+[06:16:39.676] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:17:55.674] Browser LOG     ⚙️ AuthProvider initialized...
+[06:17:55.674] Browser LOG     ℹ️ No token found in storage.
+[06:17:55.674] Browser LOG     ⚙️ AuthProvider initialized...
+[06:17:55.674] Browser LOG     ℹ️ No token found in storage.
+[06:17:55.674] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:19:18.435] Server  LOG      ✓ Compiled in 2.2s
+[06:19:48.340] Browser LOG     ⚙️ AuthProvider initialized...
+[06:19:48.340] Browser LOG     ℹ️ No token found in storage.
+[06:19:48.341] Browser LOG     ⚙️ AuthProvider initialized...
+[06:19:48.341] Browser LOG     ℹ️ No token found in storage.
+[06:19:48.494] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:19:48.494] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:19:48.494] Browser WARN    Image with src "/bot-menu-preview2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:20:22.266] Server  LOG      ✓ Compiled in 1014ms
+[06:20:24.156] Browser LOG     ⚙️ AuthProvider initialized...
+[06:20:24.156] Browser LOG     ℹ️ No token found in storage.
+[06:20:24.156] Browser LOG     ⚙️ AuthProvider initialized...
+[06:20:24.156] Browser LOG     ℹ️ No token found in storage.
+[06:20:27.604] Browser LOG     ⚙️ AuthProvider initialized...
+[06:20:27.604] Browser LOG     ℹ️ No token found in storage.
+[06:20:27.604] Browser LOG     ⚙️ AuthProvider initialized...
+[06:20:27.604] Browser LOG     ℹ️ No token found in storage.
+[06:20:27.794] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:20:27.794] Browser WARN    Image with src "/bot-menu-preview2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:20:27.794] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[06:21:35.910] Server  LOG      ✓ Compiled in 344ms
+[06:21:39.730] Server  LOG      ✓ Compiled in 685ms
+[06:21:40.371] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:40.371] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:40.384] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:40.384] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:43.720] Server  LOG      ✓ Compiled in 313ms
+[06:21:45.403] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:45.403] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:46.091] Server  LOG      ✓ Compiled in 367ms
+[06:21:46.377] Browser ERROR   ./components/Footer.js:13:1
+Parsing ecmascript source code failed
+  11 |             <h3 className="text-gray-800 dark:text-gray-100 font-semibold mb-4">
+  12 |               Quick Links
+> 13 |
+     | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Browser:
+    ./components/Footer.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Footer.js
+    ./pages/index.js
+[06:21:46.377] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:46.377] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:46.378] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:46.378] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:46.378] Browser ERROR   ./components/Footer.js:13:1
+Parsing ecmascript source code failed
+  11 |             <h3 className="text-gray-800 dark:text-gray-100 font-semibold mb-4">
+  12 |               Quick Links
+> 13 |
+     | ^
+
+Expected '</', got '<eof>'
+
+Import traces:
+  Browser:
+    ./components/Footer.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Footer.js
+    ./pages/index.js
+[06:21:46.378] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:46.378] Browser ERROR   ./pages/index.js:7:1
+Export default doesn't exist in target module
+   5 | import { motion } from "framer-motion";
+   6 | import { useAuth } from "../lib/auth";
+>  7 | import Footer from "../components/Footer";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   FaUsers,
+  10 |   FaEye,
+
+The export default was not found in module [project]/components/Footer.js [ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[06:21:51.023] Server  LOG      ✓ Compiled in 525ms

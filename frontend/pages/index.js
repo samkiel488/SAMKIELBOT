@@ -108,7 +108,7 @@ export default function Home() {
                 href="/register"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
-                Get Started
+                Deploy your bot now!
               </Link>
               <Link
                 href="/login"

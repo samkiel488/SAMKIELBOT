@@ -24,7 +24,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$ico
 ;
 function Footer() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("footer", {
-        className: "bg-gray-900 dark:bg-gray-900 px-6 py-10 mt-16",
+        className: "bg-gray-100 dark:bg-gray-800 px-6 py-10 mt-16 border-t border-gray-200 dark:border-gray-700",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
             className: "container mx-auto",
             children: [
@@ -35,7 +35,7 @@ function Footer() {
                             className: "text-center md:text-left",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Quick Links"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -47,7 +47,7 @@ function Footer() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Home"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -56,7 +56,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/login",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Login"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -65,7 +65,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/register",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Register"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -74,7 +74,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/dashboard",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Dashboard"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -97,7 +97,7 @@ function Footer() {
                             className: "text-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Legal"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -109,7 +109,7 @@ function Footer() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/terms",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Terms & Conditions"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -118,7 +118,7 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/privacy",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors text-sm",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm",
                                             children: "Privacy Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.js",
@@ -141,7 +141,7 @@ function Footer() {
                             className: "text-center md:text-right",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                    className: "text-white dark:text-white font-semibold mb-4",
+                                    className: "text-gray-800 dark:text-gray-100 font-semibold mb-4",
                                     children: "Connect With Us"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Footer.js",
@@ -155,7 +155,7 @@ function Footer() {
                                             href: "https://github.com/samkiel488",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaGithub"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -172,7 +172,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaLinkedin"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -189,7 +189,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaTwitter"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -206,7 +206,7 @@ function Footer() {
                                             href: "#",
                                             target: "_blank",
                                             rel: "noopener noreferrer",
-                                            className: "text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors hover:scale-110",
+                                            className: "text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hover:scale-110",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaInstagram"], {
                                                 size: 24
                                             }, void 0, false, {
@@ -238,7 +238,7 @@ function Footer() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "text-center text-sm text-gray-400 dark:text-gray-400 mt-8",
+                    className: "text-center text-sm text-gray-600 dark:text-gray-400 mt-8",
                     children: [
                         "© 2025 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋. All rights reserved. ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -252,7 +252,7 @@ function Footer() {
                             href: "https://www.samkiel.dev/",
                             target: "_blank",
                             rel: "noopener noreferrer",
-                            className: "text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 transition-colors",
+                            className: "text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors",
                             children: "SAMKIEL"
                         }, void 0, false, {
                             fileName: "[project]/components/Footer.js",
@@ -501,7 +501,7 @@ function Home() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/register",
                                             className: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg",
-                                            children: "Get Started"
+                                            children: "Deploy your bot now!"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/index.js",
                                             lineNumber: 107,

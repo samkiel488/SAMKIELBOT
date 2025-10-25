@@ -19,7 +19,7 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/turbopack-pages_index_0a05c8d0._.js"
     ],
     "/_app": [
-      "static/chunks/lib_auth_6472a53f.js",
+      "static/chunks/lib_auth_41deb300.js",
       "static/chunks/node_modules_next_dist_compiled_cd3fa330._.js",
       "static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js",
       "static/chunks/node_modules_next_dist_client_9b1b49db._.js",
@@ -28,12 +28,11 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/node_modules_react_e3593a73._.js",
       "static/chunks/node_modules_react-dom_cjs_react-dom_development_2b5e0eb3.js",
       "static/chunks/node_modules_react-dom_8a8085df._.js",
-      "static/chunks/node_modules_react-icons_27a67710._.js",
-      "static/chunks/node_modules_ede0014a._.js",
+      "static/chunks/node_modules_e0fcdb2c._.js",
       "static/chunks/[root-of-the-server]__1826d1c4._.js",
       "static/chunks/styles_globals_dc36e6c9.css",
       "static/chunks/pages__app_2da965e7._.js",
-      "static/chunks/turbopack-pages__app_cd4396b4._.js"
+      "static/chunks/turbopack-pages__app_4cfa05c4._.js"
     ],
     "/_error": [
       "static/chunks/node_modules_next_dist_compiled_c629999b._.js",
