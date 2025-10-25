@@ -21,3 +21,90 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 [00:02:32.602] Browser LOG     ⚙️ AuthProvider initialized...
 [00:02:32.602] Browser LOG     ℹ️ No token found in storage.
 [00:02:32.602] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:07:31.344] Server  LOG      ✓ Compiled in 874ms
+[05:07:45.756] Browser ERROR   uncaughtError: ReferenceError: handleTermsClick is not defined
+[05:07:45.756] Browser ERROR   uncaughtError: ReferenceError: handleTermsClick is not defined
+[05:07:45.756] Browser ERROR   The above error occurred in the <Login> component:
+
+    at Login (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__1d67a8ab._.js?id=%255Bproject%255D%252Fpages%252Flogin.js+%255Bclient%255D+%2528ecmascript%2529:29:176)
+    at Layout (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js:1105:19)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js:496:25)
+    at LoadableComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js:5489:9)
+    at ThemeProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js:688:26)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js:1161:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js:5040:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js:1129:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js:1906:34)
+    at Container (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js:3348:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:07:46.196] Server  LOG      ✓ Compiled in 674ms
+[05:07:59.216] Server  LOG      ✓ Compiled in 620ms
+[05:07:59.420] Browser LOG     ⚙️ AuthProvider initialized...
+[05:07:59.420] Browser LOG     ℹ️ No token found in storage.
+[05:07:59.420] Browser LOG     ⚙️ AuthProvider initialized...
+[05:07:59.420] Browser LOG     ℹ️ No token found in storage.
+[05:08:02.774] Browser LOG     🟢 Logging in...
+[05:08:04.804] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzE3MCwiZXhwIjoxNzYzOTc1MTcwfQ.87_81hRSyVEWwK6SHVEt3PxnjU1_12uS-z-Q64nw4Fg
+[05:08:04.804] Browser LOG     ✅ User successfully logged in: guy
+[05:08:04.804] Browser LOG     🟢 Attached token to request: /deploy
+[05:08:04.804] Browser LOG     🟢 Attached token to request: /deploy
+[05:08:27.197] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:08:35.889] Browser LOG     🟢 Logging in...
+[05:08:36.440] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzIwMiwiZXhwIjoxNzYzOTc1MjAyfQ.SaqrPrlIxgeGUspusug6oJp30vF1FJlTI-31a9shGC4
+[05:08:36.440] Browser LOG     ✅ User successfully logged in: guy
+[05:08:36.440] Browser LOG     🟢 Attached token to request: /deploy
+[05:08:36.440] Browser LOG     🟢 Attached token to request: /deploy
+[05:08:44.409] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:09:14.043] Browser LOG     🟢 Logging in...
+[05:09:14.438] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzI0MCwiZXhwIjoxNzYzOTc1MjQwfQ.FGivf2sbEhj6ShjlCvuzjFNg9ASSVEyrJCv7yYxQ4xk
+[05:09:14.438] Browser LOG     ✅ User successfully logged in: guy
+[05:09:14.438] Browser LOG     🟢 Attached token to request: /deploy
+[05:09:14.438] Browser LOG     🟢 Attached token to request: /deploy
+[05:09:23.438] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:09:35.896] Browser LOG     ⚙️ AuthProvider initialized...
+[05:09:35.896] Browser LOG     ℹ️ No token found in storage.
+[05:09:35.896] Browser LOG     ⚙️ AuthProvider initialized...
+[05:09:35.896] Browser LOG     ℹ️ No token found in storage.
+[05:09:35.998] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:09:36.978] Browser LOG     Refreshing page data due to server-side change
+[05:09:37.490] Server  LOG      ✓ Compiled in 708ms
+[05:09:37.659] Browser ERROR   ./pages/terms.js:57:1
+Parsing ecmascript source code failed
+  55 |     </div>
+  56 |   );
+> 57 | }
+     | ^
+  58 |
+
+Expression expected
+[05:09:40.324] Browser LOG     Refreshing page data due to server-side change
+[05:09:40.481] Server  LOG      ✓ Compiled in 465ms
+[05:09:46.535] Browser LOG     ⚙️ AuthProvider initialized...
+[05:09:46.535] Browser LOG     ℹ️ No token found in storage.
+[05:09:46.535] Browser LOG     ⚙️ AuthProvider initialized...
+[05:09:46.535] Browser LOG     ℹ️ No token found in storage.
+[05:09:46.658] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:09:55.798] Server  LOG      ✓ Compiled in 1024ms
+[05:10:10.956] Browser LOG     🟢 Logging in...
+[05:10:11.406] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzI5NywiZXhwIjoxNzYzOTc1Mjk3fQ.GQD727pYKo3vDZFUa3mdjqBpwjOR3GHx9EAnUfsVJ7A
+[05:10:11.406] Browser LOG     ✅ User successfully logged in: guy
+[05:10:11.907] Browser LOG     🟢 Attached token to request: /deploy
+[05:10:11.908] Browser LOG     🟢 Attached token to request: /deploy
+[05:10:14.660] Server  LOG      ✓ Compiled in 501ms
+[05:10:17.413] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:10:25.794] Browser LOG     🟢 Logging in...
+[05:10:26.430] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4MzMxMiwiZXhwIjoxNzYzOTc1MzEyfQ.BnH7nfjhlq2kzb5rQTkhFGpRYKb05K9RZjnOz119_3o
+[05:10:26.430] Browser LOG     ✅ User successfully logged in: guy
+[05:10:26.430] Browser LOG     🟢 Attached token to request: /deploy
+[05:10:26.430] Browser LOG     🟢 Attached token to request: /deploy
+[05:10:28.940] Server  LOG      ✓ Compiled in 374ms
+[05:10:37.552] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:10:42.790] Browser LOG     ⚙️ AuthProvider initialized...
+[05:10:42.790] Browser LOG     ℹ️ No token found in storage.
+[05:10:42.790] Browser LOG     ⚙️ AuthProvider initialized...
+[05:10:42.790] Browser LOG     ℹ️ No token found in storage.
+[05:10:42.790] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:10:57.321] Server  LOG      ✓ Compiled in 1871ms

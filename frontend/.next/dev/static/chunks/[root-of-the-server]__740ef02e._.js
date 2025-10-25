@@ -986,11 +986,12 @@ function Register() {
     const [showConfirmPassword, setShowConfirmPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [agreeToTerms, setAgreeToTerms] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [hasVisitedTerms, setHasVisitedTerms] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Register.useEffect": ()=>{
-            const saved = localStorage.getItem("samkiel_agreed");
-            if (saved === "true") setAgreeToTerms(true);
+            // Restore either explicit agreement OR that user actually read the terms
+            const agreed = localStorage.getItem("samkiel_agreed") === "true";
+            const read = localStorage.getItem("samkiel_read_terms") === "true";
+            if (agreed || read) setAgreeToTerms(true);
         }
     }["Register.useEffect"], []);
     const { register, user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useAuth"])();
@@ -1016,15 +1017,12 @@ function Register() {
             setUsername(value);
         }
     };
-    const handleTermsClick = ()=>{
-        setHasVisitedTerms(true);
-    };
     const handleSubmit = async (e)=>{
         e.preventDefault();
-        if (!agreeToTerms || !hasVisitedTerms) {
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error("Please agree to the Terms & Privacy Policy before continuing.", {
-                duration: 10000
-            });
+        const read = localStorage.getItem("samkiel_read_terms") === "true"; // user actually visited terms
+        const agreed = localStorage.getItem("samkiel_agreed") === "true";
+        if (!agreed && !read) {
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error("Please agree to the Terms & Privacy Policy or read them first.");
             return;
         }
         // ✅ WhatsApp number validation
@@ -1042,8 +1040,11 @@ function Register() {
             const result = await register(formData);
             if (result) {
                 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success(`🎉 Registration successful! Welcome ${result.username}`);
-                // Clear agreement after successful registration
+                // Clear all flags after successful registration
                 localStorage.removeItem("samkiel_agreed");
+                localStorage.removeItem("samkiel_clicked_terms");
+                localStorage.removeItem("samkiel_read_terms");
+                sessionStorage.removeItem("return_route");
             }
         } catch (error) {
             // Error is already handled in the register function
@@ -1483,8 +1484,12 @@ function Register() {
                                                 " ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "/terms",
-                                                    onClick: handleTermsClick,
-                                                    target: "_blank",
+                                                    onClick: (e)=>{
+                                                        // record intent and route, then navigate
+                                                        sessionStorage.setItem("return_route", "register");
+                                                        localStorage.setItem("samkiel_clicked_terms", "true");
+                                                    // let the normal link proceed (no preventDefault)
+                                                    },
                                                     className: "text-blue-400 hover:text-blue-300 underline",
                                                     children: "Terms & Conditions"
                                                 }, void 0, false, {
@@ -1497,11 +1502,17 @@ function Register() {
                                                 " ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                                                     href: "/privacy",
+                                                    onClick: (e)=>{
+                                                        // record intent and route, then navigate
+                                                        sessionStorage.setItem("return_route", "register");
+                                                        localStorage.setItem("samkiel_clicked_terms", "true");
+                                                    // let the normal link proceed (no preventDefault)
+                                                    },
                                                     className: "text-blue-400 hover:text-blue-300 underline",
                                                     children: "Privacy Policy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/register.js",
-                                                    lineNumber: 326,
+                                                    lineNumber: 330,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
@@ -1523,7 +1534,7 @@ function Register() {
                                     children: loading ? "Creating Account..." : "Create Account"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 335,
+                                    lineNumber: 345,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1534,12 +1545,12 @@ function Register() {
                                         children: "Already have an account? Sign in here"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/register.js",
-                                        lineNumber: 346,
+                                        lineNumber: 356,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/pages/register.js",
-                                    lineNumber: 345,
+                                    lineNumber: 355,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -1566,7 +1577,7 @@ function Register() {
         columnNumber: 5
     }, this);
 }
-_s(Register, "eV5PaAajL5hO8CpFo8hcvVtFIxo=", false, function() {
+_s(Register, "kcYCe1PPpv2hpdqrsD6tJ3flvzs=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useAuth"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]

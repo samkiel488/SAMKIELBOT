@@ -21,11 +21,12 @@ export default function Register() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [agreeToTerms, setAgreeToTerms] = useState(false);
-  const [hasVisitedTerms, setHasVisitedTerms] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("samkiel_agreed");
-    if (saved === "true") setAgreeToTerms(true);
+    // Restore either explicit agreement OR that user actually read the terms
+    const agreed = localStorage.getItem("samkiel_agreed") === "true";
+    const read = localStorage.getItem("samkiel_read_terms") === "true";
+    if (agreed || read) setAgreeToTerms(true);
   }, []);
   const { register, user } = useAuth();
   const router = useRouter();
@@ -49,19 +50,15 @@ export default function Register() {
     }
   };
 
-  const handleTermsClick = () => {
-    setHasVisitedTerms(true);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!agreeToTerms || !hasVisitedTerms) {
+    const read = localStorage.getItem("samkiel_read_terms") === "true"; // user actually visited terms
+    const agreed = localStorage.getItem("samkiel_agreed") === "true";
+
+    if (!agreed && !read) {
       toast.error(
-        "Please agree to the Terms & Privacy Policy before continuing.",
-        {
-          duration: 10000,
-        }
+        "Please agree to the Terms & Privacy Policy or read them first."
       );
       return;
     }
@@ -85,8 +82,11 @@ export default function Register() {
       const result = await register(formData);
       if (result) {
         toast.success(`🎉 Registration successful! Welcome ${result.username}`);
-        // Clear agreement after successful registration
+        // Clear all flags after successful registration
         localStorage.removeItem("samkiel_agreed");
+        localStorage.removeItem("samkiel_clicked_terms");
+        localStorage.removeItem("samkiel_read_terms");
+        sessionStorage.removeItem("return_route");
       }
     } catch (error) {
       // Error is already handled in the register function
@@ -316,8 +316,12 @@ export default function Register() {
                 I agree to the{" "}
                 <a
                   href="/terms"
-                  onClick={handleTermsClick}
-                  target="_blank"
+                  onClick={(e) => {
+                    // record intent and route, then navigate
+                    sessionStorage.setItem("return_route", "register");
+                    localStorage.setItem("samkiel_clicked_terms", "true");
+                    // let the normal link proceed (no preventDefault)
+                  }}
                   className="text-blue-400 hover:text-blue-300 underline"
                 >
                   Terms & Conditions
@@ -325,6 +329,12 @@ export default function Register() {
                 and{" "}
                 <Link
                   href="/privacy"
+                  onClick={(e) => {
+                    // record intent and route, then navigate
+                    sessionStorage.setItem("return_route", "register");
+                    localStorage.setItem("samkiel_clicked_terms", "true");
+                    // let the normal link proceed (no preventDefault)
+                  }}
                   className="text-blue-400 hover:text-blue-300 underline"
                 >
                   Privacy Policy

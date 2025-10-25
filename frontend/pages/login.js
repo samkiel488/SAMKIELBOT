@@ -16,11 +16,12 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [agreeToTerms, setAgreeToTerms] = useState(false);
-  const [hasVisitedTerms, setHasVisitedTerms] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("samkiel_agreed");
-    if (saved === "true") setAgreeToTerms(true);
+    // Restore either explicit agreement OR that user actually read the terms
+    const agreed = localStorage.getItem("samkiel_agreed") === "true";
+    const read = localStorage.getItem("samkiel_read_terms") === "true";
+    if (agreed || read) setAgreeToTerms(true);
   }, []);
   const { login, user } = useAuth();
   const router = useRouter();
@@ -44,27 +45,26 @@ export default function Login() {
     }
   };
 
-  const handleTermsClick = () => {
-    setHasVisitedTerms(true);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!agreeToTerms || !hasVisitedTerms) {
-      toast.error(
-        "Please agree to the Terms & Privacy Policy before continuing.",
-        {
-          duration: 10000,
-        }
-      );
+    const read = localStorage.getItem("samkiel_read_terms") === "true"; // user actually visited terms
+    const agreed = localStorage.getItem("samkiel_agreed") === "true";
 
+    if (!agreed && !read) {
+      toast.error(
+        "Please agree to the Terms & Privacy Policy or read them first."
+      );
       return;
     }
+
     setLoading(true);
     try {
       await login(formData.identifier, formData.password);
-      // Clear agreement after successful login
+      // Clear all flags after successful login
       localStorage.removeItem("samkiel_agreed");
+      localStorage.removeItem("samkiel_clicked_terms");
+      localStorage.removeItem("samkiel_read_terms");
+      sessionStorage.removeItem("return_route");
     } catch (error) {
       const err = JSON.parse(error.message);
       toast.error(err.message || "Login failed");
@@ -190,7 +190,12 @@ export default function Login() {
                 I agree to the{" "}
                 <a
                   href="/terms"
-                  onClick={handleTermsClick}
+                  onClick={(e) => {
+                    // record intent and route, then navigate
+                    sessionStorage.setItem("return_route", "login");
+                    localStorage.setItem("samkiel_clicked_terms", "true");
+                    // let the normal link proceed (no preventDefault)
+                  }}
                   className="text-blue-400 hover:text-blue-300 underline"
                 >
                   Terms & Conditions
@@ -198,6 +203,12 @@ export default function Login() {
                 and{" "}
                 <Link
                   href="/privacy"
+                  onClick={(e) => {
+                    // record intent and route, then navigate
+                    sessionStorage.setItem("return_route", "login");
+                    localStorage.setItem("samkiel_clicked_terms", "true");
+                    // let the normal link proceed (no preventDefault)
+                  }}
                   className="text-blue-400 hover:text-blue-300 underline"
                 >
                   Privacy Policy

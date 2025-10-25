@@ -309,10 +309,11 @@ function Login() {
     const [showPassword, setShowPassword] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     const [agreeToTerms, setAgreeToTerms] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
-    const [hasVisitedTerms, setHasVisitedTerms] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        const saved = localStorage.getItem("samkiel_agreed");
-        if (saved === "true") setAgreeToTerms(true);
+        // Restore either explicit agreement OR that user actually read the terms
+        const agreed = localStorage.getItem("samkiel_agreed") === "true";
+        const read = localStorage.getItem("samkiel_read_terms") === "true";
+        if (agreed || read) setAgreeToTerms(true);
     }, []);
     const { login, user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
@@ -335,22 +336,22 @@ function Login() {
             setUsername(value);
         }
     };
-    const handleTermsClick = ()=>{
-        setHasVisitedTerms(true);
-    };
     const handleSubmit = async (e)=>{
         e.preventDefault();
-        if (!agreeToTerms || !hasVisitedTerms) {
-            __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].error("Please agree to the Terms & Privacy Policy before continuing.", {
-                duration: 10000
-            });
+        const read = localStorage.getItem("samkiel_read_terms") === "true"; // user actually visited terms
+        const agreed = localStorage.getItem("samkiel_agreed") === "true";
+        if (!agreed && !read) {
+            __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].error("Please agree to the Terms & Privacy Policy or read them first.");
             return;
         }
         setLoading(true);
         try {
             await login(formData.identifier, formData.password);
-            // Clear agreement after successful login
+            // Clear all flags after successful login
             localStorage.removeItem("samkiel_agreed");
+            localStorage.removeItem("samkiel_clicked_terms");
+            localStorage.removeItem("samkiel_read_terms");
+            sessionStorage.removeItem("return_route");
         } catch (error) {
             const err = JSON.parse(error.message);
             __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].error(err.message || "Login failed");
@@ -642,7 +643,12 @@ function Login() {
                                                 " ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                                                     href: "/terms",
-                                                    onClick: handleTermsClick,
+                                                    onClick: (e)=>{
+                                                        // record intent and route, then navigate
+                                                        sessionStorage.setItem("return_route", "login");
+                                                        localStorage.setItem("samkiel_clicked_terms", "true");
+                                                    // let the normal link proceed (no preventDefault)
+                                                    },
                                                     className: "text-blue-400 hover:text-blue-300 underline",
                                                     children: "Terms & Conditions"
                                                 }, void 0, false, {
@@ -655,11 +661,17 @@ function Login() {
                                                 " ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                     href: "/privacy",
+                                                    onClick: (e)=>{
+                                                        // record intent and route, then navigate
+                                                        sessionStorage.setItem("return_route", "login");
+                                                        localStorage.setItem("samkiel_clicked_terms", "true");
+                                                    // let the normal link proceed (no preventDefault)
+                                                    },
                                                     className: "text-blue-400 hover:text-blue-300 underline",
                                                     children: "Privacy Policy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/login.js",
-                                                    lineNumber: 199,
+                                                    lineNumber: 204,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
@@ -681,7 +693,7 @@ function Login() {
                                     children: loading ? "Signing In..." : "Sign In"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/login.js",
-                                    lineNumber: 208,
+                                    lineNumber: 219,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -692,12 +704,12 @@ function Login() {
                                         children: "Don't have an account? Sign up here"
                                     }, void 0, false, {
                                         fileName: "[project]/pages/login.js",
-                                        lineNumber: 219,
+                                        lineNumber: 230,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/pages/login.js",
-                                    lineNumber: 218,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this)
                             ]
