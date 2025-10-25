@@ -148,7 +148,18 @@ const AuthProvider = ({ children })=>{
                 localStorage.setItem("user", JSON.stringify(user));
                 setToken(token);
                 setUser(user);
-                __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].success(`Welcome back, ${user.username}!`);
+                // Check if first login (no profile image set)
+                if (!user.profileImage) {
+                    __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].success("🎉 Welcome to SAMKIEL BOT! Join our WhatsApp community for updates.", {
+                        duration: 6000,
+                        action: {
+                            label: "Join",
+                            onClick: ()=>window.open("https://whatsapp.com/channel/0029VbAhWo3C6Zvf2t4Rne0h", "_blank")
+                        }
+                    });
+                } else {
+                    __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].success(`Welcome back, ${user.username}!`);
+                }
                 console.log("✅ User successfully logged in:", user.username);
                 router.push("/dashboard");
                 return user;
@@ -259,7 +270,7 @@ const AuthProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/frontend/lib/auth.js",
-        lineNumber: 192,
+        lineNumber: 211,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -9,7 +9,7 @@ const api = axios.create({
 // Add token to requests
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
       console.log("🟢 Attached token to request:", config.url);
@@ -28,24 +28,30 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    console.error("🚨 Response error:", error.response?.status, error.response?.data);
+    console.error(
+      "🚨 Response error:",
+      error.response?.status,
+      error.response?.data
+    );
     // Only logout on 401 if it's not a login/register request and not the verify endpoint
     if (
       error.response?.status === 401 &&
-      !error.config.url.includes('/auth/login') &&
-      !error.config.url.includes('/auth/register') &&
-      !error.config.url.includes('/auth/verify')
+      !error.config.url.includes("/auth/login") &&
+      !error.config.url.includes("/auth/register") &&
+      !error.config.url.includes("/auth/verify")
     ) {
       console.warn("🔴 Unauthorized (401). Clearing session...");
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      window.location.href = '/login';
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      window.location.href = "/login";
     }
     // Show toast for network errors
     if (!error.response) {
       // Network error - show toast
-      if (typeof window !== 'undefined' && window.toast) {
-        window.toast.error('Could not connect to the server. Please check your connection.');
+      if (typeof window !== "undefined" && window.toast) {
+        window.toast.error(
+          "Could not connect to the server. Please check your connection."
+        );
       }
     }
     return Promise.reject(error);
@@ -54,28 +60,33 @@ api.interceptors.response.use(
 
 // Auth API
 export const register = async (userData) => {
-  const response = await api.post('/auth/register', userData);
+  const response = await api.post("/auth/register", userData);
   return response.data.data;
 };
 
 export const login = async (userData) => {
-  const response = await api.post('/auth/login', userData);
+  const response = await api.post("/auth/login", userData);
   return response.data.data;
 };
 
 export const verifyToken = async () => {
-  const response = await api.get('/auth/verify');
+  const response = await api.get("/auth/verify");
+  return response.data.data;
+};
+
+export const updateProfile = async (profileData) => {
+  const response = await api.put("/auth/profile", profileData);
   return response.data.data;
 };
 
 // Deploy API
 export const deployBot = async (deployData) => {
-  const response = await api.post('/deploy', deployData);
+  const response = await api.post("/deploy", deployData);
   return response.data.data;
 };
 
 export const getDeployments = async () => {
-  const response = await api.get('/deploy');
+  const response = await api.get("/deploy");
   return response.data.data;
 };
 
@@ -86,7 +97,7 @@ export const updateDeployment = async (id, updateData) => {
 
 // Update API
 export const updateBot = async (updateData) => {
-  const response = await api.post('/update', updateData);
+  const response = await api.post("/update", updateData);
   return response.data.data;
 };
 

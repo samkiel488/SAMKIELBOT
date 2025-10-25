@@ -65,7 +65,26 @@ export const AuthProvider = ({ children }) => {
         setToken(token);
         setUser(user);
 
-        toast.success(`Welcome back, ${user.username}!`);
+        // Check if first login (no profile image set)
+        if (!user.profileImage) {
+          toast.success(
+            "🎉 Welcome to SAMKIEL BOT! Join our WhatsApp community for updates.",
+            {
+              duration: 6000,
+              action: {
+                label: "Join",
+                onClick: () =>
+                  window.open(
+                    "https://whatsapp.com/channel/0029VbAhWo3C6Zvf2t4Rne0h",
+                    "_blank"
+                  ),
+              },
+            }
+          );
+        } else {
+          toast.success(`Welcome back, ${user.username}!`);
+        }
+
         console.log("✅ User successfully logged in:", user.username);
 
         router.push("/dashboard");

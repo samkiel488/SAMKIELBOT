@@ -419,6 +419,8 @@ __turbopack_context__.s([
     ()=>updateBot,
     "updateDeployment",
     ()=>updateDeployment,
+    "updateProfile",
+    ()=>updateProfile,
     "verifyToken",
     ()=>verifyToken
 ]);
@@ -428,13 +430,13 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ]);
 [__TURBOPACK__imported__module__$5b$externals$5d2f$axios__$5b$external$5d$__$28$axios$2c$__esm_import$29$__] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__;
 ;
-const API_URL = ("TURBOPACK compile-time value", "http://localhost:5000/api") || 'http://localhost:5000/api';
+const API_URL = ("TURBOPACK compile-time value", "http://localhost:5000/api") || "http://localhost:5000/api";
 const api = __TURBOPACK__imported__module__$5b$externals$5d2f$axios__$5b$external$5d$__$28$axios$2c$__esm_import$29$__["default"].create({
     baseURL: API_URL
 });
 // Add token to requests
 api.interceptors.request.use((config)=>{
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
         console.log("🟢 Attached token to request:", config.url);
@@ -450,11 +452,11 @@ api.interceptors.request.use((config)=>{
 api.interceptors.response.use((response)=>response, (error)=>{
     console.error("🚨 Response error:", error.response?.status, error.response?.data);
     // Only logout on 401 if it's not a login/register request and not the verify endpoint
-    if (error.response?.status === 401 && !error.config.url.includes('/auth/login') && !error.config.url.includes('/auth/register') && !error.config.url.includes('/auth/verify')) {
+    if (error.response?.status === 401 && !error.config.url.includes("/auth/login") && !error.config.url.includes("/auth/register") && !error.config.url.includes("/auth/verify")) {
         console.warn("🔴 Unauthorized (401). Clearing session...");
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        window.location.href = '/login';
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        window.location.href = "/login";
     }
     // Show toast for network errors
     if (!error.response) {
@@ -465,23 +467,27 @@ api.interceptors.response.use((response)=>response, (error)=>{
     return Promise.reject(error);
 });
 const register = async (userData)=>{
-    const response = await api.post('/auth/register', userData);
+    const response = await api.post("/auth/register", userData);
     return response.data.data;
 };
 const login = async (userData)=>{
-    const response = await api.post('/auth/login', userData);
+    const response = await api.post("/auth/login", userData);
     return response.data.data;
 };
 const verifyToken = async ()=>{
-    const response = await api.get('/auth/verify');
+    const response = await api.get("/auth/verify");
+    return response.data.data;
+};
+const updateProfile = async (profileData)=>{
+    const response = await api.put("/auth/profile", profileData);
     return response.data.data;
 };
 const deployBot = async (deployData)=>{
-    const response = await api.post('/deploy', deployData);
+    const response = await api.post("/deploy", deployData);
     return response.data.data;
 };
 const getDeployments = async ()=>{
-    const response = await api.get('/deploy');
+    const response = await api.get("/deploy");
     return response.data.data;
 };
 const updateDeployment = async (id, updateData)=>{
@@ -489,7 +495,7 @@ const updateDeployment = async (id, updateData)=>{
     return response.data.data;
 };
 const updateBot = async (updateData)=>{
-    const response = await api.post('/update', updateData);
+    const response = await api.post("/update", updateData);
     return response.data.data;
 };
 const getUpdateHistory = async (deploymentId)=>{

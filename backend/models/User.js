@@ -25,6 +25,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
     },
     password: { type: String, required: true, minlength: 6 },
+    profileImage: { type: String, default: null }, // Cloudinary image URL
   },
   { timestamps: true }
 );

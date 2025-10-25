@@ -1,11 +1,11 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
-const { successResponse, errorResponse } = require('../utils/response');
+const jwt = require("jsonwebtoken");
+const User = require("../models/User");
+const { successResponse, errorResponse } = require("../utils/response");
 
 // Generate JWT Token
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: '30d',
+    expiresIn: "30d",
   });
 };
 
@@ -18,7 +18,7 @@ const register = async (req, res) => {
 
     // Validation for required fields
     if (!fullName || !username || !email || !whatsappNumber || !password) {
-      return errorResponse(res, 'All fields are required', 400);
+      return errorResponse(res, "All fields are required", 400);
     }
 
     // Additional backend validation for uniqueness (pre-check before MongoDB)
@@ -26,19 +26,29 @@ const register = async (req, res) => {
       $or: [
         { email: email.toLowerCase().trim() },
         { username: username.toLowerCase().trim() },
-        { whatsappNumber: whatsappNumber.trim() }
-      ]
+        { whatsappNumber: whatsappNumber.trim() },
+      ],
     });
 
     if (existingUser) {
       if (existingUser.email === email.toLowerCase().trim()) {
-        return errorResponse(res, 'Email already exists.', 400, 'email_exists');
+        return errorResponse(res, "Email already exists.", 400, "email_exists");
       }
       if (existingUser.username === username.toLowerCase().trim()) {
-        return errorResponse(res, 'Username already exists.', 400, 'username_exists');
+        return errorResponse(
+          res,
+          "Username already exists.",
+          400,
+          "username_exists"
+        );
       }
       if (existingUser.whatsappNumber === whatsappNumber.trim()) {
-        return errorResponse(res, 'WhatsApp number already exists.', 400, 'whatsappNumber_exists');
+        return errorResponse(
+          res,
+          "WhatsApp number already exists.",
+          400,
+          "whatsappNumber_exists"
+        );
       }
     }
 
@@ -61,20 +71,30 @@ const register = async (req, res) => {
         token: generateToken(user._id),
       });
     } else {
-      errorResponse(res, 'Invalid user data', 400);
+      errorResponse(res, "Invalid user data", 400);
     }
   } catch (error) {
     // Handle duplicate key errors (fallback)
     if (error.code === 11000) {
       const field = Object.keys(error.keyValue)[0];
-      return errorResponse(res, `${field.charAt(0).toUpperCase() + field.slice(1)} already exists.`, 400, `${field}_exists`);
+      return errorResponse(
+        res,
+        `${field.charAt(0).toUpperCase() + field.slice(1)} already exists.`,
+        400,
+        `${field}_exists`
+      );
     }
     // Handle validation errors
-    if (error.name === 'ValidationError') {
-      const messages = Object.values(error.errors).map(err => err.message);
-      return errorResponse(res, messages.join(', '), 400, 'validation_error');
+    if (error.name === "ValidationError") {
+      const messages = Object.values(error.errors).map((err) => err.message);
+      return errorResponse(res, messages.join(", "), 400, "validation_error");
     }
-    errorResponse(res, 'Registration failed. Please try again.', 500, 'general_error');
+    errorResponse(
+      res,
+      "Registration failed. Please try again.",
+      500,
+      "general_error"
+    );
   }
 };
 
@@ -86,7 +106,7 @@ const login = async (req, res) => {
     const { identifier, password } = req.body; // identifier can be email or username
 
     const user = await User.findOne({
-      $or: [{ email: identifier }, { username: identifier }]
+      $or: [{ email: identifier }, { username: identifier }],
     });
 
     if (user && (await user.matchPassword(password))) {
@@ -99,7 +119,7 @@ const login = async (req, res) => {
         token: generateToken(user._id),
       });
     } else {
-      errorResponse(res, 'Invalid credentials', 401);
+      errorResponse(res, "Invalid credentials", 401);
     }
   } catch (error) {
     errorResponse(res, error.message, 500);
@@ -111,8 +131,40 @@ const login = async (req, res) => {
 // @access  Private
 const verifyToken = async (req, res) => {
   try {
-    const user = await User.findById(req.user.id).select('-password');
+    const user = await User.findById(req.user.id).select("-password");
     successResponse(res, user);
+  } catch (error) {
+    errorResponse(res, error.message, 500);
+  }
+};
+
+// @desc    Update user profile
+// @route   PUT /api/auth/profile
+// @access  Private
+const updateProfile = async (req, res) => {
+  try {
+    const { fullName, profileImage } = req.body;
+
+    const user = await User.findById(req.user.id);
+
+    if (!user) {
+      return errorResponse(res, "User not found", 404);
+    }
+
+    // Update fields
+    if (fullName) user.fullName = fullName;
+    if (profileImage !== undefined) user.profileImage = profileImage;
+
+    await user.save();
+
+    successResponse(res, {
+      _id: user._id,
+      fullName: user.fullName,
+      username: user.username,
+      email: user.email,
+      whatsappNumber: user.whatsappNumber,
+      profileImage: user.profileImage,
+    });
   } catch (error) {
     errorResponse(res, error.message, 500);
   }
@@ -122,4 +174,5 @@ module.exports = {
   register,
   login,
   verifyToken,
+  updateProfile,
 };

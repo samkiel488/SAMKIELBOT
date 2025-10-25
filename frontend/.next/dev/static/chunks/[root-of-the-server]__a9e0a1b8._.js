@@ -541,7 +541,18 @@ const AuthProvider = ({ children })=>{
                 localStorage.setItem("user", JSON.stringify(user));
                 setToken(token);
                 setUser(user);
-                __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success(`Welcome back, ${user.username}!`);
+                // Check if first login (no profile image set)
+                if (!user.profileImage) {
+                    __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success("🎉 Welcome to SAMKIEL BOT! Join our WhatsApp community for updates.", {
+                        duration: 6000,
+                        action: {
+                            label: "Join",
+                            onClick: ()=>window.open("https://whatsapp.com/channel/0029VbAhWo3C6Zvf2t4Rne0h", "_blank")
+                        }
+                    });
+                } else {
+                    __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success(`Welcome back, ${user.username}!`);
+                }
                 console.log("✅ User successfully logged in:", user.username);
                 router.push("/dashboard");
                 return user;
@@ -654,7 +665,7 @@ const AuthProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/frontend/lib/auth.js",
-        lineNumber: 192,
+        lineNumber: 211,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1090,19 +1101,21 @@ __turbopack_context__.s([
     ()=>updateBot,
     "updateDeployment",
     ()=>updateDeployment,
+    "updateProfile",
+    ()=>updateProfile,
     "verifyToken",
     ()=>verifyToken
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/frontend/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend/node_modules/axios/lib/axios.js [client] (ecmascript)");
 ;
-const API_URL = ("TURBOPACK compile-time value", "http://localhost:5000/api") || 'http://localhost:5000/api';
+const API_URL = ("TURBOPACK compile-time value", "http://localhost:5000/api") || "http://localhost:5000/api";
 const api = __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].create({
     baseURL: API_URL
 });
 // Add token to requests
 api.interceptors.request.use((config)=>{
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
         console.log("🟢 Attached token to request:", config.url);
@@ -1118,39 +1131,43 @@ api.interceptors.request.use((config)=>{
 api.interceptors.response.use((response)=>response, (error)=>{
     console.error("🚨 Response error:", error.response?.status, error.response?.data);
     // Only logout on 401 if it's not a login/register request and not the verify endpoint
-    if (error.response?.status === 401 && !error.config.url.includes('/auth/login') && !error.config.url.includes('/auth/register') && !error.config.url.includes('/auth/verify')) {
+    if (error.response?.status === 401 && !error.config.url.includes("/auth/login") && !error.config.url.includes("/auth/register") && !error.config.url.includes("/auth/verify")) {
         console.warn("🔴 Unauthorized (401). Clearing session...");
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        window.location.href = '/login';
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        window.location.href = "/login";
     }
     // Show toast for network errors
     if (!error.response) {
         // Network error - show toast
-        if (("TURBOPACK compile-time value", "object") !== 'undefined' && window.toast) {
-            window.toast.error('Could not connect to the server. Please check your connection.');
+        if (("TURBOPACK compile-time value", "object") !== "undefined" && window.toast) {
+            window.toast.error("Could not connect to the server. Please check your connection.");
         }
     }
     return Promise.reject(error);
 });
 const register = async (userData)=>{
-    const response = await api.post('/auth/register', userData);
+    const response = await api.post("/auth/register", userData);
     return response.data.data;
 };
 const login = async (userData)=>{
-    const response = await api.post('/auth/login', userData);
+    const response = await api.post("/auth/login", userData);
     return response.data.data;
 };
 const verifyToken = async ()=>{
-    const response = await api.get('/auth/verify');
+    const response = await api.get("/auth/verify");
+    return response.data.data;
+};
+const updateProfile = async (profileData)=>{
+    const response = await api.put("/auth/profile", profileData);
     return response.data.data;
 };
 const deployBot = async (deployData)=>{
-    const response = await api.post('/deploy', deployData);
+    const response = await api.post("/deploy", deployData);
     return response.data.data;
 };
 const getDeployments = async ()=>{
-    const response = await api.get('/deploy');
+    const response = await api.get("/deploy");
     return response.data.data;
 };
 const updateDeployment = async (id, updateData)=>{
@@ -1158,7 +1175,7 @@ const updateDeployment = async (id, updateData)=>{
     return response.data.data;
 };
 const updateBot = async (updateData)=>{
-    const response = await api.post('/update', updateData);
+    const response = await api.post("/update", updateData);
     return response.data.data;
 };
 const getUpdateHistory = async (deploymentId)=>{
