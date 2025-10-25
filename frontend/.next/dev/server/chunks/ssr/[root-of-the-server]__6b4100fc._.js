@@ -617,55 +617,14 @@ function Navbar() {
                                 href: "/register",
                                 onClick: ()=>setMenuOpen(false),
                                 className: "block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors",
-                                children: "Register"
+                                children: "mn Register"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/components/Navbar.js",
                                 lineNumber: 200,
                                 columnNumber: 15
                             }, this)
                         ]
-                    }, void 0, true),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "flex justify-center mt-2",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                            onClick: ()=>{
-                                const next = theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
-                                toggleTheme(next);
-                            },
-                            className: "p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all hover:scale-110",
-                            "aria-label": "Toggle theme",
-                            children: theme === "light" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
-                                size: 20,
-                                className: "text-yellow-500 transition-colors duration-300"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/components/Navbar.js",
-                                lineNumber: 226,
-                                columnNumber: 17
-                            }, this) : theme === "dark" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
-                                size: 20,
-                                className: "text-blue-400 transition-colors duration-300"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/components/Navbar.js",
-                                lineNumber: 231,
-                                columnNumber: 17
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$monitor$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Monitor$3e$__["Monitor"], {
-                                size: 20,
-                                className: "text-gray-500 transition-colors duration-300"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/components/Navbar.js",
-                                lineNumber: 236,
-                                columnNumber: 17
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/frontend/components/Navbar.js",
-                            lineNumber: 212,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/frontend/components/Navbar.js",
-                        lineNumber: 211,
-                        columnNumber: 11
-                    }, this)
+                    }, void 0, true)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/components/Navbar.js",

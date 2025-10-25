@@ -201,45 +201,13 @@ export default function Navbar() {
                 href="/register"
                 onClick={() => setMenuOpen(false)}
                 className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-              >
+              >mn 
                 Register
               </Link>
             </>
           )}
 
-          {/* Theme Toggle inside dropdown */}
-          <div className="flex justify-center mt-2">
-            <button
-              onClick={() => {
-                const next =
-                  theme === "light"
-                    ? "dark"
-                    : theme === "dark"
-                    ? "system"
-                    : "light";
-                toggleTheme(next);
-              }}
-              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all hover:scale-110"
-              aria-label="Toggle theme"
-            >
-              {theme === "light" ? (
-                <Sun
-                  size={20}
-                  className="text-yellow-500 transition-colors duration-300"
-                />
-              ) : theme === "dark" ? (
-                <Moon
-                  size={20}
-                  className="text-blue-400 transition-colors duration-300"
-                />
-              ) : (
-                <Monitor
-                  size={20}
-                  className="text-gray-500 transition-colors duration-300"
-                />
-              )}
-            </button>
-          </div>
+         
         </div>
       )}
     </nav>

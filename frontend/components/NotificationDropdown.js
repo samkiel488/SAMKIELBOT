@@ -8,18 +8,39 @@ export default function NotificationDropdown() {
   const notifications = [
     {
       id: 1,
+      message: (
+        <div>
+          <div className="font-semibold">🎉 Welcome to SAMKIEL BOT!</div>
+          <div className="text-sm mt-1">
+            Join our WhatsApp community for updates.
+          </div>
+          <a
+            href="https://whatsapp.com/channel/0029VbAhWo3C6Zvf2t4Rne0h"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:text-blue-600 text-sm underline"
+          >
+            Join Now
+          </a>
+        </div>
+      ),
+      time: "Just now",
+      type: "welcome",
+    },
+    {
+      id: 2,
       message: "Your bot has been deployed successfully",
       time: "2 hours ago",
       type: "success",
     },
     {
-      id: 2,
+      id: 3,
       message: "Deployment failed. Try again.",
       time: "1 day ago",
       type: "error",
     },
     {
-      id: 3,
+      id: 4,
       message: "New update available for your bot",
       time: "2 days ago",
       type: "info",

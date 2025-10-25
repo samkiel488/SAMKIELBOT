@@ -1,140 +1,106 @@
-[00:00:05.538] Server  LOG      ✓ Ready in 2.5s
-[00:00:05.558] Server  WARN     ⚠ Cross origin request detected from 192.168.0.4 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:05.573] Browser LOG     Refreshing page data due to server-side change
-[00:00:08.633] Server  LOG      ○ Compiling /dashboard ...
-[00:01:05.735] Browser LOG     ⚙️ AuthProvider initialized...
-[00:01:05.736] Browser LOG     ℹ️ No token found in storage.
-[00:01:05.736] Browser LOG     ⚙️ AuthProvider initialized...
-[00:01:05.736] Browser LOG     ℹ️ No token found in storage.
-[00:01:05.862] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:01:28.394] Browser LOG     🟢 Logging in...
-[00:01:28.394] Browser ERROR   ❌ Login error: {}
-[00:01:28.394] Browser ERROR   unhandledRejection: SyntaxError: Unexpected token 'F', "Failed to fetch" is not valid JSON
-[00:19:19.486] Browser LOG     ⚙️ AuthProvider initialized...
-[00:19:19.486] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:19:19.486] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:19:19.486] Browser LOG     ✅ Token still valid, restoring session...
-[00:19:19.486] Browser LOG     ⚙️ AuthProvider initialized...
-[00:19:19.486] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:19:19.486] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:19:19.486] Browser LOG     ✅ Token still valid, restoring session...
-[00:19:19.486] Browser LOG     🟢 Attached token to request: /deploy
-[00:19:19.486] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:19:56.681] Browser LOG     ⚙️ AuthProvider initialized...
-[00:19:56.681] Browser LOG     ℹ️ No token found in storage.
-[00:19:56.681] Browser LOG     ⚙️ AuthProvider initialized...
-[00:19:56.681] Browser LOG     ℹ️ No token found in storage.
-[00:19:56.901] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:20:02.231] Browser LOG     ⚙️ AuthProvider initialized...
-[00:20:02.231] Browser LOG     ℹ️ No token found in storage.
-[00:20:02.231] Browser LOG     ⚙️ AuthProvider initialized...
-[00:20:02.231] Browser LOG     ℹ️ No token found in storage.
-[00:20:02.288] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:20:05.095] Browser LOG     🟢 Logging in...
-[00:20:05.095] Browser ERROR   ❌ Login error: {}
-[00:20:05.095] Browser ERROR   unhandledRejection: SyntaxError: Unexpected token 'F', "Failed to fetch" is not valid JSON
-[00:23:32.536] Server  LOG      ✓ Compiled in 330ms
-[00:23:32.597] Browser LOG     🟢 Attached token to request: /deploy
-[00:23:39.891] Server  LOG      ✓ Compiled in 293ms
-[00:23:40.603] Browser LOG     🟢 Attached token to request: /deploy
-[00:23:47.119] Server  LOG      ✓ Compiled in 272ms
-[00:23:47.605] Browser LOG     🟢 Attached token to request: /deploy
-[00:25:01.023] Browser LOG     🟢 Attached token to request: /deploy
-[00:25:01.100] Server  LOG      ✓ Compiled in 221ms
-[00:25:51.008] Server  LOG      ✓ Compiled in 129ms
-[00:25:51.599] Browser LOG     🟢 Attached token to request: /deploy
-[00:25:53.203] Server  LOG      ✓ Compiled in 109ms
-[00:25:53.599] Browser LOG     🟢 Attached token to request: /deploy
-[00:25:54.773] Browser LOG     🟢 Attached token to request: /deploy
-[00:25:54.851] Server  LOG      ✓ Compiled in 176ms
-[00:49:19.282] Server  LOG      ✓ Compiled in 109ms
-[00:49:36.598] Server  LOG      ✓ Compiled in 40ms
-[00:49:38.643] Browser LOG     ⚙️ AuthProvider initialized...
-[00:49:38.643] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:49:38.643] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:49:38.643] Browser LOG     ✅ Token still valid, restoring session...
-[00:49:38.643] Browser LOG     ⚙️ AuthProvider initialized...
-[00:49:38.643] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:49:38.643] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:49:38.643] Browser LOG     ✅ Token still valid, restoring session...
-[00:49:38.643] Browser LOG     ⚙️ AuthProvider initialized...
-[00:49:38.643] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:49:38.643] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:49:38.643] Browser LOG     ✅ Token still valid, restoring session...
-[00:49:38.643] Browser LOG     ⚙️ AuthProvider initialized...
-[00:49:38.643] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:49:38.643] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:49:38.643] Browser LOG     ✅ Token still valid, restoring session...
-[00:50:05.439] Browser LOG     🟢 Attached token to request: /deploy
-[00:50:05.439] Browser LOG     🟢 Attached token to request: /deploy
-[00:50:36.699] Server  LOG      ✓ Compiled in 839ms
-[00:50:58.734] Server  LOG      ✓ Compiled in 640ms
-[00:51:19.354] Server  LOG      ✓ Compiled in 906ms
-[00:51:35.687] Browser LOG     ⚙️ AuthProvider initialized...
-[00:51:35.687] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:51:35.688] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:51:35.688] Browser LOG     ✅ Token still valid, restoring session...
-[00:51:35.688] Browser LOG     ⚙️ AuthProvider initialized...
-[00:51:35.688] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:51:35.688] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:51:35.688] Browser LOG     ✅ Token still valid, restoring session...
-[00:51:35.688] Browser LOG     🟢 Attached token to request: /deploy
-[00:51:35.688] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:51:44.145] Server  LOG      ✓ Compiled in 1126ms
-[00:52:53.117] Browser LOG     🟢 Attached token to request: /deploy
-[00:52:53.696] Browser LOG     🟢 Attached token to request: /deploy
-[00:53:12.723] Browser LOG     ⚙️ AuthProvider initialized...
-[00:53:12.723] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:53:12.723] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:53:12.723] Browser LOG     ✅ Token still valid, restoring session...
-[00:53:12.723] Browser LOG     ⚙️ AuthProvider initialized...
-[00:53:12.723] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:53:12.723] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:53:12.723] Browser LOG     ✅ Token still valid, restoring session...
-[00:53:12.723] Browser LOG     🟢 Attached token to request: /deploy
-[00:53:12.723] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:53:42.301] Browser LOG     🟢 Attached token to request: /deploy
-[00:53:47.234] Browser LOG     ⚙️ AuthProvider initialized...
-[00:53:47.234] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:53:47.234] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:53:47.234] Browser LOG     ✅ Token still valid, restoring session...
-[00:53:47.234] Browser LOG     ⚙️ AuthProvider initialized...
-[00:53:47.234] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:53:47.234] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:53:47.234] Browser LOG     ✅ Token still valid, restoring session...
-[00:53:47.234] Browser LOG     🟢 Attached token to request: /deploy
-[00:53:47.234] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:54:04.052] Browser LOG     ⚙️ AuthProvider initialized...
-[00:54:04.052] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:54:04.052] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:54:04.052] Browser LOG     ✅ Token still valid, restoring session...
-[00:54:04.052] Browser LOG     ⚙️ AuthProvider initialized...
-[00:54:04.052] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:54:04.052] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:54:04.052] Browser LOG     ✅ Token still valid, restoring session...
-[00:54:04.208] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:54:14.563] Server  LOG      ✓ Compiled in 756ms
-[00:54:23.419] Browser LOG     ⚙️ AuthProvider initialized...
-[00:54:23.419] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:54:23.419] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:54:23.420] Browser LOG     ✅ Token still valid, restoring session...
-[00:54:23.420] Browser LOG     ⚙️ AuthProvider initialized...
-[00:54:23.420] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:54:23.420] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:54:23.420] Browser LOG     ✅ Token still valid, restoring session...
-[00:54:23.687] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:54:24.589] Browser LOG     🟢 Attached token to request: /deploy
-[00:54:24.589] Browser LOG     🟢 Attached token to request: /deploy
-[00:54:30.625] Browser LOG     🟢 Attached token to request: /deploy
-[00:54:30.625] Browser LOG     🟢 Attached token to request: /deploy
-[00:54:36.597] Browser LOG     ⚙️ AuthProvider initialized...
-[00:54:36.597] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:54:36.597] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:54:36.597] Browser LOG     ✅ Token still valid, restoring session...
-[00:54:36.597] Browser LOG     ⚙️ AuthProvider initialized...
-[00:54:36.597] Browser LOG     📦 Saved token detected: {"exp":1763991346,"iat":1761399346,"id":"68fa3c466414c64795ef7ee7"}
-[00:54:36.597] Browser LOG     📆 Expiration: "2025-11-24T13:35:46.000Z"
-[00:54:36.597] Browser LOG     ✅ Token still valid, restoring session...
-[00:54:36.598] Browser LOG     🟢 Attached token to request: /deploy
-[00:54:36.598] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:06.643] Server  LOG      ✓ Ready in 4.7s
+[00:00:09.745] Server  LOG      ○ Compiling /deploy ...
+[00:00:22.008] Browser LOG     ⚙️ AuthProvider initialized...
+[00:00:22.008] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:00:22.008] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:00:22.008] Browser LOG     ✅ Token still valid, restoring session...
+[00:00:22.008] Browser LOG     ⚙️ AuthProvider initialized...
+[00:00:22.008] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:00:22.008] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:00:22.008] Browser LOG     ✅ Token still valid, restoring session...
+[00:00:22.164] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:26.215] Browser LOG     🟢 Attached token to request: /deploy
+[00:00:26.215] Browser LOG     🟢 Attached token to request: /deploy
+[00:01:17.330] Server  LOG      ✓ Compiled in 656ms
+[00:01:17.344] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:00.546] Browser WARN    Image with src "/bot-menu-preview2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:00.546] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:03.550] Browser LOG     ⚙️ AuthProvider initialized...
+[00:02:03.550] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:02:03.550] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:02:03.550] Browser LOG     ✅ Token still valid, restoring session...
+[00:02:03.550] Browser LOG     ⚙️ AuthProvider initialized...
+[00:02:03.550] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:02:03.550] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:02:03.550] Browser LOG     ✅ Token still valid, restoring session...
+[00:02:03.550] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:03.550] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:18.799] Browser LOG     ⚙️ AuthProvider initialized...
+[00:02:18.799] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:02:18.799] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:02:18.799] Browser LOG     ✅ Token still valid, restoring session...
+[00:02:18.799] Browser LOG     ⚙️ AuthProvider initialized...
+[00:02:18.799] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:02:18.800] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:02:18.800] Browser LOG     ✅ Token still valid, restoring session...
+[00:02:18.800] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:18.800] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:33.015] Server  LOG      ✓ Compiled in 404ms
+[00:02:36.433] Server  LOG      ✓ Compiled in 578ms
+[00:02:36.478] Browser LOG     Refreshing page data due to server-side change
+[00:02:37.346] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:37.346] Browser ERROR   ./frontend/pages/dashboard.js:1:4
+Parsing ecmascript source code failed
+> 1 | ge ssaimport { useState, useEffect } from "react";
+    |    ^^^^^^^^^
+  2 | import Head from "next/head";
+  3 | import { useRouter } from "next/router";
+  4 | import Link from "next/link";
+
+Expected ';', '}' or <eof>
+[00:02:37.346] Browser ERROR   ./frontend/pages/dashboard.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/frontend/pages/dashboard.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/frontend/pages/dashboard.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:02:42.239] Server  LOG      ✓ Compiled in 391ms
+[00:02:42.345] Browser LOG     Refreshing page data due to server-side change
+[00:02:42.346] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:42.346] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:48.108] Server  LOG      ✓ Compiled in 451ms
+[00:02:49.349] Browser LOG     Refreshing page data due to server-side change
+[00:02:49.349] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:49.349] Browser ERROR   ./frontend/pages/dashboard.js:143:15
+Parsing ecmascript source code failed
+  141 |             Deploy Bot
+  142 |           </Link>
+> 143 |         </div>
+      |               ^
+> 144 |
+      | ^
+> 145 |         {/* Mobile Deploy Button */}
+      | ^^^^^^^^^
+  146 |         <div className="md:hidden fixed bottom-6 right-6 z-40">
+  147 |           <Link
+  148 |             href="/deploy"
+
+Expected '</', got 'jsx text (
+
+        )'
+[00:02:49.349] Browser ERROR   ./frontend/pages/dashboard.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/frontend/pages/dashboard.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/frontend/pages/dashboard.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:02:50.443] Server  LOG      ✓ Compiled in 595ms
+[00:02:51.348] Browser LOG     Refreshing page data due to server-side change
+[00:02:51.348] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:51.348] Browser LOG     🟢 Attached token to request: /deploy
+[00:02:58.048] Server  LOG      ✓ Compiled in 646ms
+[00:03:34.069] Server  LOG      ✓ Compiled in 1200ms
+[00:03:46.379] Browser LOG     🟢 Attached token to request: /deploy
+[00:03:46.379] Browser LOG     🟢 Attached token to request: /deploy
