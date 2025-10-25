@@ -1,6 +1,6 @@
 var R=require("../chunks/ssr/[turbopack]_runtime.js")("server/pages/_app.js")
-R.c("server/chunks/ssr/lib_auth_80f91966.js")
-R.c("server/chunks/ssr/node_modules_b01b7a65._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__c24b23e3._.js")
-R.m("[project]/pages/_app.js [ssr] (ecmascript)")
-module.exports=R.m("[project]/pages/_app.js [ssr] (ecmascript)").exports
+R.c("server/chunks/ssr/frontend_lib_auth_ee68517b.js")
+R.c("server/chunks/ssr/9e883_d10b2ea8._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__d83866d5._.js")
+R.m("[project]/frontend/pages/_app.js [ssr] (ecmascript)")
+module.exports=R.m("[project]/frontend/pages/_app.js [ssr] (ecmascript)").exports
