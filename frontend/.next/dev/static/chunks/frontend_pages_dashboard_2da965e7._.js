@@ -13,7 +13,7 @@
   "static/chunks/9e883_react-icons_lib_a4910764._.js",
   "static/chunks/9e883_axios_lib_afe0686f._.js",
   "static/chunks/9e883_9a02b802._.js",
-  "static/chunks/[root-of-the-server]__f65bfa87._.js"
+  "static/chunks/[root-of-the-server]__a9e0a1b8._.js"
 ],
     source: "entry"
 });

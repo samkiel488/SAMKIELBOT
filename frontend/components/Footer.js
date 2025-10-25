@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { useAuth } from "../lib/auth";
 
 export default function Footer() {
+  const { user } = useAuth();
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 px-6 py-10 mt-16 border-t border-gray-200 dark:border-gray-700">
       <div className="container mx-auto">
@@ -18,24 +20,30 @@ export default function Footer() {
               >
                 Home
               </Link>
-              <Link
-                href="/login"
-                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm"
-              >
-                Login
-              </Link>
-              <Link
-                href="/register"
-                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm"
-              >
-                Register
-              </Link>
-              <Link
-                href="/dashboard"
-                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm"
-              >
-                Dashboard
-              </Link>
+              {!user && (
+                <>
+                  <Link
+                    href="/login"
+                    className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm"
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    href="/register"
+                    className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm"
+                  >
+                    Register
+                  </Link>
+                </>
+              )}
+              {user && (
+                <Link
+                  href="/dashboard"
+                  className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm"
+                >
+                  Dashboard
+                </Link>
+              )}
             </div>
           </div>
 

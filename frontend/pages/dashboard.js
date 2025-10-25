@@ -63,10 +63,10 @@ export default function Dashboard() {
         <title>Dashboard - 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋</title>
       </Head>
 
-      <main className="container mx-auto px-4 py-16">
-        <div className="flex justify-between items-center mb-8">
+      <main className="container mx-auto px-4 pt-20 pb-8 md:pb-16">
+        <div className="flex justify-between items-center mb-4 md:mb-8">
           <div>
-            <h1 className="text-4xl font-bold mb-2">
+            <h1 className="text-2xl md:text-4xl font-bold mb-2">
               Welcome back, {user.fullName}!
             </h1>
             <p className="text-gray-600 dark:text-gray-400">
@@ -75,7 +75,7 @@ export default function Dashboard() {
           </div>
           <button
             onClick={handleDeploy}
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
           >
             Deploy New Bot
           </button>
@@ -119,7 +119,7 @@ export default function Dashboard() {
                   </p>
                   <button
                     onClick={handleDeploy}
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-2 rounded-lg font-semibold transition-all duration-200"
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-4 py-2 md:px-6 md:py-2 rounded-lg font-semibold transition-all duration-200"
                   >
                     Deploy Your First Bot
                   </button>
