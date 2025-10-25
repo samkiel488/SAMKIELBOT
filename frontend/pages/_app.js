@@ -3,7 +3,7 @@ import { Toaster } from "react-hot-toast";
 import dynamic from "next/dynamic";
 import Layout from "../components/Layout";
 import Head from "next/head";
-import { ThemeProvider } from "../context/ThemeProvider";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const AuthProvider = dynamic(
   () => import("../lib/auth").then((mod) => mod.AuthProvider),

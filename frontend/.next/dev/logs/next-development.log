@@ -403,3 +403,87 @@ Debug info:
 [05:21:15.321] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [05:21:15.321] Browser WARN    Image with src "/bot-menu-preview2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [05:21:15.321] Browser WARN    Image with src "/viewonce-demo.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:26:58.386] Server  LOG      ✓ Compiled in 842ms
+[05:27:00.639] Browser ERROR   uncaughtError: TypeError: Cannot destructure property 'theme' of '(0 , __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__.useContext)(...)' as it is undefined.
+[05:27:00.639] Browser ERROR   uncaughtError: TypeError: Cannot destructure property 'theme' of '(0 , __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__.useContext)(...)' as it is undefined.
+[05:27:00.639] Browser ERROR   The above error occurred in the <Navbar> component:
+
+    at Navbar (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js?ts=1761383709550:754:149)
+    at Layout (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js?ts=1761383709550:1105:19)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0336b677._.js?ts=1761383709550:496:25)
+    at LoadableComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js?ts=1761383709550:5489:9)
+    at ThemeProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__6f13c766._.js?id=%255Bproject%255D%252Fcontext%252FThemeContext.js+%255Bclient%255D+%2528ecmascript%2529:16:26)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__6f13c766._.js?id=%255Bproject%255D%252Fpages%252F_app.js+%255Bclient%255D+%2528ecmascript%2529:31:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js?ts=1761383709550:5040:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js?ts=1761383709550:1129:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js?ts=1761383709550:1906:34)
+    at Container (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761383709550:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761383709550:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761383709550:3348:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:27:04.591] Browser ERROR   uncaughtError: TypeError: Cannot destructure property 'theme' of '(0 , __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__.useContext)(...)' as it is undefined.
+[05:27:04.592] Browser ERROR   uncaughtError: TypeError: Cannot destructure property 'theme' of '(0 , __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__.useContext)(...)' as it is undefined.
+[05:27:04.592] Browser ERROR   The above error occurred in the <Navbar> component:
+
+    at Navbar (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__6f13c766._.js?ts=1761384306424:754:149)
+    at Layout (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__6f13c766._.js?ts=1761384306424:1105:19)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__6f13c766._.js?ts=1761384306424:496:25)
+    at LoadableComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js?ts=1761384306424:5489:9)
+    at ThemeProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__6f13c766._.js?ts=1761384306424:1146:26)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__6f13c766._.js?ts=1761384306424:1246:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js?ts=1761384306424:5040:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js?ts=1761384306424:1129:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js?ts=1761384306424:1906:34)
+    at Container (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761384306424:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761384306424:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761384306424:3348:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:27:09.547] Server  LOG      ✓ Compiled in 514ms
+[05:27:14.370] Browser ERROR   uncaughtError: ReferenceError: ThemeContext is not defined
+[05:27:14.370] Browser ERROR   uncaughtError: ReferenceError: ThemeContext is not defined
+[05:27:14.370] Browser ERROR   The above error occurred in the <Navbar> component:
+
+    at Navbar (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__1826d1c4._.js?ts=1761384316737:786:149)
+    at Layout (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__1826d1c4._.js?ts=1761384316737:1137:19)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__1826d1c4._.js?ts=1761384316737:496:25)
+    at LoadableComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js?ts=1761384316737:5489:9)
+    at ThemeProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__1826d1c4._.js?ts=1761384316737:688:26)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__1826d1c4._.js?ts=1761384316737:1193:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_c47ed297._.js?ts=1761384316737:5040:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js?ts=1761384316737:1129:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js?ts=1761384316737:1906:34)
+    at Container (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761384316737:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761384316737:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_9b1b49db._.js?ts=1761384316737:3348:17)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:27:22.166] Server  LOG      ✓ Compiled in 317ms
+[05:27:34.071] Server  LOG      ✓ Compiled in 458ms
+[05:27:44.004] Browser LOG     ⚙️ AuthProvider initialized...
+[05:27:44.004] Browser LOG     📦 Saved token detected: {"exp":1763975892,"iat":1761383892,"id":"68fa3c466414c64795ef7ee7"}
+[05:27:44.004] Browser LOG     📆 Expiration: "2025-11-24T09:18:12.000Z"
+[05:27:44.004] Browser LOG     ✅ Token still valid, restoring session...
+[05:27:44.004] Browser LOG     ⚙️ AuthProvider initialized...
+[05:27:44.004] Browser LOG     📦 Saved token detected: {"exp":1763975892,"iat":1761383892,"id":"68fa3c466414c64795ef7ee7"}
+[05:27:44.004] Browser LOG     📆 Expiration: "2025-11-24T09:18:12.000Z"
+[05:27:44.004] Browser LOG     ✅ Token still valid, restoring session...
+[05:27:44.235] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:27:44.901] Browser LOG     🟢 Attached token to request: /deploy
+[05:27:44.901] Browser LOG     🟢 Attached token to request: /deploy
+[05:27:46.947] Browser ERROR   uncaughtError: InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('[object Object]') contains HTML space characters, which are not valid in tokens.
+[05:27:46.947] Browser ERROR   uncaughtError: InvalidCharacterError: Failed to execute 'add' on 'DOMTokenList': The token provided ('[object Object]') contains HTML space characters, which are not valid in tokens.
+[05:27:48.782] Server  LOG      ✓ Compiled in 384ms
+[05:27:57.497] Browser WARN    🔴 Logging out triggered: Manual logout
+[05:28:33.928] Browser LOG     ⚙️ AuthProvider initialized...
+[05:28:33.928] Browser LOG     ℹ️ No token found in storage.
+[05:28:33.928] Browser LOG     ⚙️ AuthProvider initialized...
+[05:28:33.928] Browser LOG     ℹ️ No token found in storage.
+[05:28:33.928] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:29:00.937] Browser LOG     🟢 Logging in...
+[05:29:02.683] Browser LOG     ✅ Token received: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmEzYzQ2NjQxNGM2NDc5NWVmN2VlNyIsImlhdCI6MTc2MTM4NDQyOCwiZXhwIjoxNzYzOTc2NDI4fQ.ACdjSGlmqkaYD7_OUntBs0SM5QkHTcPrTh7JmEQINdA
+[05:29:02.683] Browser LOG     ✅ User successfully logged in: guy
+[05:29:02.988] Browser LOG     🟢 Attached token to request: /deploy
+[05:29:02.988] Browser LOG     🟢 Attached token to request: /deploy
+[05:29:10.987] Browser WARN    🔴 Logging out triggered: Manual logout

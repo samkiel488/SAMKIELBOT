@@ -2,19 +2,19 @@ import { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useAuth } from "../lib/auth";
-import { ThemeContext } from "../context/ThemeProvider";
+import { useTheme } from "../context/ThemeContext";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Sun, Moon, Monitor } from "lucide-react";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleTheme = () => {
-    if (theme === "light") setTheme("dark");
-    else if (theme === "dark") setTheme("system");
-    else setTheme("light");
+  const handleToggleTheme = () => {
+    const next =
+      theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
+    toggleTheme(next);
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -80,7 +80,7 @@ export default function Navbar() {
 
           {/* Single Theme Toggle Icon */}
           <button
-            onClick={toggleTheme}
+            onClick={handleToggleTheme}
             className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors ml-4"
             aria-label={`Current theme: ${theme}. Click to cycle themes.`}
           >
@@ -94,7 +94,7 @@ export default function Navbar() {
         <div className="md:hidden flex items-center space-x-2">
           {/* Single Theme Toggle for Mobile */}
           <button
-            onClick={toggleTheme}
+            onClick={handleToggleTheme}
             className="p-1 rounded text-gray-400 hover:text-white transition-colors"
             aria-label={`Current theme: ${theme}. Click to cycle themes.`}
           >
