@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }) => {
           return;
         }
 
-        console.log("✅ Token received:", token);
+        console.log("✅ Token received:");
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
         setToken(token);
@@ -108,7 +108,7 @@ export const AuthProvider = ({ children }) => {
           return null;
         }
 
-        console.log("✅ Token received:", token);
+        console.log("✅ Token received:");
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
         setToken(token);

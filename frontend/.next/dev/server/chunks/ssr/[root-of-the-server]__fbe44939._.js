@@ -125,7 +125,7 @@ const AuthProvider = ({ children })=>{
                     __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].error("Login failed: no token received from server");
                     return;
                 }
-                console.log("✅ Token received:", token);
+                console.log("✅ Token received:");
                 localStorage.setItem("token", token);
                 localStorage.setItem("user", JSON.stringify(user));
                 setToken(token);
@@ -164,7 +164,7 @@ const AuthProvider = ({ children })=>{
                     __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$29$__["default"].error("Registration failed: no token received from server");
                     return null;
                 }
-                console.log("✅ Token received:", token);
+                console.log("✅ Token received:");
                 localStorage.setItem("token", token);
                 localStorage.setItem("user", JSON.stringify(user));
                 setToken(token);
