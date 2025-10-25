@@ -34,6 +34,21 @@
       "static/chunks/frontend_pages__app_2da965e7._.js",
       "static/chunks/turbopack-frontend_pages__app_db25a6e2._.js"
     ],
+    "/_error": [
+      "static/chunks/9e883_next_dist_compiled_712bffdb._.js",
+      "static/chunks/9e883_next_dist_shared_lib_8ad05970._.js",
+      "static/chunks/9e883_next_dist_client_fe082e00._.js",
+      "static/chunks/9e883_next_dist_91312c1c._.js",
+      "static/chunks/9e883_next_error_43788141.js",
+      "static/chunks/[next]_entry_page-loader_ts_b9ef54ef._.js",
+      "static/chunks/9e883_react_bd4f1e8c._.js",
+      "static/chunks/9e883_react-dom_cjs_react-dom_development_2d164baf.js",
+      "static/chunks/9e883_react-dom_68830139._.js",
+      "static/chunks/9e883_2a3b8b9f._.js",
+      "static/chunks/[root-of-the-server]__2b803f7d._.js",
+      "static/chunks/frontend_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-frontend_pages__error_e9357b1d._.js"
+    ],
     "/dashboard": [
       "static/chunks/9e883_next_dist_compiled_15b2531f._.js",
       "static/chunks/9e883_next_dist_shared_lib_34461f37._.js",
@@ -46,10 +61,25 @@
       "static/chunks/9e883_react-icons_fa_index_mjs_d956662c._.js",
       "static/chunks/9e883_react-icons_lib_a4910764._.js",
       "static/chunks/9e883_axios_lib_afe0686f._.js",
-      "static/chunks/9e883_9a02b802._.js",
+      "static/chunks/9e883_1f854704._.js",
       "static/chunks/[root-of-the-server]__a9e0a1b8._.js",
       "static/chunks/frontend_pages_dashboard_2da965e7._.js",
-      "static/chunks/turbopack-frontend_pages_dashboard_c9651135._.js"
+      "static/chunks/turbopack-frontend_pages_dashboard_e0fe3d16._.js"
+    ],
+    "/deploy": [
+      "static/chunks/9e883_next_dist_compiled_15b2531f._.js",
+      "static/chunks/9e883_next_dist_shared_lib_34461f37._.js",
+      "static/chunks/9e883_next_dist_client_c89cbffc._.js",
+      "static/chunks/9e883_next_dist_4bfa5b9e._.js",
+      "static/chunks/9e883_next_ed3d4f41._.js",
+      "static/chunks/9e883_react_4afec026._.js",
+      "static/chunks/9e883_react-dom_cjs_react-dom_development_2d164baf.js",
+      "static/chunks/9e883_react-dom_68830139._.js",
+      "static/chunks/9e883_axios_lib_afe0686f._.js",
+      "static/chunks/9e883_03686d1e._.js",
+      "static/chunks/[root-of-the-server]__3d2be3ef._.js",
+      "static/chunks/frontend_pages_deploy_2da965e7._.js",
+      "static/chunks/turbopack-frontend_pages_deploy_98b51abf._.js"
     ],
     "/login": [
       "static/chunks/9e883_next_dist_compiled_712bffdb._.js",

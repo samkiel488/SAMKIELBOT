@@ -2,6 +2,7 @@ var R=require("../chunks/ssr/[turbopack]_runtime.js")("server/pages/dashboard.js
 R.c("server/chunks/ssr/9e883_next_dist_09b9b27b._.js")
 R.c("server/chunks/ssr/9e883_react-icons_fa_index_mjs_1db3577b._.js")
 R.c("server/chunks/ssr/9e883_react-icons_lib_693f9555._.js")
+R.c("server/chunks/ssr/9e883_lucide-react_dist_esm_icons_f547e9f3._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__f75ecfe0._.js")
 R.c("server/chunks/ssr/9e883_08d01a05._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__e6a4d965._.js")
