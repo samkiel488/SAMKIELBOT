@@ -359,6 +359,10 @@ img, video {
   margin-right: auto;
 }
 
+.-mt-1 {
+  margin-top: -.25rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -397,10 +401,6 @@ img, video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.-mt-1 {
-  margin-top: -.25rem;
 }
 
 .block {
@@ -445,10 +445,6 @@ img, video {
 
 .h-8 {
   height: 2rem;
-}
-
-.h-64 {
-  height: 16rem;
 }
 
 .min-h-screen {
