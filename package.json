@@ -4,11 +4,11 @@
   "description": "𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋 Full-Stack Application",
   "main": "index.js",
   "scripts": {
-  "dev": "rimraf frontend/.next/dev/lock && concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
-  "install:all": "npm install --prefix backend && npm install --prefix frontend",
-  "build": "npm run install:all && npm run build --prefix frontend",
-  "start": "npm install --prefix backend && node backend/server.js"
-},
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "rimraf frontend/.next/dev/lock && concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run install:all && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
   "keywords": [
     "bot",
     "deployment",
