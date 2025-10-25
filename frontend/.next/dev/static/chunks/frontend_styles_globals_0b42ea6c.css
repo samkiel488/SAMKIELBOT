@@ -511,6 +511,14 @@ img, video {
   max-height: 16rem;
 }
 
+.max-h-0 {
+  max-height: 0;
+}
+
+.max-h-96 {
+  max-height: 24rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1349,6 +1357,14 @@ img, video {
 
 .opacity-60 {
   opacity: .6;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
 }
 
 .shadow-lg {

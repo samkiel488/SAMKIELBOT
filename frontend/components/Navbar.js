@@ -3,13 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { useAuth } from "../lib/auth";
 import { useTheme } from "../context/ThemeContext";
-import { Menu, X, Sun, Moon, Monitor } from "lucide-react";
+import { Menu, X, Sun, Moon, Monitor, Bell } from "lucide-react";
+import NotificationDropdown from "./NotificationDropdown";
+import UserAvatarDropdown from "./UserAvatarDropdown";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -82,6 +85,23 @@ export default function Navbar() {
             </>
           )}
 
+          {/* Notifications */}
+          {user && (
+            <div className="relative">
+              <button
+                onClick={() => setShowNotifications(!showNotifications)}
+                className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              >
+                <Bell size={20} className="text-gray-700 dark:text-gray-300" />
+              </button>
+              {showNotifications && (
+                <NotificationDropdown
+                  onClose={() => setShowNotifications(false)}
+                />
+              )}
+            </div>
+          )}
+
           {/* Theme Toggle Button */}
           <button
             onClick={() => {
@@ -113,6 +133,9 @@ export default function Navbar() {
               />
             )}
           </button>
+
+          {/* User Avatar */}
+          {user && <UserAvatarDropdown user={user} />}
         </div>
 
         {/* Mobile Header: Theme Toggle + Menu Button */}
@@ -158,58 +181,59 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
       {/* Mobile Dropdown */}
-      {menuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 px-6 py-4 space-y-3">
-          <Link
-            href={user ? "/dashboard" : "/"}
-            onClick={() => setMenuOpen(false)}
-            className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-          >
-            Home
-          </Link>
-          {user ? (
-            <>
-              <Link
-                href="/dashboard"
-                onClick={() => setMenuOpen(false)}
-                className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-              >
-                Dashboard
-              </Link>
-              <button
-                onClick={() => {
-                  logout();
-                  setMenuOpen(false);
-                }}
-                className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-left"
-              >
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link
-                href="/login"
-                onClick={() => setMenuOpen(false)}
-                className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-              >
-                Login
-              </Link>
-              <Link
-                href="/register"
-                onClick={() => setMenuOpen(false)}
-                className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-              >mn 
-                Register
-              </Link>
-            </>
-          )}
-
-         
-        </div>
-      )}
+      <div
+        className={`md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 px-6 py-4 space-y-3 transition-all duration-300 ${
+          menuOpen
+            ? "max-h-96 opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
+        }`}
+      >
+        <Link
+          href={user ? "/dashboard" : "/"}
+          onClick={() => setMenuOpen(false)}
+          className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+        >
+          Home
+        </Link>
+        {user ? (
+          <>
+            <Link
+              href="/dashboard"
+              onClick={() => setMenuOpen(false)}
+              className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              Dashboard
+            </Link>
+            <button
+              onClick={() => {
+                logout();
+                setMenuOpen(false);
+              }}
+              className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-left"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link
+              href="/login"
+              onClick={() => setMenuOpen(false)}
+              className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              Login
+            </Link>
+            <Link
+              href="/register"
+              onClick={() => setMenuOpen(false)}
+              className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              Register
+            </Link>
+          </>
+        )}
+      </div>
     </nav>
   );
 }
