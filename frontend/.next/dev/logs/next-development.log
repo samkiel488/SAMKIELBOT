@@ -1,1 +1,83 @@
 [00:00:08.111] Server  LOG      ✓ Ready in 4.7s
+[00:00:40.267] Server  LOG      ○ Compiling /dashboard ...
+[00:01:21.508] Browser LOG     ⚙️ AuthProvider initialized...
+[00:01:21.508] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:01:21.508] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:01:21.508] Browser LOG     ✅ Token still valid, restoring session...
+[00:01:21.508] Browser LOG     ⚙️ AuthProvider initialized...
+[00:01:21.508] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:01:21.508] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:01:21.508] Browser LOG     ✅ Token still valid, restoring session...
+[00:01:21.508] Browser LOG     🟢 Attached token to request: /deploy
+[00:01:21.619] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:50.750] Server  LOG      ✓ Compiled in 769ms
+[00:02:52.333] Browser LOG     Refreshing page data due to server-side change
+[00:02:52.333] Browser ERROR   ./frontend/pages/dashboard.js:139:2
+Parsing ecmascript source code failed
+  137 |     </>
+  138 |   );
+> 139 | }
+      |  ^
+  140 |
+
+Expected '}', got '<eof>'
+[00:02:52.334] Browser ERROR   ./frontend/pages/dashboard.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/frontend/pages/dashboard.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/frontend/pages/dashboard.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:02:52.334] Browser LOG     🟢 Attached token to request: /deploy
+[00:03:01.837] Server  LOG      ✓ Compiled in 559ms
+[00:03:01.884] Browser LOG     Refreshing page data due to server-side change
+[00:03:01.884] Browser LOG     🟢 Attached token to request: /deploy
+[00:03:01.884] Browser LOG     🟢 Attached token to request: /deploy
+[00:03:16.543] Browser LOG     Refreshing page data due to server-side change
+[00:03:16.543] Browser LOG     🟢 Attached token to request: /deploy
+[00:03:16.543] Browser LOG     🟢 Attached token to request: /deploy
+[00:03:17.014] Server  LOG      ✓ Compiled in 735ms
+[00:03:22.802] Browser LOG     ⚙️ AuthProvider initialized...
+[00:03:22.802] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:03:22.802] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:03:22.802] Browser LOG     ✅ Token still valid, restoring session...
+[00:03:22.802] Browser LOG     ⚙️ AuthProvider initialized...
+[00:03:22.802] Browser LOG     📦 Saved token detected: {"exp":1764026591,"iat":1761434591,"id":"68fa340812371bf92d74f95f"}
+[00:03:22.802] Browser LOG     📆 Expiration: "2025-11-24T23:23:11.000Z"
+[00:03:22.802] Browser LOG     ✅ Token still valid, restoring session...
+[00:03:22.802] Browser LOG     🟢 Attached token to request: /deploy
+[00:03:22.802] Browser WARN    Image with src "/SAMKIELBOT-LOGO.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:34.058] Browser LOG     🟢 Attached token to request: /deploy
+[00:03:34.226] Server  LOG      ✓ Compiled in 280ms
+[00:03:37.538] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+    at div
+    at div
+    at p
+    at div
+    at div
+    at div
+    at div
+    at NotificationDropdown (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0725b2be._.js:785:184)
+    at div
+    at div
+    at nav
+    at Navbar (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0725b2be._.js:1190:161)
+    at div
+    at Layout (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0725b2be._.js:1524:19)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0725b2be._.js:496:25)
+    at LoadableComponent (http://localhost:3000/_next/static/chunks/9e883_next_dist_shared_lib_02edf08a._.js:5489:9)
+    at ThemeProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0725b2be._.js:699:26)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0725b2be._.js:1592:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/9e883_next_dist_shared_lib_02edf08a._.js:5040:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/9e883_next_dist_4bfa5b9e._.js:1129:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/9e883_next_dist_4bfa5b9e._.js:1906:34)
+    at Container (http://localhost:3000/_next/static/chunks/9e883_next_dist_client_e36166f9._.js:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/9e883_next_dist_client_e36166f9._.js:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/9e883_next_dist_client_e36166f9._.js:3348:17)
+[00:04:15.870] Browser LOG     🟢 Attached token to request: /deploy
+[00:04:15.870] Browser LOG     🟢 Attached token to request: /deploy
