@@ -2,6 +2,9 @@ self.__BUILD_MANIFEST = {
   "/dashboard": [
     "static/chunks/pages/dashboard.js"
   ],
+  "/deploy": [
+    "static/chunks/pages/deploy.js"
+  ],
   "/profile": [
     "static/chunks/pages/profile.js"
   ],

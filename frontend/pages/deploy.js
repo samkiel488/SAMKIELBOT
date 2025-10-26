@@ -14,6 +14,7 @@ export default function DeployPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [deployment, setDeployment] = useState(null);
+  const [deploymentStatus, setDeploymentStatus] = useState("idle"); // idle, deploying, success
   const { user } = useAuth();
   const router = useRouter();
 
@@ -28,17 +29,60 @@ export default function DeployPage() {
     e.preventDefault();
     setLoading(true);
     setError("");
+    setDeploymentStatus("deploying");
 
     try {
-      await deployBot(formData);
-      toast.success("Bot deployed successfully!");
-      router.push("/dashboard");
+      const deploymentData = await deployBot(formData);
+      setDeployment(deploymentData);
+      toast.success("Bot deployment started!");
+
+      // Poll for deployment status
+      pollDeploymentStatus(deploymentData._id);
     } catch (error) {
       setError(error.response?.data?.error || "Deployment failed");
       toast.error("Deployment failed. Please try again.");
-    } finally {
       setLoading(false);
+      setDeploymentStatus("idle");
     }
+  };
+
+  const pollDeploymentStatus = async (deploymentId) => {
+    const pollInterval = setInterval(async () => {
+      try {
+        const response = await fetch(`/api/deploy/${deploymentId}`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        const deploymentData = await response.json();
+
+        if (deploymentData.data.pairingCode) {
+          setDeployment(deploymentData.data);
+          setDeploymentStatus("success");
+          setLoading(false);
+          clearInterval(pollInterval);
+          toast.success("Bot deployed successfully! Pairing code retrieved.");
+        } else if (deploymentData.data.status === "failed") {
+          setError("Deployment failed. Please try again.");
+          setDeploymentStatus("idle");
+          setLoading(false);
+          clearInterval(pollInterval);
+          toast.error("Deployment failed.");
+        }
+      } catch (error) {
+        console.error("Error polling deployment status:", error);
+      }
+    }, 5000); // Poll every 5 seconds
+
+    // Stop polling after 10 minutes
+    setTimeout(() => {
+      clearInterval(pollInterval);
+      if (deploymentStatus !== "success") {
+        setError("Deployment timed out. Please check your dashboard.");
+        setDeploymentStatus("idle");
+        setLoading(false);
+      }
+    }, 600000); // 10 minutes
   };
 
   if (!user) {

@@ -101,7 +101,7 @@ const processDeployment = async (deploymentId) => {
 
     const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
     const owner = "samkiel488";
-    const repo = "SAMKIELBOT";
+    const repo = "SAMKIEL-AI";
     const baseBranch = "main";
 
     // Fetch settings.js from GitHub
@@ -117,10 +117,15 @@ const processDeployment = async (deploymentId) => {
     ).toString("utf-8");
 
     // Modify bot number in settings.js
-    const modifiedSettings = settingsContent.replace(
-      /global\.ownernumber\s*=\s*['"`][^'"`]*['"`]/,
-      `global.ownernumber = '${deployment.botNumber}'`
-    );
+    const modifiedSettings = settingsContent
+      .replace(
+        /global\.ownernumber\s*=\s*['"`][^'"`]*['"`]/,
+        `global.ownernumber = '${deployment.botNumber}'`
+      )
+      .replace(
+        /global\.botNumber\s*=\s*['"`][^'"`]*['"`]/,
+        `global.botNumber = '${deployment.botNumber}'`
+      );
 
     // Create new branch
     const branchName = `blackboxai/bot-${deployment.botNumber}-${Date.now()}`;
