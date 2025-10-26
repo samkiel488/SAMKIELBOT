@@ -81,3 +81,5 @@ Debug info:
     at Root (http://localhost:3000/_next/static/chunks/9e883_next_dist_client_e36166f9._.js:3348:17)
 [00:04:15.870] Browser LOG     🟢 Attached token to request: /deploy
 [00:04:15.870] Browser LOG     🟢 Attached token to request: /deploy
+[00:18:07.444] Server  LOG      ✓ Compiled in 177ms
+[00:18:07.837] Browser LOG     🟢 Attached token to request: /deploy

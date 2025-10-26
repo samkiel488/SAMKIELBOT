@@ -1495,7 +1495,7 @@ function Dashboard() {
                                 className: "text-2xl md:text-4xl font-bold mb-2 text-gray-900 dark:text-white",
                                 children: [
                                     "Welcome back, ",
-                                    user.fullName || user.username,
+                                    user.username,
                                     " 👋"
                                 ]
                             }, void 0, true, {

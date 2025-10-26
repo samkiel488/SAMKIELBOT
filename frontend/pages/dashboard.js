@@ -64,7 +64,7 @@ export default function Dashboard() {
         {/* Header Section */}
         <div className="mb-8">
           <h1 className="text-2xl md:text-4xl font-bold mb-2 text-gray-900 dark:text-white">
-            Welcome back, {user.fullName || user.username} 👋
+            Welcome back, {user.username} 👋
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
             Manage and monitor your bot deployments easily.
