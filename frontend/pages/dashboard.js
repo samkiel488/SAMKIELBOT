@@ -5,17 +5,14 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import BotCard from "../components/BotCard";
 import StatsOverview from "../components/StatsOverview";
-import NotificationDropdown from "../components/NotificationDropdown";
-import UserAvatarDropdown from "../components/UserAvatarDropdown";
 import { getDeployments } from "../lib/api";
 import { useAuth } from "../lib/auth";
-import { Bell, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import toast from "react-hot-toast";
 
 export default function Dashboard() {
   const [deployments, setDeployments] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [showNotifications, setShowNotifications] = useState(false);
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
 
@@ -26,8 +23,8 @@ export default function Dashboard() {
     }
 
     if (user) {
-    if (user) {
-    }
+      if (user) {
+      }
       fetchDeployments();
 
       // Show welcome toast for first-time users
@@ -82,52 +79,22 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <>
       <Head>
         <title>Dashboard - 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋</title>
       </Head>
 
-      {/* Header Section */}
-      <div className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-between items-center">
-            <div className="flex-1">
-              <h1 className="text-2xl md:text-4xl font-bold mb-2 text-gray-900 dark:text-white">
-                Welcome back, {user.fullName || user.username} 👋
-              </h1>
-              <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                Manage and monitor your bot deployments easily.
-              </p>
-            </div>
-
-            {/* Header Actions */}
-            <div className="flex items-center space-x-4">
-              {/* Notifications */}
-              <div className="relative">
-                <button
-                  onClick={() => setShowNotifications(!showNotifications)}
-                  className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                >
-                  <Bell
-                    size={24}
-                    className="text-gray-700 dark:text-gray-300"
-                  />
-                </button>
-                {showNotifications && (
-                  <NotificationDropdown
-                    onClose={() => setShowNotifications(false)}
-                  />
-                )}
-              </div>
-
-              {/* User Avatar */}
-              <UserAvatarDropdown user={user} />
-            </div>
-          </div>
+      <main className="container mx-auto px-4 py-8">
+        {/* Header Section */}
+        <div className="mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold mb-2 text-gray-900 dark:text-white">
+            Welcome back, {user.fullName || user.username} 👋
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
+            Manage and monitor your bot deployments easily.
+          </p>
         </div>
-      </div>
 
-      <main className="container mx-auto px-4 pt-32 pb-8 md:pb-16">
         {/* Stats Overview */}
         <StatsOverview deployments={deployments} />
 
@@ -202,8 +169,6 @@ export default function Dashboard() {
       </main>
 
       <Footer />
-
-      {/* Remove old modal since we now navigate to /deploy */}
-    </div>
+    </>
   );
 }
