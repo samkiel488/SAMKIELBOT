@@ -12,7 +12,6 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [showNotifications, setShowNotifications] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -46,100 +45,87 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-8 items-center text-gray-800 dark:text-gray-100">
-          <Link
-            href={user ? "/dashboard" : "/"}
-            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-          >
-            Home
-          </Link>
-          {user ? (
-            <>
-              <Link
-                href="/dashboard"
-                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-              >
-                Dashboard
-              </Link>
-              <button
-                onClick={logout}
-                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-              >
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link
-                href="/login"
-                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-              >
-                Login
-              </Link>
-              <Link
-                href="/register"
-                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-              >
-                Register
-              </Link>
-            </>
-          )}
+        <div className="hidden md:flex items-center justify-between px-4 py-2">
+          <div className="flex gap-8 items-center text-gray-800 dark:text-gray-100">
+            <Link
+              href={user ? "/dashboard" : "/"}
+              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              Home
+            </Link>
+            {user ? (
+              <>
+                <Link
+                  href="/dashboard"
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                >
+                  Dashboard
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                >
+                  Login
+                </Link>
+                <Link
+                  href="/register"
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                >
+                  Register
+                </Link>
+              </>
+            )}
+          </div>
 
-          {/* Notifications */}
-          {user && (
-            <div className="relative">
-              <button
-                onClick={() => setShowNotifications(!showNotifications)}
-                className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              >
-                <Bell size={20} className="text-gray-700 dark:text-gray-300" />
-              </button>
-              {showNotifications && (
-                <NotificationDropdown
-                  onClose={() => setShowNotifications(false)}
+          <div className="flex items-center gap-4">
+            {/* Notifications */}
+            {user && <NotificationDropdown />}
+
+            {/* Theme Toggle Button */}
+            <button
+              onClick={() => {
+                const next =
+                  theme === "light"
+                    ? "dark"
+                    : theme === "dark"
+                    ? "system"
+                    : "light";
+                toggleTheme(next);
+              }}
+              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all hover:scale-110"
+              aria-label="Toggle theme"
+            >
+              {theme === "light" ? (
+                <Sun
+                  size={20}
+                  className="text-yellow-500 transition-colors duration-300"
+                />
+              ) : theme === "dark" ? (
+                <Moon
+                  size={20}
+                  className="text-blue-400 transition-colors duration-300"
+                />
+              ) : (
+                <Monitor
+                  size={20}
+                  className="text-gray-500 transition-colors duration-300"
                 />
               )}
-            </div>
-          )}
+            </button>
 
-          {/* Theme Toggle Button */}
-          <button
-            onClick={() => {
-              const next =
-                theme === "light"
-                  ? "dark"
-                  : theme === "dark"
-                  ? "system"
-                  : "light";
-              toggleTheme(next);
-            }}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all hover:scale-110"
-            aria-label="Toggle theme"
-          >
-            {theme === "light" ? (
-              <Sun
-                size={20}
-                className="text-yellow-500 transition-colors duration-300"
-              />
-            ) : theme === "dark" ? (
-              <Moon
-                size={20}
-                className="text-blue-400 transition-colors duration-300"
-              />
-            ) : (
-              <Monitor
-                size={20}
-                className="text-gray-500 transition-colors duration-300"
-              />
-            )}
-          </button>
-
-          {/* User Avatar */}
-          {user && <UserAvatarDropdown user={user} />}
+            {/* User Avatar */}
+            {user && <UserAvatarDropdown user={user} />}
+          </div>
         </div>
 
-        {/* Mobile Header: Theme Toggle + Menu Button */}
+        {/* Mobile Header: Notification + Theme Toggle + Profile + Menu Button */}
         <div className="md:hidden flex items-center gap-2">
+          {/* Mobile Notifications */}
+          {user && <NotificationDropdown />}
+
           {/* Mobile Theme Toggle Button */}
           <button
             onClick={() => {
@@ -171,6 +157,9 @@ export default function Navbar() {
               />
             )}
           </button>
+
+          {/* Mobile Profile Avatar */}
+          {user && <UserAvatarDropdown user={user} />}
 
           {/* Mobile Menu Button */}
           <button
@@ -205,15 +194,6 @@ export default function Navbar() {
             >
               Dashboard
             </Link>
-            <button
-              onClick={() => {
-                logout();
-                setMenuOpen(false);
-              }}
-              className="block text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-left"
-            >
-              Logout
-            </button>
           </>
         ) : (
           <>

@@ -1566,7 +1566,7 @@ function Dashboard() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex justify-end mb-6",
+                        className: "mt-4 md:mt-8 flex justify-center md:justify-end",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/deploy",
                             className: "inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 text-white shadow-lg",
@@ -1591,28 +1591,6 @@ function Dashboard() {
                         lineNumber: 102,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "md:hidden fixed bottom-6 right-6 z-40",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                            href: "/deploy",
-                            className: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 p-4 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 text-white",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
-                                size: 24
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/pages/dashboard.js",
-                                lineNumber: 118,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/frontend/pages/dashboard.js",
-                            lineNumber: 114,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/frontend/pages/dashboard.js",
-                        lineNumber: 113,
-                        columnNumber: 9
-                    }, this),
                     loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-center py-16",
                         children: [
@@ -1620,7 +1598,7 @@ function Dashboard() {
                                 className: "animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/pages/dashboard.js",
-                                lineNumber: 124,
+                                lineNumber: 114,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1628,13 +1606,13 @@ function Dashboard() {
                                 children: "Loading deployments..."
                             }, void 0, false, {
                                 fileName: "[project]/frontend/pages/dashboard.js",
-                                lineNumber: 125,
+                                lineNumber: 115,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/pages/dashboard.js",
-                        lineNumber: 123,
+                        lineNumber: 113,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
@@ -1643,7 +1621,7 @@ function Dashboard() {
                                     deployment: deployment
                                 }, deployment._id, false, {
                                     fileName: "[project]/frontend/pages/dashboard.js",
-                                    lineNumber: 132,
+                                    lineNumber: 122,
                                     columnNumber: 15
                                 }, this)),
                             deployments.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1665,17 +1643,17 @@ function Dashboard() {
                                                     d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend/pages/dashboard.js",
-                                                    lineNumber: 144,
+                                                    lineNumber: 134,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/pages/dashboard.js",
-                                                lineNumber: 138,
+                                                lineNumber: 128,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/frontend/pages/dashboard.js",
-                                            lineNumber: 137,
+                                            lineNumber: 127,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1683,7 +1661,7 @@ function Dashboard() {
                                             children: "No deployments yet"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend/pages/dashboard.js",
-                                            lineNumber: 152,
+                                            lineNumber: 142,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1691,7 +1669,7 @@ function Dashboard() {
                                             children: "Create your first bot deployment to get started!"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend/pages/dashboard.js",
-                                            lineNumber: 155,
+                                            lineNumber: 145,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1700,24 +1678,24 @@ function Dashboard() {
                                             children: "Deploy Your First Bot"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend/pages/dashboard.js",
-                                            lineNumber: 158,
+                                            lineNumber: 148,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend/pages/dashboard.js",
-                                    lineNumber: 136,
+                                    lineNumber: 126,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/frontend/pages/dashboard.js",
-                                lineNumber: 135,
+                                lineNumber: 125,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/pages/dashboard.js",
-                        lineNumber: 130,
+                        lineNumber: 120,
                         columnNumber: 11
                     }, this)
                 ]
@@ -1728,7 +1706,7 @@ function Dashboard() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$components$2f$Footer$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/frontend/pages/dashboard.js",
-                lineNumber: 171,
+                lineNumber: 161,
                 columnNumber: 7
             }, this)
         ]

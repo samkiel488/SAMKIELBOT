@@ -98,24 +98,14 @@ export default function Dashboard() {
         {/* Stats Overview */}
         <StatsOverview deployments={deployments} />
 
-        {/* Deploy Button beside stats */}
-        <div className="flex justify-end mb-6">
+        {/* Deploy Button */}
+        <div className="mt-4 md:mt-8 flex justify-center md:justify-end">
           <Link
             href="/deploy"
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 text-white shadow-lg"
           >
             <Plus size={20} className="mr-2" />
             Deploy Bot
-          </Link>
-        </div>
-
-        {/* Mobile Deploy Button */}
-        <div className="md:hidden fixed bottom-6 right-6 z-40">
-          <Link
-            href="/deploy"
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 p-4 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 text-white"
-          >
-            <Plus size={24} />
           </Link>
         </div>
 

@@ -16,21 +16,6 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/frontend_pages__app_2da965e7._.js",
       "static/chunks/turbopack-frontend_pages__app_75ef9c7d._.js"
     ],
-    "/_error": [
-      "static/chunks/9e883_next_dist_compiled_712bffdb._.js",
-      "static/chunks/9e883_next_dist_shared_lib_8ad05970._.js",
-      "static/chunks/9e883_next_dist_client_fe082e00._.js",
-      "static/chunks/9e883_next_dist_91312c1c._.js",
-      "static/chunks/9e883_next_error_43788141.js",
-      "static/chunks/[next]_entry_page-loader_ts_b9ef54ef._.js",
-      "static/chunks/9e883_react_bd4f1e8c._.js",
-      "static/chunks/9e883_react-dom_cjs_react-dom_development_2d164baf.js",
-      "static/chunks/9e883_react-dom_68830139._.js",
-      "static/chunks/9e883_2a3b8b9f._.js",
-      "static/chunks/[root-of-the-server]__2b803f7d._.js",
-      "static/chunks/frontend_pages__error_2da965e7._.js",
-      "static/chunks/turbopack-frontend_pages__error_e9357b1d._.js"
-    ],
     "/dashboard": [
       "static/chunks/9e883_next_dist_compiled_15b2531f._.js",
       "static/chunks/9e883_next_dist_shared_lib_34461f37._.js",
@@ -47,21 +32,6 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/[root-of-the-server]__5e636851._.js",
       "static/chunks/frontend_pages_dashboard_2da965e7._.js",
       "static/chunks/turbopack-frontend_pages_dashboard_3356c437._.js"
-    ],
-    "/profile": [
-      "static/chunks/9e883_next_dist_compiled_dc6c7870._.js",
-      "static/chunks/9e883_next_dist_shared_lib_e1cf71dc._.js",
-      "static/chunks/9e883_next_dist_client_e36166f9._.js",
-      "static/chunks/9e883_next_dist_4bfa5b9e._.js",
-      "static/chunks/9e883_next_7ba8e82a._.js",
-      "static/chunks/9e883_react_4afec026._.js",
-      "static/chunks/9e883_react-dom_cjs_react-dom_development_2d164baf.js",
-      "static/chunks/9e883_react-dom_68830139._.js",
-      "static/chunks/9e883_axios_lib_afe0686f._.js",
-      "static/chunks/9e883_03538ca8._.js",
-      "static/chunks/[root-of-the-server]__53d8dc3e._.js",
-      "static/chunks/frontend_pages_profile_2da965e7._.js",
-      "static/chunks/turbopack-frontend_pages_profile_bae1221d._.js"
     ]
   },
   "devFiles": [],
