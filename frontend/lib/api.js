@@ -81,7 +81,7 @@ export const updateProfile = async (profileData) => {
 
 // Deploy API
 export const deployBot = async (deployData) => {
-  const response = await api.post("/deploy", deployData);
+  const response = await api.post("/deploy/create", deployData);
   return response.data.data;
 };
 

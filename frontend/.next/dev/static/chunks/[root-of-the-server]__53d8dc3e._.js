@@ -761,7 +761,7 @@ const updateProfile = async (profileData)=>{
     return response.data.data;
 };
 const deployBot = async (deployData)=>{
-    const response = await api.post("/deploy", deployData);
+    const response = await api.post("/deploy/create", deployData);
     return response.data.data;
 };
 const getDeployments = async ()=>{

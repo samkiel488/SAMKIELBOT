@@ -1,23 +1,31 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const deploymentSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "User",
     required: true,
   },
-  botName: {
+  botNumber: {
     type: String,
     required: true,
+    validate: {
+      validator: function (v) {
+        return /^\d{10,15}$/.test(v); // International WhatsApp number validation
+      },
+      message: "Bot number must be a valid international number (10-15 digits)",
+    },
   },
-  version: {
+  serviceId: {
     type: String,
-    required: true,
+  },
+  pairingCode: {
+    type: String,
   },
   status: {
     type: String,
-    enum: ['pending', 'running', 'stopped', 'failed'],
-    default: 'pending',
+    enum: ["pending", "deploying", "running", "failed"],
+    default: "pending",
   },
   deployedAt: {
     type: Date,
@@ -29,4 +37,4 @@ const deploymentSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Deployment', deploymentSchema);
+module.exports = mongoose.model("Deployment", deploymentSchema);

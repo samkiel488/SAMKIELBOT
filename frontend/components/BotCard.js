@@ -36,7 +36,7 @@ export default function BotCard({ deployment }) {
       <div className="flex justify-between items-start mb-4">
         <div>
           <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-1">
-            {deployment.botName}
+            Bot {deployment.botNumber}
           </h3>
           <span
             className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${getStatusBadgeColor(
@@ -49,14 +49,15 @@ export default function BotCard({ deployment }) {
       </div>
 
       <div className="space-y-2 mb-4">
+        {deployment.pairingCode && (
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            <span className="font-medium">Pairing Code:</span>{" "}
+            {deployment.pairingCode}
+          </p>
+        )}
         <p className="text-gray-600 dark:text-gray-400 text-sm">
-          <span className="font-medium">Version:</span> {deployment.version}
-        </p>
-        <p className="text-gray-600 dark:text-gray-400 text-sm">
-          <span className="font-medium">Last Updated:</span>{" "}
-          {new Date(
-            deployment.updatedAt || deployment.deployedAt
-          ).toLocaleDateString()}
+          <span className="font-medium">Deployed:</span>{" "}
+          {new Date(deployment.deployedAt).toLocaleDateString()}
         </p>
       </div>
 

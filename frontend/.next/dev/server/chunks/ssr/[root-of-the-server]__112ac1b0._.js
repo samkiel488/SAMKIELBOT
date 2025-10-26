@@ -333,8 +333,11 @@ function BotCard({ deployment }) {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
                             className: "text-xl font-semibold text-gray-800 dark:text-gray-100 mb-1",
-                            children: deployment.botName
-                        }, void 0, false, {
+                            children: [
+                                "Bot ",
+                                deployment.botNumber
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/frontend/components/BotCard.js",
                             lineNumber: 38,
                             columnNumber: 11
@@ -361,42 +364,42 @@ function BotCard({ deployment }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "space-y-2 mb-4",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                    deployment.pairingCode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
                         className: "text-gray-600 dark:text-gray-400 text-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                 className: "font-medium",
-                                children: "Version:"
+                                children: "Pairing Code:"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/components/BotCard.js",
-                                lineNumber: 53,
-                                columnNumber: 11
+                                lineNumber: 54,
+                                columnNumber: 13
                             }, this),
                             " ",
-                            deployment.version
+                            deployment.pairingCode
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/components/BotCard.js",
-                        lineNumber: 52,
-                        columnNumber: 9
+                        lineNumber: 53,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
                         className: "text-gray-600 dark:text-gray-400 text-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                 className: "font-medium",
-                                children: "Last Updated:"
+                                children: "Deployed:"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/components/BotCard.js",
-                                lineNumber: 56,
+                                lineNumber: 59,
                                 columnNumber: 11
                             }, this),
                             " ",
-                            new Date(deployment.updatedAt || deployment.deployedAt).toLocaleDateString()
+                            new Date(deployment.deployedAt).toLocaleDateString()
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/components/BotCard.js",
-                        lineNumber: 55,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, this)
                 ]
@@ -416,14 +419,14 @@ function BotCard({ deployment }) {
                                 className: "mr-1"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/components/BotCard.js",
-                                lineNumber: 65,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, this),
                             "View Details"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/components/BotCard.js",
-                        lineNumber: 64,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -434,14 +437,14 @@ function BotCard({ deployment }) {
                                 className: "mr-1"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/components/BotCard.js",
-                                lineNumber: 69,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this),
                             "Restart"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/components/BotCard.js",
-                        lineNumber: 68,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -452,20 +455,20 @@ function BotCard({ deployment }) {
                                 className: "mr-1"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/components/BotCard.js",
-                                lineNumber: 73,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this),
                             "Stop"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/components/BotCard.js",
-                        lineNumber: 72,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/components/BotCard.js",
-                lineNumber: 63,
+                lineNumber: 64,
                 columnNumber: 7
             }, this)
         ]
@@ -677,7 +680,7 @@ const updateProfile = async (profileData)=>{
     return response.data.data;
 };
 const deployBot = async (deployData)=>{
-    const response = await api.post("/deploy", deployData);
+    const response = await api.post("/deploy/create", deployData);
     return response.data.data;
 };
 const getDeployments = async ()=>{

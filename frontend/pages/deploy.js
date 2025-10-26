@@ -9,11 +9,11 @@ import toast from "react-hot-toast";
 
 export default function DeployPage() {
   const [formData, setFormData] = useState({
-    botName: "",
-    version: "1.0.0",
+    botNumber: "",
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [deployment, setDeployment] = useState(null);
   const { user } = useAuth();
   const router = useRouter();
 
@@ -85,32 +85,22 @@ export default function DeployPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
-                Bot Name
+                WhatsApp Bot Number
               </label>
               <input
                 type="text"
-                name="botName"
-                value={formData.botName}
+                name="botNumber"
+                value={formData.botNumber}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
-                placeholder="Enter your bot name"
+                placeholder="Enter international WhatsApp number (e.g., 1234567890)"
+                pattern="^\d{10,15}$"
+                title="Enter a valid international WhatsApp number (10-15 digits)"
                 required
               />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
-                Version
-              </label>
-              <input
-                type="text"
-                name="version"
-                value={formData.version}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
-                placeholder="1.0.0"
-                required
-              />
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                Enter the full international number without + or spaces
+              </p>
             </div>
 
             <div className="flex space-x-4 pt-4">

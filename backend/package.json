@@ -9,6 +9,8 @@
     "build": "echo 'No build step for backend'"
   },
   "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "axios": "^1.6.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
