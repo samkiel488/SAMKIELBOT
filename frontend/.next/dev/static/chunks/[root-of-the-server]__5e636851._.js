@@ -1292,6 +1292,8 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 __turbopack_context__.s([
     "deployBot",
     ()=>deployBot,
+    "getDeploymentById",
+    ()=>getDeploymentById,
     "getDeployments",
     ()=>getDeployments,
     "getUpdateHistory",
@@ -1375,6 +1377,10 @@ const getDeployments = async ()=>{
 };
 const updateDeployment = async (id, updateData)=>{
     const response = await api.put(`/deploy/${id}`, updateData);
+    return response.data.data;
+};
+const getDeploymentById = async (id)=>{
+    const response = await api.get(`/deploy/${id}`);
     return response.data.data;
 };
 const updateBot = async (updateData)=>{

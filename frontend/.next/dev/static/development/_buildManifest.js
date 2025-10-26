@@ -5,8 +5,8 @@ self.__BUILD_MANIFEST = {
   "/deploy": [
     "static/chunks/pages/deploy.js"
   ],
-  "/profile": [
-    "static/chunks/pages/profile.js"
+  "/login": [
+    "static/chunks/pages/login.js"
   ],
   "__rewrites": {
     "afterFiles": [],

@@ -3,5 +3,5 @@
   "/_document": "pages/_document.js",
   "/dashboard": "pages/dashboard.js",
   "/deploy": "pages/deploy.js",
-  "/profile": "pages/profile.js"
+  "/login": "pages/login.js"
 }

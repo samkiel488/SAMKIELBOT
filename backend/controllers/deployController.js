@@ -105,11 +105,16 @@ const processDeployment = async (deploymentId) => {
     const baseBranch = "main";
 
     // Fetch settings.js from GitHub
-    const { data: settingsFile } = await octokit.repos.getContent({
-      owner,
-      repo,
-      path: "settings.js",
-    });
+    const response = await octokit.request(
+      "GET /repos/{owner}/{repo}/contents/{path}",
+      {
+        owner,
+        repo,
+        path: "settings.js",
+        ref: "main",
+      }
+    );
+    const settingsFile = response.data;
 
     const settingsContent = Buffer.from(
       settingsFile.content,

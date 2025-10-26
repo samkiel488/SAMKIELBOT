@@ -2,7 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { deployBot } from "../lib/api";
+import { deployBot, getDeploymentById } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { ArrowLeft } from "lucide-react";
 import toast from "react-hot-toast";
@@ -49,20 +49,15 @@ export default function DeployPage() {
   const pollDeploymentStatus = async (deploymentId) => {
     const pollInterval = setInterval(async () => {
       try {
-        const response = await fetch(`/api/deploy/${deploymentId}`, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
-        const deploymentData = await response.json();
+        const deploymentData = await getDeploymentById(deploymentId);
 
-        if (deploymentData.data.pairingCode) {
-          setDeployment(deploymentData.data);
+        if (deploymentData.pairingCode) {
+          setDeployment(deploymentData);
           setDeploymentStatus("success");
           setLoading(false);
           clearInterval(pollInterval);
           toast.success("Bot deployed successfully! Pairing code retrieved.");
-        } else if (deploymentData.data.status === "failed") {
+        } else if (deploymentData.status === "failed") {
           setError("Deployment failed. Please try again.");
           setDeploymentStatus("idle");
           setLoading(false);
@@ -126,43 +121,103 @@ export default function DeployPage() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
-                WhatsApp Bot Number
-              </label>
-              <input
-                type="text"
-                name="botNumber"
-                value={formData.botNumber}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
-                placeholder="Enter international WhatsApp number (e.g., 1234567890)"
-                pattern="^\d{10,15}$"
-                title="Enter a valid international WhatsApp number (10-15 digits)"
-                required
-              />
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                Enter the full international number without + or spaces
+          {deploymentStatus === "idle" && (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
+                  WhatsApp Bot Number
+                </label>
+                <input
+                  type="text"
+                  name="botNumber"
+                  value={formData.botNumber}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                  placeholder="Enter international WhatsApp number (e.g., 1234567890)"
+                  pattern="^\d{10,15}$"
+                  title="Enter a valid international WhatsApp number (10-15 digits)"
+                  required
+                />
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  Enter the full international number without + or spaces
+                </p>
+              </div>
+
+              <div className="flex space-x-4 pt-4">
+                <Link
+                  href="/dashboard"
+                  className="flex-1 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 text-gray-800 dark:text-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
+                >
+                  Cancel
+                </Link>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="flex-1 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                >
+                  {loading ? "Deploying..." : "Deploy Bot"}
+                </button>
+              </div>
+            </form>
+          )}
+
+          {deploymentStatus === "deploying" && (
+            <div className="text-center py-8">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+              <h3 className="text-xl font-semibold mb-2">
+                Deploying your bot...
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                This may take a few minutes. Please wait while we set up your
+                WhatsApp bot.
               </p>
             </div>
+          )}
 
-            <div className="flex space-x-4 pt-4">
-              <Link
-                href="/dashboard"
-                className="flex-1 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 text-gray-800 dark:text-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
-              >
-                Cancel
-              </Link>
+          {deploymentStatus === "success" && deployment && (
+            <div className="text-center py-8">
+              <div className="bg-green-100 dark:bg-green-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">
+                Bot Deployed Successfully!
+              </h3>
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                  Your pairing code is:
+                </p>
+                <p className="text-2xl font-mono font-bold text-indigo-600 dark:text-indigo-400">
+                  {deployment.pairingCode}
+                </p>
+                <button
+                  onClick={() =>
+                    navigator.clipboard.writeText(deployment.pairingCode)
+                  }
+                  className="mt-2 text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 underline"
+                >
+                  Copy to clipboard
+                </button>
+              </div>
               <button
-                type="submit"
-                disabled={loading}
-                className="flex-1 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                onClick={() => router.push("/dashboard")}
+                className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
-                {loading ? "Deploying..." : "Deploy Bot"}
+                Go to Dashboard
               </button>
             </div>
-          </form>
+          )}
         </div>
 
         {/* Info Section */}

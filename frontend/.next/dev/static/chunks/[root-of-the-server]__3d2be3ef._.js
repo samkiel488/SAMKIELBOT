@@ -468,6 +468,8 @@ function triggerUpdate(msg) {
 __turbopack_context__.s([
     "deployBot",
     ()=>deployBot,
+    "getDeploymentById",
+    ()=>getDeploymentById,
     "getDeployments",
     ()=>getDeployments,
     "getUpdateHistory",
@@ -551,6 +553,10 @@ const getDeployments = async ()=>{
 };
 const updateDeployment = async (id, updateData)=>{
     const response = await api.put(`/deploy/${id}`, updateData);
+    return response.data.data;
+};
+const getDeploymentById = async (id)=>{
+    const response = await api.get(`/deploy/${id}`);
     return response.data.data;
 };
 const updateBot = async (updateData)=>{
@@ -848,19 +854,14 @@ function DeployPage() {
     const pollDeploymentStatus = async (deploymentId)=>{
         const pollInterval = setInterval(async ()=>{
             try {
-                const response = await fetch(`/api/deploy/${deploymentId}`, {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem("token")}`
-                    }
-                });
-                const deploymentData = await response.json();
-                if (deploymentData.data.pairingCode) {
-                    setDeployment(deploymentData.data);
+                const deploymentData = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$lib$2f$api$2e$js__$5b$client$5d$__$28$ecmascript$29$__["getDeploymentById"])(deploymentId);
+                if (deploymentData.pairingCode) {
+                    setDeployment(deploymentData);
                     setDeploymentStatus("success");
                     setLoading(false);
                     clearInterval(pollInterval);
                     __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success("Bot deployed successfully! Pairing code retrieved.");
-                } else if (deploymentData.data.status === "failed") {
+                } else if (deploymentData.status === "failed") {
                     setError("Deployment failed. Please try again.");
                     setDeploymentStatus("idle");
                     setLoading(false);
@@ -893,12 +894,12 @@ function DeployPage() {
                     children: "Deploy Bot - 𝕊𝔸𝕄𝕂𝕀𝔼𝕃 𝔹𝕆𝕋"
                 }, void 0, false, {
                     fileName: "[project]/frontend/pages/deploy.js",
-                    lineNumber: 96,
+                    lineNumber: 91,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/frontend/pages/deploy.js",
-                lineNumber: 95,
+                lineNumber: 90,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -915,19 +916,19 @@ function DeployPage() {
                                     className: "mr-2"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/pages/deploy.js",
-                                    lineNumber: 106,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, this),
                                 "Back to Dashboard"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend/pages/deploy.js",
-                            lineNumber: 102,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/frontend/pages/deploy.js",
-                        lineNumber: 101,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -938,7 +939,7 @@ function DeployPage() {
                                 children: "Deploy New Bot"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/pages/deploy.js",
-                                lineNumber: 113,
+                                lineNumber: 108,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -946,13 +947,13 @@ function DeployPage() {
                                 children: "Configure and deploy your WhatsApp bot to get started"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/pages/deploy.js",
-                                lineNumber: 116,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/pages/deploy.js",
-                        lineNumber: 112,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -963,10 +964,10 @@ function DeployPage() {
                                 children: error
                             }, void 0, false, {
                                 fileName: "[project]/frontend/pages/deploy.js",
-                                lineNumber: 124,
+                                lineNumber: 119,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                            deploymentStatus === "idle" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                 onSubmit: handleSubmit,
                                 className: "space-y-6",
                                 children: [
@@ -977,8 +978,8 @@ function DeployPage() {
                                                 children: "WhatsApp Bot Number"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/pages/deploy.js",
-                                                lineNumber: 131,
-                                                columnNumber: 15
+                                                lineNumber: 127,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                 type: "text",
@@ -992,22 +993,22 @@ function DeployPage() {
                                                 required: true
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/pages/deploy.js",
-                                                lineNumber: 134,
-                                                columnNumber: 15
+                                                lineNumber: 130,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-xs text-gray-500 dark:text-gray-400 mt-1",
                                                 children: "Enter the full international number without + or spaces"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/pages/deploy.js",
-                                                lineNumber: 145,
-                                                columnNumber: 15
+                                                lineNumber: 141,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend/pages/deploy.js",
-                                        lineNumber: 130,
-                                        columnNumber: 13
+                                        lineNumber: 126,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex space-x-4 pt-4",
@@ -1018,8 +1019,8 @@ function DeployPage() {
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/pages/deploy.js",
-                                                lineNumber: 151,
-                                                columnNumber: 15
+                                                lineNumber: 147,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 type: "submit",
@@ -1028,25 +1029,144 @@ function DeployPage() {
                                                 children: loading ? "Deploying..." : "Deploy Bot"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/pages/deploy.js",
-                                                lineNumber: 157,
-                                                columnNumber: 15
+                                                lineNumber: 153,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend/pages/deploy.js",
-                                        lineNumber: 150,
-                                        columnNumber: 13
+                                        lineNumber: 146,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend/pages/deploy.js",
-                                lineNumber: 129,
-                                columnNumber: 11
+                                lineNumber: 125,
+                                columnNumber: 13
+                            }, this),
+                            deploymentStatus === "deploying" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-center py-8",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"
+                                    }, void 0, false, {
+                                        fileName: "[project]/frontend/pages/deploy.js",
+                                        lineNumber: 166,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-xl font-semibold mb-2",
+                                        children: "Deploying your bot..."
+                                    }, void 0, false, {
+                                        fileName: "[project]/frontend/pages/deploy.js",
+                                        lineNumber: 167,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-gray-600 dark:text-gray-400",
+                                        children: "This may take a few minutes. Please wait while we set up your WhatsApp bot."
+                                    }, void 0, false, {
+                                        fileName: "[project]/frontend/pages/deploy.js",
+                                        lineNumber: 170,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/frontend/pages/deploy.js",
+                                lineNumber: 165,
+                                columnNumber: 13
+                            }, this),
+                            deploymentStatus === "success" && deployment && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-center py-8",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "bg-green-100 dark:bg-green-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                            className: "w-8 h-8 text-green-600",
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            viewBox: "0 0 24 24",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                strokeWidth: 2,
+                                                d: "M5 13l4 4L19 7"
+                                            }, void 0, false, {
+                                                fileName: "[project]/frontend/pages/deploy.js",
+                                                lineNumber: 186,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/frontend/pages/deploy.js",
+                                            lineNumber: 180,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/frontend/pages/deploy.js",
+                                        lineNumber: 179,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-xl font-semibold mb-4",
+                                        children: "Bot Deployed Successfully!"
+                                    }, void 0, false, {
+                                        fileName: "[project]/frontend/pages/deploy.js",
+                                        lineNumber: 194,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mb-6",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-sm text-gray-600 dark:text-gray-400 mb-2",
+                                                children: "Your pairing code is:"
+                                            }, void 0, false, {
+                                                fileName: "[project]/frontend/pages/deploy.js",
+                                                lineNumber: 198,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-2xl font-mono font-bold text-indigo-600 dark:text-indigo-400",
+                                                children: deployment.pairingCode
+                                            }, void 0, false, {
+                                                fileName: "[project]/frontend/pages/deploy.js",
+                                                lineNumber: 201,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>navigator.clipboard.writeText(deployment.pairingCode),
+                                                className: "mt-2 text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 underline",
+                                                children: "Copy to clipboard"
+                                            }, void 0, false, {
+                                                fileName: "[project]/frontend/pages/deploy.js",
+                                                lineNumber: 204,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/frontend/pages/deploy.js",
+                                        lineNumber: 197,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>router.push("/dashboard"),
+                                        className: "bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200",
+                                        children: "Go to Dashboard"
+                                    }, void 0, false, {
+                                        fileName: "[project]/frontend/pages/deploy.js",
+                                        lineNumber: 213,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/frontend/pages/deploy.js",
+                                lineNumber: 178,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/pages/deploy.js",
-                        lineNumber: 122,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1057,7 +1177,7 @@ function DeployPage() {
                                 children: "Deployment Information"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/pages/deploy.js",
-                                lineNumber: 170,
+                                lineNumber: 225,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1067,52 +1187,52 @@ function DeployPage() {
                                         children: "• Your bot will be deployed with the latest stable configuration"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/pages/deploy.js",
-                                        lineNumber: 174,
+                                        lineNumber: 229,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: "• Deployment may take a few minutes to complete"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/pages/deploy.js",
-                                        lineNumber: 177,
+                                        lineNumber: 232,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: "• You can monitor the status from your dashboard"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/pages/deploy.js",
-                                        lineNumber: 178,
+                                        lineNumber: 233,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: "• Make sure your WhatsApp number is verified"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/pages/deploy.js",
-                                        lineNumber: 179,
+                                        lineNumber: 234,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend/pages/deploy.js",
-                                lineNumber: 173,
+                                lineNumber: 228,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/pages/deploy.js",
-                        lineNumber: 169,
+                        lineNumber: 224,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/pages/deploy.js",
-                lineNumber: 99,
+                lineNumber: 94,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/frontend/pages/deploy.js",
-        lineNumber: 94,
+        lineNumber: 89,
         columnNumber: 5
     }, this);
 }

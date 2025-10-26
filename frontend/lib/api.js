@@ -95,6 +95,11 @@ export const updateDeployment = async (id, updateData) => {
   return response.data.data;
 };
 
+export const getDeploymentById = async (id) => {
+  const response = await api.get(`/deploy/${id}`);
+  return response.data.data;
+};
+
 // Update API
 export const updateBot = async (updateData) => {
   const response = await api.post("/update", updateData);
